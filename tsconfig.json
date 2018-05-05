@@ -10,6 +10,7 @@
     "target": "es5",
     "allowSyntheticDefaultImports": true,
     "declaration": true,
+    "noResolve": false,
     "lib": [
       "dom",
       "es2015"
@@ -17,7 +18,8 @@
     "outDir": "dist"
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "src/definitions.d.ts"
   ],
   "exclude": [
     "node_modules"
