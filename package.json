@@ -1,0 +1,18 @@
+{
+  "name": "@gen-tech/js-utils",
+  "version": "0.0.0",
+  "description": "Javascript utility functions for web development",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alisahinozcelik@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^2.8.3"
+  },
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
