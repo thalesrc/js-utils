@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "module": "commonjs",
     "noImplicitAny": false,
     "preserveConstEnums": true,
     "noEmitHelpers": true,

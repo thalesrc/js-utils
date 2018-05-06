@@ -1,6 +1,6 @@
 {
   "name": "@gen-tech/js-utils",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Javascript utility functions for web development",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -9,11 +9,14 @@
     "url": "https://github.com/gen-tech/js-utils.git"
   },
   "scripts": {
-    "prepare": "tsc"
+    "prepare": "tsc",
+    "document": "typedoc --theme markdown --out documentation --mdEngine github --excludeNotExported"
   },
   "author": "alisahinozcelik@gmail.com",
   "license": "MIT",
   "devDependencies": {
+    "typedoc": "^0.11.1",
+    "typedoc-plugin-markdown": "^1.1.6",
     "typescript": "^2.8.3"
   },
   "dependencies": {
