@@ -1,15 +1,18 @@
 {
   "name": "@gen-tech/js-utils",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Javascript utility functions for web development",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "homepage": "https://gen-tech.github.io/js-utils",
   "keywords": [
-    "array", "compact",
+    "array",
+    "compact",
     "defer",
-    "is truthy", "is falsy",
-    "math", "min max",
+    "is truthy",
+    "is falsy",
+    "math",
+    "min max",
     "noop",
     "unique id"
   ],
@@ -19,7 +22,7 @@
   },
   "scripts": {
     "prepare": "tsc",
-    "document": "typedoc --out docs --mdEngine github --excludeNotExported"
+    "document": "typedoc --out docs --mdEngine github --excludeNotExported --disableOutputCheck"
   },
   "author": "alisahinozcelik@gmail.com",
   "license": "MIT",
