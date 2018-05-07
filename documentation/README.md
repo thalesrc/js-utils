@@ -14,6 +14,7 @@ Javascript utility functions for web development
 ### External modules
 
 * ["as-proto/compact"](modules/_as_proto_compact_.md)
+* ["as-proto/min-max"](modules/_as_proto_min_max_.md)
 * ["compact"](modules/_compact_.md)
 * ["defer"](modules/_defer_.md)
 * ["index"](modules/_index_.md)

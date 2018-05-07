@@ -18,7 +18,7 @@
 
 ▸ **noop**(): `void`
 
-*Defined in [noop.ts:5](https://github.com/gen-tech/js-utils/blob/1e39221/src/noop.ts#L5)*
+*Defined in [noop.ts:5](https://github.com/gen-tech/js-utils/blob/b26de53/src/noop.ts#L5)*
 
 Noop function
 

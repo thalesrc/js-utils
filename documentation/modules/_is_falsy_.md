@@ -18,7 +18,7 @@
 
 ▸ **isFalsy**(value: *`boolean`*): `boolean`
 
-*Defined in is-falsy.ts:16*
+*Defined in [is-falsy.ts:16](https://github.com/gen-tech/js-utils/blob/b26de53/src/is-falsy.ts#L16)*
 
 Returns whether the entered value is falsy
 

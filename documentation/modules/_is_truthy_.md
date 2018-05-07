@@ -18,7 +18,7 @@
 
 ▸ **isTruthy**(value: *`any`*): `boolean`
 
-*Defined in is-truthy.ts:16*
+*Defined in [is-truthy.ts:16](https://github.com/gen-tech/js-utils/blob/b26de53/src/is-truthy.ts#L16)*
 
 Returns whether the entered value is truthy
 
