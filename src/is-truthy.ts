@@ -1,6 +1,7 @@
 /**
- * Returns whether the entered value is truthy
+ * #### Returns whether the entered value is truthy
  *
+ * * * *
  * Example usage:
  * ```typescript
  * import { isTruthy } from "@gen-tech/js-utils";
@@ -11,6 +12,7 @@
  *
  * const truthyValues = ["a", undefined, "b", "", "c"].filter(isTruthy); // ["a", "b", "c"]
  * ```
+ * * * *
  * @param value value to be checked
  */
 export function isTruthy(value: any): boolean {

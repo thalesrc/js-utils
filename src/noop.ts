@@ -1,5 +1,4 @@
 /**
- * Noop function
- * @returns void
+ * #### Noop function
  */
 export function noop(): void {}

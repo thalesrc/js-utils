@@ -13,11 +13,23 @@ function* uniqueIdGenerator(prefix?: string) {
 }
 
 /**
- * Generates a unique id
+ * #### Generates a unique id
  *
  * Starts a new counter for every unique prefix and if a prefix is given, returns the id by prefixing it, otherwise returns the id as number
- * @param  {string} [prefix]
- * @returns string | number
+ * * * *
+ * Example usage:
+ * ```typescript
+ * import { uniqueId } from "@gen-tech/js-utils";
+ *
+ * uniqueId(); // 0
+ * uniqueId(); // 1
+ * uniqueId("some-str"); // "some-str-0";
+ * uniqueId("some-str"); // "some-str-1";
+ * uniqueId(); // 3
+ * ```
+ * * * *
+ * @param prefix prefix to prepend into the unique id
+ * @returns A unique id
  */
 export function uniqueId(prefix?: string): string | number {
   if (!prefix || typeof prefix !== 'string') {

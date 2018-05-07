@@ -8,6 +8,13 @@
  *
  * const limitedValue = minMax(200, 300, Math.random() * 1000);
  * ```
+ *
+ * Example as Math static:
+ * ```typescript
+ * import "@gen-tech/js-utils/dist/as-proto/min-max";
+ *
+ * const limitedValue = Math.minMax(200, 300, Math.random() * 1000);
+ * ```
  * * * *
  * @param min minimum limit
  * @param max maximum limit
