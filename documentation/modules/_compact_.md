@@ -18,7 +18,7 @@
 
 ▸ **compact**T(arrayToCompact: *`T`[]*): `T`[]
 
-*Defined in [compact.ts:14](https://github.com/gen-tech/js-utils/blob/bdc0cd0/src/compact.ts#L14)*
+*Defined in [compact.ts:14](https://github.com/gen-tech/js-utils/blob/0ca84a0/src/compact.ts#L14)*
 
 Filters falsy values of the given array
 

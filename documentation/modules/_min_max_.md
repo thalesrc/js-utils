@@ -18,7 +18,7 @@
 
 ▸ **minMax**(min: *`number`*, max: *`number`*, value: *`number`*): `number`
 
-*Defined in [min-max.ts:8](https://github.com/gen-tech/js-utils/blob/bdc0cd0/src/min-max.ts#L8)*
+*Defined in [min-max.ts:8](https://github.com/gen-tech/js-utils/blob/0ca84a0/src/min-max.ts#L8)*
 
 Limits the value
 

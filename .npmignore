@@ -2,6 +2,7 @@ node_modules/
 documentation/
 .vscode/
 src/
+*.tgz
 
 .editorconfig
 tslint.json

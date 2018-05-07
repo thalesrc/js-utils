@@ -15,6 +15,7 @@ Javascript utility functions for web development
 
 * ["as-proto/compact"](modules/_as_proto_compact_.md)
 * ["compact"](modules/_compact_.md)
+* ["defer"](modules/_defer_.md)
 * ["index"](modules/_index_.md)
 * ["min-max"](modules/_min_max_.md)
 * ["noop"](modules/_noop_.md)
