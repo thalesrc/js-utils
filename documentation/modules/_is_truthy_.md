@@ -18,9 +18,11 @@
 
 ▸ **isTruthy**(value: *`any`*): `boolean`
 
-*Defined in [is-truthy.ts:16](https://github.com/gen-tech/js-utils/blob/b26de53/src/is-truthy.ts#L16)*
+*Defined in [is-truthy.ts:18](https://github.com/gen-tech/js-utils/blob/6e1149a/src/is-truthy.ts#L18)*
 
-Returns whether the entered value is truthy
+#### Returns whether the entered value is truthy
+
+* * *
 
 Example usage:
 
@@ -31,6 +33,9 @@ Example usage:
     isTruthy([]) // true
     
     const truthyValues = ["a", undefined, "b", "", "c"].filter(isTruthy); // ["a", "b", "c"]
+    
+
+* * *
 
 **Parameters:**
 

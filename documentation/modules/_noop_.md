@@ -18,12 +18,11 @@
 
 ▸ **noop**(): `void`
 
-*Defined in [noop.ts:5](https://github.com/gen-tech/js-utils/blob/b26de53/src/noop.ts#L5)*
+*Defined in [noop.ts:4](https://github.com/gen-tech/js-utils/blob/6e1149a/src/noop.ts#L4)*
 
-Noop function
+#### Noop function
 
 **Returns:** `void`
-void
 
 ___
 

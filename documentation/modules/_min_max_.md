@@ -18,7 +18,7 @@
 
 ▸ **minMax**(min: *`number`*, max: *`number`*, value: *`number`*): `number`
 
-*Defined in [min-max.ts:16](https://github.com/gen-tech/js-utils/blob/b26de53/src/min-max.ts#L16)*
+*Defined in [min-max.ts:23](https://github.com/gen-tech/js-utils/blob/6e1149a/src/min-max.ts#L23)*
 
 #### Limits the value by given parameters
 
@@ -29,6 +29,13 @@ Example usage:
     import { minMax } from "@gen-tech/js-utils";
     
     const limitedValue = minMax(200, 300, Math.random() * 1000);
+    
+
+Example as Math static:
+
+    import "@gen-tech/js-utils/dist/as-proto/min-max";
+    
+    const limitedValue = Math.minMax(200, 300, Math.random() * 1000);
     
 
 * * *

@@ -18,9 +18,11 @@
 
 ▸ **isFalsy**(value: *`boolean`*): `boolean`
 
-*Defined in [is-falsy.ts:16](https://github.com/gen-tech/js-utils/blob/b26de53/src/is-falsy.ts#L16)*
+*Defined in [is-falsy.ts:18](https://github.com/gen-tech/js-utils/blob/6e1149a/src/is-falsy.ts#L18)*
 
-Returns whether the entered value is falsy
+#### Returns whether the entered value is falsy
+
+* * *
 
 Example usage:
 
@@ -31,6 +33,9 @@ Example usage:
     isFalsy([]) // false
     
     const falsyValues = ["a", undefined, "b", "", "c"].filter(isFalsy); // [undefined, ""]
+    
+
+* * *
 
 **Parameters:**
 
