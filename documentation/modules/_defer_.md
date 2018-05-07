@@ -18,7 +18,7 @@
 
 ▸ **defer**T(callback: *`function`*): `Promise`<`T`>
 
-*Defined in defer.ts:5*
+*Defined in [defer.ts:5](https://github.com/gen-tech/js-utils/blob/1e39221/src/defer.ts#L5)*
 
 Delays the execution of the passed function to increase the render performance
 

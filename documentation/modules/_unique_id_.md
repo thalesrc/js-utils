@@ -18,7 +18,7 @@
 
 ▸ **uniqueId**(prefix?: *`string`*): `string` |`number`
 
-*Defined in [unique-id.ts:22](https://github.com/gen-tech/js-utils/blob/0ca84a0/src/unique-id.ts#L22)*
+*Defined in [unique-id.ts:22](https://github.com/gen-tech/js-utils/blob/1e39221/src/unique-id.ts#L22)*
 
 Generates a unique id
 

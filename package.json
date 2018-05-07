@@ -1,12 +1,13 @@
 {
   "name": "@gen-tech/js-utils",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Javascript utility functions for web development",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "keywords": [
     "array", "compact",
     "defer",
+    "is truthy", "is falsy",
     "math", "min max",
     "noop",
     "unique id"

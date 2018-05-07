@@ -17,6 +17,8 @@ Javascript utility functions for web development
 * ["compact"](modules/_compact_.md)
 * ["defer"](modules/_defer_.md)
 * ["index"](modules/_index_.md)
+* ["is-falsy"](modules/_is_falsy_.md)
+* ["is-truthy"](modules/_is_truthy_.md)
 * ["min-max"](modules/_min_max_.md)
 * ["noop"](modules/_noop_.md)
 * ["unique-id"](modules/_unique_id_.md)
