@@ -4,6 +4,7 @@
   "description": "Javascript utility functions for web development",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "homepage": "https://gen-tech.github.io/js-utils",
   "keywords": [
     "array", "compact",
     "defer",
@@ -18,7 +19,7 @@
   },
   "scripts": {
     "prepare": "tsc",
-    "document": "typedoc --out doc --mdEngine github --excludeNotExported"
+    "document": "typedoc --out docs --mdEngine github --excludeNotExported"
   },
   "author": "alisahinozcelik@gmail.com",
   "license": "MIT",
