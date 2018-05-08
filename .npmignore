@@ -6,3 +6,7 @@ src/
 
 .editorconfig
 tslint.json
+
+# Testing
+.nyc_output/
+coverage/

@@ -3,3 +3,7 @@ node_modules/
 dist/
 package-lock.json
 *.tgz
+
+# Testing
+.nyc_output/
+coverage/
