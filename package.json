@@ -23,7 +23,7 @@
   },
   "scripts": {
     "prepare": "tsc",
-    "document": "typedoc --out docs --mdEngine github --excludeNotExported --disableOutputCheck",
+    "document": "typedoc --out docs --excludeNotExported --disableOutputCheck",
     "test": "mocha -r ts-node/register src/**/*.spec.ts"
   },
   "author": "alisahinozcelik@gmail.com",

@@ -83,13 +83,13 @@
 					<a name="defer" class="tsd-anchor"></a>
 					<h3>defer</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">defer&lt;T&gt;<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">defer&lt;T&gt;<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/01d7dff/src/defer.ts#L18">defer.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/93795b3/src/defer.ts#L28">defer.ts:28</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -101,6 +101,13 @@
 								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { defer } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
 
 defer(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> aFunctionToDefer())
+ .then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> ...)
+ .catch(<span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> ...);
+</code></pre>
+								<p>Example as promise static method</p>
+								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-static/defer"</span>;
+
+<span class="hljs-built_in">Promise</span>.defer(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> aFunctionToDefer())
  .then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> ...)
  .catch(<span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> ...);
 </code></pre>
@@ -118,7 +125,7 @@ defer(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</spa
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>callback: <span class="tsd-signature-type">function</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> callback: <span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> =&nbsp;noop as () &#x3D;&gt; T</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Callback function to be executed</p>
 									</div>
@@ -153,7 +160,10 @@ defer(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</spa
 						<a href="_as_proto_compact_.html">"as-<wbr>proto/compact"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_as_proto_min_max_.html">"as-<wbr>proto/min-<wbr>max"</a>
+						<a href="_as_static_defer_.html">"as-<wbr>static/defer"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_as_static_min_max_.html">"as-<wbr>static/min-<wbr>max"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_compact_.html">"compact"</a>
