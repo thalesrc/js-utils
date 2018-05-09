@@ -23,7 +23,7 @@
   },
   "scripts": {
     "prepare": "tsc",
-    "document": "typedoc --out docs --excludeNotExported --disableOutputCheck",
+    "document": "typedoc --out docs --excludeNotExported --disableOutputCheck --gitRevision master",
     "test": "NODE_ENV=test nyc mocha --recursive --compilers ts:ts-node/register src/*.spec.ts src/**/*.spec.ts",
     "cover": "nyc report --reporter=text-lcov | coveralls"
   },
