@@ -24,8 +24,8 @@
   "scripts": {
     "prepare": "tsc",
     "document": "typedoc --out docs --excludeNotExported --disableOutputCheck",
-    "test": "nyc --require ts-node/register mocha src/**/*.spec.ts",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "test": "NODE_ENV=test nyc mocha --compilers ts:ts-node/register ./src/**/*.spec.ts",
+    "cover": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": "alisahinozcelik@gmail.com",
   "license": "MIT",
@@ -49,7 +49,9 @@
     ],
     "exclude": [
       "node_modules/",
-      "src/**/*.spec.ts"
+      "./src/index.ts",
+      "./src/**/*.spec.ts",
+      "**/*.d.ts"
     ],
     "extension": [
       ".ts"
@@ -58,10 +60,9 @@
       "ts-node/register"
     ],
     "reporter": [
-      "text-summary",
+      "json",
       "html"
     ],
-    "sourceMap": true,
-    "instrument": true
+    "all": true
   }
 }
