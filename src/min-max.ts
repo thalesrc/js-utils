@@ -19,6 +19,7 @@
  * @param min minimum limit
  * @param max maximum limit
  * @param value value to limit
+ * @return the limited value *(returns NaN if an argument is NaN)*
  */
 export function minMax(min: number, max: number, value: number): number {
   return Math.max(Math.min(max, value), min);
