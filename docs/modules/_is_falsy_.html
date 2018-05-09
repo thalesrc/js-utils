@@ -83,13 +83,13 @@
 					<a name="isfalsy" class="tsd-anchor"></a>
 					<h3>is<wbr>Falsy</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Falsy<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Falsy<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/dbd92f9/src/is-falsy.ts#L18">is-falsy.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/5da7a20/src/is-falsy.ts#L28">is-falsy.ts:28</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -106,12 +106,21 @@ isFalsy([]) <span class="hljs-comment">// false</span>
 
 <span class="hljs-keyword">const</span> falsyValues = [<span class="hljs-string">"a"</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">""</span>, <span class="hljs-string">"c"</span>].filter(isFalsy); <span class="hljs-comment">// [undefined, ""]</span>
 </code></pre>
+								<p>Static usage example:</p>
+								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-static/is-falsy"</span>;
+
+<span class="hljs-built_in">Boolean</span>.isFalsy(<span class="hljs-literal">undefined</span>); <span class="hljs-comment">// true</span>
+<span class="hljs-built_in">Boolean</span>.isFalsy(<span class="hljs-literal">true</span>); <span class="hljs-comment">// false</span>
+<span class="hljs-built_in">Boolean</span>.isFalsy([]) <span class="hljs-comment">// false</span>
+
+<span class="hljs-keyword">const</span> falsyValues = [<span class="hljs-string">"a"</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">""</span>, <span class="hljs-string">"c"</span>].filter(<span class="hljs-built_in">Boolean</span>.isFalsy); <span class="hljs-comment">// [undefined, ""]</span>
+</code></pre>
 								<hr>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>value to be checked</p>
 									</div>
@@ -134,6 +143,12 @@ isFalsy([]) <span class="hljs-comment">// false</span>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_as_static_defer_.html">"as-<wbr>static/defer"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_as_static_is_falsy_.html">"as-<wbr>static/is-<wbr>falsy"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_as_static_is_truthy_.html">"as-<wbr>static/is-<wbr>truthy"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_as_static_min_max_.html">"as-<wbr>static/min-<wbr>max"</a>
