@@ -12,6 +12,16 @@
  *
  * const truthyValues = ["a", undefined, "b", "", "c"].filter(isTruthy); // ["a", "b", "c"]
  * ```
+ * Static usage example:
+ * ```typescript
+ * import "@gen-tech/js-utils/dist/as-static/is-truthy";
+ *
+ * Boolean.isTruthy(undefined); // false
+ * Boolean.isTruthy(true); // true
+ * Boolean.isTruthy([]) // true
+ *
+ * const truthyValues = ["a", undefined, "b", "", "c"].filter(Boolean.isTruthy); // ["a", "b", "c"]
+ * ```
  * * * *
  * @param value value to be checked
  */

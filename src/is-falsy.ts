@@ -12,9 +12,19 @@
  *
  * const falsyValues = ["a", undefined, "b", "", "c"].filter(isFalsy); // [undefined, ""]
  * ```
+ * Static usage example:
+ * ```typescript
+ * import "@gen-tech/js-utils/dist/as-static/is-falsy";
+ *
+ * Boolean.isFalsy(undefined); // true
+ * Boolean.isFalsy(true); // false
+ * Boolean.isFalsy([]) // false
+ *
+ * const falsyValues = ["a", undefined, "b", "", "c"].filter(Boolean.isFalsy); // [undefined, ""]
+ * ```
  * * * *
  * @param value value to be checked
  */
-export function isFalsy(value: boolean): boolean {
+export function isFalsy(value: any): boolean {
 	return !value;
 }

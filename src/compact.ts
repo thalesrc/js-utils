@@ -1,4 +1,4 @@
-const FALSY_VALUES = [undefined, null, "", 0, false];
+import { isTruthy } from "./is-truthy";
 
 /**
  * #### Filters falsy values of the given array
@@ -28,5 +28,5 @@ const FALSY_VALUES = [undefined, null, "", 0, false];
  * @returns __a	new__ compacted array
  */
 export function compact<T = any>(arrayToCompact: T[]): T[] {
-	return arrayToCompact.filter((item: any) => !Number.isNaN(item) && FALSY_VALUES.every(value => item !== value));
+	return arrayToCompact.filter(isTruthy);
 }

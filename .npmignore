@@ -6,6 +6,7 @@ src/
 
 .editorconfig
 tslint.json
+.travis.yml
 
 # Testing
 .nyc_output/
