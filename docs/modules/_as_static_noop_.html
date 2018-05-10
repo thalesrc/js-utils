@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;is-falsy&quot; | @gen-tech/js-utils</title>
+	<title>&quot;as-static/noop&quot; | @gen-tech/js-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,83 +54,16 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_is_falsy_.html">&quot;is-falsy&quot;</a>
+					<a href="_as_static_noop_.html">&quot;as-static/noop&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;is-falsy&quot;</h1>
+			<h1>External module &quot;as-static/noop&quot;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel-group tsd-index-group">
-				<h2>Index</h2>
-				<section class="tsd-panel tsd-index-panel">
-					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Functions</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_is_falsy_.html#isfalsy" class="tsd-kind-icon">is<wbr>Falsy</a></li>
-							</ul>
-						</section>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="isfalsy" class="tsd-anchor"></a>
-					<h3>is<wbr>Falsy</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Falsy<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/is-falsy.ts#L28">is-falsy.ts:28</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<h4 id="returns-whether-the-entered-value-is-falsy">Returns whether the entered value is falsy</h4>
-								</div>
-								<hr>
-								<p>Example usage:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { isFalsy } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
-
-isFalsy(<span class="hljs-literal">undefined</span>); <span class="hljs-comment">// true</span>
-isFalsy(<span class="hljs-literal">true</span>); <span class="hljs-comment">// false</span>
-isFalsy([]) <span class="hljs-comment">// false</span>
-
-<span class="hljs-keyword">const</span> falsyValues = [<span class="hljs-string">"a"</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">""</span>, <span class="hljs-string">"c"</span>].filter(isFalsy); <span class="hljs-comment">// [undefined, ""]</span>
-</code></pre>
-								<p>Static usage example:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-static/is-falsy"</span>;
-
-<span class="hljs-built_in">Boolean</span>.isFalsy(<span class="hljs-literal">undefined</span>); <span class="hljs-comment">// true</span>
-<span class="hljs-built_in">Boolean</span>.isFalsy(<span class="hljs-literal">true</span>); <span class="hljs-comment">// false</span>
-<span class="hljs-built_in">Boolean</span>.isFalsy([]) <span class="hljs-comment">// false</span>
-
-<span class="hljs-keyword">const</span> falsyValues = [<span class="hljs-string">"a"</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">""</span>, <span class="hljs-string">"c"</span>].filter(<span class="hljs-built_in">Boolean</span>.isFalsy); <span class="hljs-comment">// [undefined, ""]</span>
-</code></pre>
-								<hr>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>value to be checked</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
@@ -153,7 +86,7 @@ isFalsy([]) <span class="hljs-comment">// false</span>
 					<li class=" tsd-kind-external-module">
 						<a href="_as_static_min_max_.html">"as-<wbr>static/min-<wbr>max"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="_as_static_noop_.html">"as-<wbr>static/noop"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -165,7 +98,7 @@ isFalsy([]) <span class="hljs-comment">// false</span>
 					<li class=" tsd-kind-external-module">
 						<a href="_index_.html">"index"</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="_is_falsy_.html">"is-<wbr>falsy"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -184,9 +117,6 @@ isFalsy([]) <span class="hljs-comment">// false</span>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_is_falsy_.html#isfalsy" class="tsd-kind-icon">is<wbr>Falsy</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
