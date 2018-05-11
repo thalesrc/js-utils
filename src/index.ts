@@ -1,6 +1,7 @@
 export { clone } from "./clone";
 export * from "./compact";
 export * from "./defer";
+export { difference } from "./difference";
 export * from "./is-falsy";
 export * from "./is-truthy";
 export * from "./min-max";

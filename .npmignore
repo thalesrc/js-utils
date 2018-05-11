@@ -3,6 +3,7 @@ docs/
 .vscode/
 src/
 *.tgz
+package-lock.json
 
 .editorconfig
 tslint.json
