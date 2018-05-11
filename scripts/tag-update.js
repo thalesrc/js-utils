@@ -1,11 +1,16 @@
 const updateJson = require('update-json');
+const latestTag = require('latest-git-tag');
 
-const [, , version] = process.argv;
+const [, , argVersion] = process.argv;
 
-updateJson("./package.json", {version}, error => {
-  if (error) {
-    throw error;
-  } else {
-    console.log("Package version updated to:", version);
-  }
-});
+Promise.resolve(argVersion)
+  .then(version => !version ? latestTag() : version)
+  .then(version => {
+    updateJson("./package.json", {version}, error => {
+      if (error) {
+        throw error;
+      } else {
+        console.log("Package version updated to:", version);
+      }
+    });
+  });

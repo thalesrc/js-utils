@@ -2,11 +2,12 @@ language: node_js
 node_js:
 - '7'
 git:
-  depth: 3
+  depth: false
 branches:
   only:
   - master
   - /^(\d+\.){2}\d+$/
+before_script: node ./scripts/tag-update $TRAVIS_TAG
 after_success: npm run cover
 deploy:
   provider: npm
@@ -14,7 +15,6 @@ deploy:
   email: alisahinozcelik@gmail.com
   api_key:
     secure: hfZHWsQhCgFtgoyE2y4wzJIznu5Kd4pgNWCxCpWQFsjWGufOOu5ggVYEY0+vDCiIye9LFdavozkweeL4Grcg9hVDR7m9dYZ636Uh7DQ2gGTCqsfQkFuDW71vBs8bc8gf7jfD45MrQOAhEnmlfJEwZkIOOo7kosAw4RsXUlgKNVWdM+gK2ylMvpd/FK/PDFI7HQOCf2NaxuT1rirWg+lVU/GrJoUKSEp9cWML7D1yA7B+D5ciF93BEBVtILPWewZWSt73lu2BF1RCeGK1Rg+oOtAbQz9jRroEUKvK9hA6HubX8wxsEMl40LLT1PZlLKSqFPLnuATQ6rkWExt8Uzw82rGpJ7ubn1Qx6vQaF7UuVERnaMxBDYMXdqfJ2vmWZKF0MbOcB0h9LgzjycSC+r8ySCV+VStDBZ2+8esU06CcwVjWM4XvY+CT56iudIiNkntHdhgtMxnLLodz2XwyE95V46GET1zQU2JtD+hIeEQNCZRfMupDYsS51ue8F+zf8SoCsjA8aiuNpPALBNvPzVibY5yJ0pmHcumTnZye4OVzDblLzWgOwnnscg/Z2O9bw/moesZ/vUwZ1NcHrgOsuNtq4IXGiGsj0GL4jd4qeKuSZQh/PXXBFNTuGQfM24GraiT7dtp3xvCI58oCVkeHCGhDujwfx+b1JvryvkIse81YElk=
-  before_deploy: node ./scripts/tag-update $TRAVIS_TAG
   on:
     tags: true
     repo: gen-tech/js-utils
