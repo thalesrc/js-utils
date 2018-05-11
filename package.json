@@ -1,11 +1,13 @@
 {
   "name": "@gen-tech/js-utils",
-  "version": "0.9.1",
+  "version": "0.0.0",
   "description": "Javascript utility functions for web development",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "homepage": "https://gen-tech.github.io/js-utils",
   "keywords": [
+    "object",
+    "deep clone",
     "array",
     "compact",
     "promise",
@@ -41,7 +43,8 @@
     "nyc": "^11.7.1",
     "ts-node": "^6.0.3",
     "typedoc": "^0.11.1",
-    "typescript": "^2.8.3"
+    "typescript": "^2.8.3",
+    "update-json": "^1.0.0"
   },
   "dependencies": {
     "tslib": "^1.9.0"
