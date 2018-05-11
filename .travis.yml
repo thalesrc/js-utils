@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - '7'
 git:
-  depth: false
+  depth: 5
 branches:
   only:
   - master
