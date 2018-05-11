@@ -1,4 +1,5 @@
-# Javascript utility functions for web development
+# @gen-tech/js-utils
+## Javascript utility functions for web development
 
 [![travis](https://travis-ci.org/gen-tech/js-utils.svg)](https://travis-ci.org/gen-tech/js-utils)
 [![Coverage Status](https://coveralls.io/repos/github/gen-tech/js-utils/badge.svg?branch=master)](https://coveralls.io/github/gen-tech/js-utils?branch=master)
