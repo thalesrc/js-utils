@@ -15,6 +15,7 @@
 * [clone](https://gen-tech.github.io/js-utils/modules/_clone_.html)
 * [compact](https://gen-tech.github.io/js-utils/modules/_compact_.html)
 * [defer](https://gen-tech.github.io/js-utils/modules/_defer_.html)
+* [difference](https://gen-tech.github.io/js-utils/modules/_difference_.html)
 * [is-falsy](https://gen-tech.github.io/js-utils/modules/_is_falsy_.html)
 * [is-truthy](https://gen-tech.github.io/js-utils/modules/_is_truthy_.html)
 * [min-max](https://gen-tech.github.io/js-utils/modules/_min_max_.html)
