@@ -1,5 +1,6 @@
 /**
- * Cloning Options
+ * #### Cloning Options
+ * Cloning options of the [clone]{@link clone} function
  */
 export interface ICloneOptions {
   /**
@@ -20,6 +21,7 @@ export interface ICloneOptions {
    * // clonedObject.element === object.element
    * ```
    * * * *
+   * @default []
    */
   instancesToRefer?: any[];
 
@@ -44,12 +46,30 @@ export interface ICloneOptions {
    * ```
    * * * *
    * @param value incoming value to be cloned
-   * @return Return true to pass same reference
+   * @return Return true to pass same reference, false to clone
+   * @default () => false
    */
   valueFiltererToRefer?(value: any): boolean;
 
   /**
-   * properties which cloning unwanted
+   * #### Properties which cloning unwanted
+   * Give the unwanted properties to prevent them being cloned
+   *
+   * * * *
+   * Example:
+   * ```typescript
+   * import { clone } from "@gen-tech/js-utils";
+   *
+   * const object = {
+   *   width: 250,
+   *   element: document.querySelector("div")
+   * };
+   *
+   * const clonedObject = clone(object, {propsToRefer: [ "element" ]});
+   * // clonedObject.element === object.element
+   * ```
+   * * * *
+   * @default []
    */
   propsToRefer?: Array<string | symbol>;
 };
@@ -59,10 +79,43 @@ export interface ICloneOptions {
 type PolyfillRequired<T, TNames extends string> = { [P in TNames]: (T & { [name: string]: never })[P] };
 type TNonOptionalCloneOptions = PolyfillRequired<ICloneOptions, keyof ICloneOptions>;
 
+
 /**
  * #### Deep Clone
+ *
+ * A function to recursively clone objects, arrays etc. with [cloning options]{@link ICloneOptions}
+ *
+ * *References Functions & Symbols by default*
+ *
+ * * * *
+ * Example:
+ * ```typescript
+ * import { clone } from "@gen-tech/js-utils";
+ *
+ * const object = {a: 1, b: {c: true, d: ["x", "y"]}};
+ *
+ * // Clone all
+ * const clonedObject = clone(object);
+ * // {a: 1, b: {c: true, d: ["x", "y"]}}
+ * // object.b.d === clonedObject.b.d // false
+ *
+ * // Clone all but reference "d"
+ * const clonedObject = clone(object, {propsToRefer: ["d"]});
+ * // {a: 1, b: {c: true, d: ["x", "y"]}}
+ * // object.b.d === clonedObject.b.d // true
+ * ```
+ *
+ * Static usage example:
+ * ```typescript
+ * import "@gen-tech/js-utils/dist/as-static/clone";
+ *
+ * const object = {a: 1, b: 2};
+ * const clonedObject = Object.clone(object); // {a: 1, b: 2}
+ * ```
+ * * * *
  * @param objectToClone Object to clone
- * @param options Clone Options
+ * @param options {ICloneOptions} Cloning Options
+ * @see {@link ICloneOptions} for more information.
  */
 export function clone<T>(
   objectToClone: T,
@@ -70,7 +123,7 @@ export function clone<T>(
     instancesToRefer = [],
     propsToRefer = [],
     valueFiltererToRefer = () => false
-  }: ICloneOptions = {}
+  }: ICloneOptions = <ICloneOptions>{}
 ): T {
   // Pass primitives & functions
 	if (objectToClone === null || !(objectToClone instanceof Object) || objectToClone instanceof Function) {

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;as-static/min-max&quot; | @gen-tech/js-utils</title>
+	<title>&quot;clone&quot; | @gen-tech/js-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,16 +54,110 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_as_static_min_max_.html">&quot;as-static/min-max&quot;</a>
+					<a href="_clone_.html">&quot;clone&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;as-static/min-max&quot;</h1>
+			<h1>External module &quot;clone&quot;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_clone_.icloneoptions.html" class="tsd-kind-icon">IClone<wbr>Options</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_clone_.html#clone" class="tsd-kind-icon">clone</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+					<a name="clone" class="tsd-anchor"></a>
+					<h3>clone</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">clone&lt;T&gt;<span class="tsd-signature-symbol">(</span>objectToClone<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, __namedParameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L120">clone.ts:120</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<h4 id="deep-clone">Deep Clone</h4>
+								</div>
+								<p>A function to recursively clone objects, arrays etc. with <a href="../interfaces/_clone_.icloneoptions.html">cloning options</a></p>
+								<p><em>References Functions &amp; Symbols by default</em></p>
+								<hr>
+								<p>Example:</p>
+								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+
+<span class="hljs-keyword">const</span> object = {a: <span class="hljs-number">1</span>, b: {c: <span class="hljs-literal">true</span>, d: [<span class="hljs-string">"x"</span>, <span class="hljs-string">"y"</span>]}};
+
+<span class="hljs-comment">// Clone all</span>
+<span class="hljs-keyword">const</span> clonedObject = clone(object);
+<span class="hljs-comment">// {a: 1, b: {c: true, d: ["x", "y"]}}</span>
+<span class="hljs-comment">// object.b.d === clonedObject.b.d // false</span>
+
+<span class="hljs-comment">// Clone all but reference "d"</span>
+<span class="hljs-keyword">const</span> clonedObject = clone(object, {propsToRefer: [<span class="hljs-string">"d"</span>]});
+<span class="hljs-comment">// {a: 1, b: {c: true, d: ["x", "y"]}}</span>
+<span class="hljs-comment">// object.b.d === clonedObject.b.d // true</span>
+</code></pre>
+								<p>Static usage example:</p>
+								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-static/clone"</span>;
+
+<span class="hljs-keyword">const</span> object = {a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>};
+<span class="hljs-keyword">const</span> clonedObject = <span class="hljs-built_in">Object</span>.clone(object); <span class="hljs-comment">// {a: 1, b: 2}</span>
+</code></pre>
+								<hr>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="../interfaces/_clone_.icloneoptions.html">ICloneOptions</a> for more information.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>objectToClone: <span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Object to clone</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> __namedParameters: <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;&lt;ICloneOptions&gt;{}</span></h5>
+									<ul class="tsd-parameters">
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
@@ -86,13 +180,13 @@
 					<li class=" tsd-kind-external-module">
 						<a href="_as_static_is_truthy_.html">"as-<wbr>static/is-<wbr>truthy"</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="_as_static_min_max_.html">"as-<wbr>static/min-<wbr>max"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_as_static_noop_.html">"as-<wbr>static/noop"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="_clone_.html">"clone"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -123,6 +217,12 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_clone_.icloneoptions.html" class="tsd-kind-icon">IClone<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_clone_.html#clone" class="tsd-kind-icon">clone</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

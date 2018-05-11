@@ -1,3 +1,4 @@
+export { clone } from "./clone";
 export * from "./compact";
 export * from "./defer";
 export * from "./is-falsy";

@@ -93,7 +93,7 @@ describe('Clone Function', () => {
     expect(bar.b).to.eql(foo.b);
   });
 
-  it('should reference filtered properties', () => {
+  it('should reference unwanted properties', () => {
     const sym = Symbol();
     const foo = {a: {x: 1}, b: {x: 2}, [sym]: {x: 3}};
     const bar = clone(foo, {propsToRefer: ['a', sym]});
