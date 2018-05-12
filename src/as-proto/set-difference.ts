@@ -19,12 +19,13 @@ declare global {
      * * * *
      * @param base Base Set
      * @param substraction Set or Array to remove its values from the base
+     * @param allDiff By default all the same items encountered in substraction will be removed, set this argument as true to get real difference
      * @returns Difference of base from substraction
      */
-    difference(substraction: TSubstraction): Set<T>;
+    difference(substraction: TSubstraction, allDiff?: boolean): Set<T>;
   }
 }
 
-Set.prototype.difference = function<T>(this: Set<T>, substraction: TSubstraction) {
-  return difference(this, substraction);
+Set.prototype.difference = function<T>(this: Set<T>, substraction: TSubstraction, allDiff = false) {
+  return difference(this, substraction, allDiff);
 }

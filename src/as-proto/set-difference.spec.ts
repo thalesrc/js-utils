@@ -12,5 +12,8 @@ describe('Set Difference Proto Function', () => {
 
     expect(foo.difference(bar)).to.eql(difference(foo, bar));
     expect(foo.difference(baz)).to.eql(difference(foo, baz));
+
+    expect(foo.difference(bar, true)).to.eql(difference(foo, bar, true));
+    expect(foo.difference(baz, true)).to.eql(difference(foo, baz, true));
   });
 });
