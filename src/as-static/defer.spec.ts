@@ -53,7 +53,9 @@ describe('Defer Static Function', () => {
   });
 
   it('should catch callback errors', done => {
-    Promise.defer(() => {throw new CustomError("foo")})
+    Promise.defer(() => {
+      throw new CustomError("foo");
+    })
       .then(value => {
         throw new CustomError("couldn't catch error");
       })
