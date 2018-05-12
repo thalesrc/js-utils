@@ -10,6 +10,8 @@
     "deep clone",
     "array",
     "compact",
+    "difference",
+    "intersecion",
     "promise",
     "defer",
     "is truthy",

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;noop&quot; | @gen-tech/js-utils</title>
+	<title>&quot;intersection&quot; | @gen-tech/js-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_noop_.html">&quot;noop&quot;</a>
+					<a href="_intersection_.html">&quot;intersection&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;noop&quot;</h1>
+			<h1>External module &quot;intersection&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -69,48 +69,139 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_intersection_.html#tinclusion" class="tsd-kind-icon">TInclusion</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_noop_.html#noop" class="tsd-kind-icon">noop</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_intersection_.html#intersection" class="tsd-kind-icon">intersection</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
+					<a name="tinclusion" class="tsd-anchor"></a>
+					<h3>TInclusion</h3>
+					<div class="tsd-signature tsd-kind-icon">TInclusion<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/intersection.ts#L4">intersection.ts:4</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Intersection Inclusion Type</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="noop" class="tsd-anchor"></a>
-					<h3>noop</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">noop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+					<a name="intersection" class="tsd-anchor"></a>
+					<h3>intersection</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">intersection&lt;T&gt;<span class="tsd-signature-symbol">(</span>base<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, inclusion<span class="tsd-signature-symbol">: </span><a href="_intersection_.html#tinclusion" class="tsd-signature-type">TInclusion</a>, allEquals<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">intersection&lt;T&gt;<span class="tsd-signature-symbol">(</span>base<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, inclusion<span class="tsd-signature-symbol">: </span><a href="_intersection_.html#tinclusion" class="tsd-signature-type">TInclusion</a>, allEquals<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/noop.ts#L20">noop.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/intersection.ts#L43">intersection.ts:43</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<h4 id="noop-function">Noop function</h4>
-									<hr>
-									<p>Example usage:
-										<code>`</code>typescript
-									import { noop } from &quot;@gen-tech/js-utils&quot;;</p>
+									<h4 id="intersection">Intersection</h4>
 								</div>
-								<p>noop();
-								document.onload = noop;</p>
-								<pre><code><span class="hljs-keyword">Static</span> usage example:
-```typescript
-import <span class="hljs-string">"@gen-tech/js-utils/dist/as-static/noop"</span>;
+								<p>Gets the intersection of the two arrays or sets</p>
+								<hr>
+								<p>Example:</p>
+								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { intersection } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
 
-<span class="hljs-function"><span class="hljs-keyword">Function</span>.<span class="hljs-title">noop</span><span class="hljs-params">()</span></span>;
-document.onload = <span class="hljs-function"><span class="hljs-keyword">Function</span>.<span class="hljs-title">noop</span></span>;
-</code></pre><hr>
+<span class="hljs-keyword">const</span> base = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>];
+
+intersection(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"x"</span>]); <span class="hljs-comment">// ["a", "b", "a", "b"]</span>
+intersection(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"x"</span>], <span class="hljs-literal">false</span>); <span class="hljs-comment">// ["a", "b"]</span>
+</code></pre>
+								<p>Array Prototype Example:</p>
+								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-proto/array-intersection"</span>;
+
+<span class="hljs-keyword">const</span> base = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>];
+
+base.intersection([<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>]); <span class="hljs-comment">// ["a", "b", "a", "b"]</span>
+</code></pre>
+								<p>Set Prototype Example:</p>
+								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-proto/set-intersection"</span>;
+
+<span class="hljs-keyword">const</span> base = <span class="hljs-keyword">new</span> Set([<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>]);
+
+base.intersection([<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>]); <span class="hljs-comment">// Set(["a", "b"])</span>
+</code></pre>
+								<hr>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>base: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Base Set or Array</p>
+									</div>
+								</li>
+								<li>
+									<h5>inclusion: <a href="_intersection_.html#tinclusion" class="tsd-signature-type">TInclusion</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Set or Array to include its values</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> allEquals: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>By default all the same items encountered in the inclusion will be included, set this argument as false to get real intersection</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>Intersection of base and inclusion</p>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/intersection.ts#L44">intersection.ts:44</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>base: <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>inclusion: <a href="_intersection_.html#tinclusion" class="tsd-signature-type">TInclusion</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> allEquals: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -170,7 +261,7 @@ document.onload = <span class="hljs-function"><span class="hljs-keyword">Functio
 					<li class=" tsd-kind-external-module">
 						<a href="_index_.html">"index"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="_intersection_.html">"intersection"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -182,7 +273,7 @@ document.onload = <span class="hljs-function"><span class="hljs-keyword">Functio
 					<li class=" tsd-kind-external-module">
 						<a href="_min_max_.html">"min-<wbr>max"</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="_noop_.html">"noop"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -192,8 +283,11 @@ document.onload = <span class="hljs-function"><span class="hljs-keyword">Functio
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_noop_.html#noop" class="tsd-kind-icon">noop</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="_intersection_.html#tinclusion" class="tsd-kind-icon">TInclusion</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_intersection_.html#intersection" class="tsd-kind-icon">intersection</a>
 					</li>
 				</ul>
 			</nav>

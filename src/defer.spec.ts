@@ -4,6 +4,10 @@ import 'mocha';
 
 import { defer } from "./defer";
 
+class CustomError {
+  constructor(public message: string) {}
+}
+
 describe('Defer Function', () => {
   it('should defer execution', done => {
     let counter = 0;
@@ -50,12 +54,14 @@ describe('Defer Function', () => {
   });
 
   it('should catch callback errors', done => {
-    defer(() => {throw new Error("abcd")})
+    Promise.defer(() => {
+      throw new CustomError("foo");
+    })
       .then(value => {
-        fail("couldn't catch error");
+        throw new CustomError("couldn't catch error");
       })
-      .catch((err: Error) => {
-        expect(err.message).to.eq("abcd");
+      .catch((err: CustomError) => {
+        expect(err.message).to.eq("foo");
         done();
       });
   });

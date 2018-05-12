@@ -107,14 +107,14 @@
 					<a name="difference" class="tsd-anchor"></a>
 					<h3>difference</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">difference&lt;T&gt;<span class="tsd-signature-symbol">(</span>base<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, substraction<span class="tsd-signature-symbol">: </span><a href="_difference_.html#tsubstraction" class="tsd-signature-type">TSubstraction</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
-						<li class="tsd-signature tsd-kind-icon">difference&lt;T&gt;<span class="tsd-signature-symbol">(</span>base<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, substraction<span class="tsd-signature-symbol">: </span><a href="_difference_.html#tsubstraction" class="tsd-signature-type">TSubstraction</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">difference&lt;T&gt;<span class="tsd-signature-symbol">(</span>base<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, substraction<span class="tsd-signature-symbol">: </span><a href="_difference_.html#tsubstraction" class="tsd-signature-type">TSubstraction</a>, allDiff<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">difference&lt;T&gt;<span class="tsd-signature-symbol">(</span>base<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, substraction<span class="tsd-signature-symbol">: </span><a href="_difference_.html#tsubstraction" class="tsd-signature-type">TSubstraction</a>, allDiff<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/difference.ts#L41">difference.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/difference.ts#L43">difference.ts:43</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -129,6 +129,7 @@
 <span class="hljs-keyword">const</span> base = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>];
 
 difference(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>]); <span class="hljs-comment">// ["c", "d", "c", "d"]</span>
+difference(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>], <span class="hljs-literal">true</span>); <span class="hljs-comment">// ["c", "d", "a", "b", "c", "d"]</span>
 </code></pre>
 								<p>Array Prototype Example:</p>
 								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-proto/array-difference"</span>;
@@ -166,6 +167,12 @@ base.difference([<span class="hljs-string">"a"</span>, <span class="hljs-string"
 										<p>Set or Array to remove its values from the base</p>
 									</div>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> allDiff: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>By default all the same items encountered in substraction will be removed, set this argument as true to get real difference</p>
+									</div>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
 							<p>Difference of base from substraction</p>
@@ -173,7 +180,7 @@ base.difference([<span class="hljs-string">"a"</span>, <span class="hljs-string"
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/difference.ts#L42">difference.ts:42</a></li>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/difference.ts#L44">difference.ts:44</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -189,6 +196,9 @@ base.difference([<span class="hljs-string">"a"</span>, <span class="hljs-string"
 								</li>
 								<li>
 									<h5>substraction: <a href="_difference_.html#tsubstraction" class="tsd-signature-type">TSubstraction</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> allDiff: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -207,10 +217,16 @@ base.difference([<span class="hljs-string">"a"</span>, <span class="hljs-string"
 						<a href="_as_proto_array_difference_.html">"as-<wbr>proto/array-<wbr>difference"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="_as_proto_array_intersection_.html">"as-<wbr>proto/array-<wbr>intersection"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="_as_proto_compact_.html">"as-<wbr>proto/compact"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_as_proto_set_difference_.html">"as-<wbr>proto/set-<wbr>difference"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_as_proto_set_intersection_.html">"as-<wbr>proto/set-<wbr>intersection"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_as_static_clone_.html">"as-<wbr>static/clone"</a>
@@ -244,6 +260,9 @@ base.difference([<span class="hljs-string">"a"</span>, <span class="hljs-string"
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_index_.html">"index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_intersection_.html">"intersection"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_is_falsy_.html">"is-<wbr>falsy"</a>
