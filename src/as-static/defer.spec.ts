@@ -1,5 +1,4 @@
 import { expect } from 'chai';
-import { fail } from 'assert';
 import 'mocha';
 
 import "./defer";
@@ -50,12 +49,12 @@ describe('Defer Static Function', () => {
   });
 
   it('should catch callback errors', done => {
-    Promise.defer(() => {throw new Error("abcd")})
+    Promise.defer(() => {throw new Error("foo")})
       .then(value => {
-        fail("couldn't catch error");
+        throw new Error("couldn't catch error");
       })
       .catch((err: Error) => {
-        expect(err.message).to.eq("abcd");
+        expect(err.message).to.eq("foo");
         done();
       });
   });
