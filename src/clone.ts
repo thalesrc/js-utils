@@ -1,3 +1,6 @@
+import { difference } from "./difference";
+import { intersection } from "./intersection";
+
 /**
  * #### Cloning Options
  * Cloning options of the [clone]{@link clone} function
@@ -166,12 +169,12 @@ export function clone<T>(
   const allProperties = [...Object.keys(objectToClone), ...Object.getOwnPropertySymbols(objectToClone)];
 
   // Pass unwanted props
-  allProperties.filter(val => propsToRefer.indexOf(val) > -1).forEach(prop => {
+  intersection(propsToRefer, allProperties).forEach(prop => {
     _clone[prop] = objectToClone[prop];
   });
 
   // Clone remaining properties
-  allProperties.filter(val => propsToRefer.indexOf(val) === -1).forEach(cloneObject);
+  difference(allProperties, propsToRefer).forEach(cloneObject);
 
 	return _clone;
 }
