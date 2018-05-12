@@ -1,7 +1,11 @@
-import { expect, AssertionError } from 'chai';
+import { expect } from 'chai';
 import 'mocha';
 
 import "./defer";
+
+class CustomError {
+  constructor(public message: string) {}
+}
 
 describe('Defer Static Function', () => {
   it('should defer execution', done => {
@@ -49,11 +53,11 @@ describe('Defer Static Function', () => {
   });
 
   it('should catch callback errors', done => {
-    Promise.defer(() => {throw new AssertionError("foo")})
+    Promise.defer(() => {throw new CustomError("foo")})
       .then(value => {
-        throw new AssertionError("couldn't catch error");
+        throw new CustomError("couldn't catch error");
       })
-      .catch((err: Error) => {
+      .catch((err: CustomError) => {
         expect(err.message).to.eq("foo");
         done();
       });
