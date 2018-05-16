@@ -7,4 +7,5 @@ export * from "./is-falsy";
 export * from "./is-truthy";
 export * from "./min-max";
 export * from "./noop";
+export * from "./open-promise";
 export * from "./unique-id";
