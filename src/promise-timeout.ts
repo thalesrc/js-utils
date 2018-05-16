@@ -2,6 +2,7 @@ import { OpenPromise } from "./open-promise";
 
 export interface PromiseTimeoutFunction {
   /**
+   * @see promiseTimeout
    * @param time Time to resolve promise in miliseconds
    * @param value Value to resolve promise with
    * @param key Key to cancel the timeout if needed
@@ -10,12 +11,53 @@ export interface PromiseTimeoutFunction {
 
   /**
    * #### Promise Timeout Canceller
+   *
+   * * * *
+   * Usage via promise instance:
+   * ```typescript
+   * import { promiseTimeout } from "@gen-tech/js-utils";
+   *
+   * const timeout = promiseTimeout(1000);
+   *
+   * timeout
+   *  .then(() => console.log("this won't be logged"))
+   *  .catch(() => console.log("this will be logged, because timer has been cancelled"));
+   *
+   * promiseTimeout.cancel(timeout);
+   * ```
+   * Usage via key
+   * ```typescript
+   * import { promiseTimeout } from "@gen-tech/js-utils";
+   *
+   * const key = Symbol();
+   *
+   * promiseTimeout(1000, null, key)
+   *  .then(() => console.log("this won't be logged"))
+   *  .catch(() => console.log("this will be logged, because timer has been cancelled"));
+   *
+   * promiseTimeout.cancel(key);
+   * ```
+   * * * *
    * @param identifier The identifier of the promise to cancel
    * @param error The error which will be throwed by the cancelled promise
+   * @returns A promise which resolves if cancelling process is successfull, rejects otherwise
    */
   cancel(identifier: Promise<any> | symbol, error?: any): Promise<void>;
+
+  /**
+   * Will be throwed in cancelling promise when the timer has already finished or cancelled
+   */
   readonly FINISHED_ALREADY: symbol;
+
+  /**
+   * Will be throwed in cancelling promise when the timer has not found via identifier
+   */
   readonly IDENTIFIER_NOT_FOUND: symbol;
+
+  /**
+   * The default timeout cancelling rejection error
+   * Will be throwed when the timer has cancelled
+   */
   readonly TIMEOUT_CANCELLED: symbol;
 }
 
@@ -24,11 +66,8 @@ interface ITimeoutCache {
   openPromise: OpenPromise;
 }
 
-/**
- * #### Timeout Promise
- * Returns a promise which resolves after given time
- */
-export const promiseTimeout: PromiseTimeoutFunction = (() => {
+// Defined here for documentation
+const promiseTimeoutInitializer = (() => {
   const REFERANCE_CACHE = new WeakMap<Promise<any>, ITimeoutCache>();
   const KEY_CACHE = new Map<symbol, ITimeoutCache>();
 
@@ -97,3 +136,37 @@ export const promiseTimeout: PromiseTimeoutFunction = (() => {
 
   return <PromiseTimeoutFunction>timeout;
 })();
+
+/**
+ * #### Promise Timeout
+ * Returns a promise which resolves after given time
+ *
+ * * * *
+ * Example:
+ * ```typescript
+ * import { promiseTimeout } from "@gen-tech/js-utils";
+ *
+ * promiseTimeout(1000);
+ *  .then(() => console.log("will be logged after a second"));
+ * ```
+ * Example with a resolve value:
+ * ```typescript
+ * import { promiseTimeout } from "@gen-tech/js-utils";
+ *
+ * promiseTimeout(1000, "foo");
+ *  .then(val => console.log("will log 'foo' after a second", val));
+ * ```
+ * Can be used in promise chaining:
+ * ```typescript
+ * import { promiseTimeout } from "@gen-tech/js-utils";
+ *
+ * fetch("http://localhost:8080/anEndpoint") // Fetch something
+ *  .then(val => promiseTimeout(1000, val)) // Wait a second after response
+ *  .then(val => {
+ *    ...do something else
+ *  });
+ * ```
+ * * * *
+ * @see PromiseTimeoutFunction#cancel for cancelling
+ */
+export const promiseTimeout: PromiseTimeoutFunction = promiseTimeoutInitializer;
