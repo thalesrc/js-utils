@@ -22,4 +22,7 @@ Javascript utility functions for web development
 * [noop](https://gen-tech.github.io/js-utils/modules/_noop_.html)
 * [unique-id](https://gen-tech.github.io/js-utils/modules/_unique_id_.html)
 
+#### Utility Classes
+* [open-promise](https://gen-tech.github.io/js-utils/modules/_open_promise_.html)
+
 All Documentation => [gen-tech.github.io/js-utils](https://gen-tech.github.io/js-utils)
