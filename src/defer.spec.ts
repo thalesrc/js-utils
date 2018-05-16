@@ -54,7 +54,7 @@ describe('Defer Function', () => {
   });
 
   it('should catch callback errors', done => {
-    Promise.defer(() => {
+    defer(() => {
       throw new CustomError("foo");
     })
       .then(value => {
