@@ -14,6 +14,7 @@
     "intersecion",
     "promise",
     "defer",
+    "open",
     "is truthy",
     "is falsy",
     "math",
