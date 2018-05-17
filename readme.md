@@ -5,6 +5,7 @@ Javascript utility functions for web development
 [![Coverage Status](https://coveralls.io/repos/github/gen-tech/js-utils/badge.svg?branch=master)](https://coveralls.io/github/gen-tech/js-utils?branch=master)
 [![npm](https://img.shields.io/npm/v/@gen-tech/js-utils.svg)](https://www.npmjs.com/package/@gen-tech/js-utils)
 [![npm](https://img.shields.io/npm/dw/@gen-tech/js-utils.svg)](https://www.npmjs.com/package/@gen-tech/js-utils)
+[![TypeScript](https://badges.frapsoft.com/typescript/version/typescript-next.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
 [![npm](https://img.shields.io/npm/l/@gen-tech/js-utils.svg)](https://github.com/gen-tech/js-utils/blob/master/LICENSE) [![Join the chat at https://gitter.im/gen-tech_js-utils/Lobby](https://badges.gitter.im/gen-tech_js-utils/Lobby.svg)](https://gitter.im/gen-tech_js-utils/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 #### Installation
