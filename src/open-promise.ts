@@ -1,6 +1,7 @@
 /**
  * #### Open Promise
  * A promise constructor to resolve or reject from outside
+ *
  * * * *
  * Example:
  * ```typescript
@@ -19,7 +20,7 @@
  * * * *
  * @template T typeof the value which will be resolved
  */
-export class OpenPromise<T> {
+export class OpenPromise<T = any> {
 	private _resolver: (param: T) => void;
   private _rejector: (error: any) => void;
 

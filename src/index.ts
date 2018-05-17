@@ -8,4 +8,5 @@ export * from "./is-truthy";
 export * from "./min-max";
 export * from "./noop";
 export * from "./open-promise";
+export * from "./promise-timeout";
 export * from "./unique-id";

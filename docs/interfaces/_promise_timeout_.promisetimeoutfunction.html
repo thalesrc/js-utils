@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ICloneOptions | @gen-tech/js-utils</title>
+	<title>PromiseTimeoutFunction | @gen-tech/js-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,32 +54,74 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_clone_.html">&quot;clone&quot;</a>
+					<a href="../modules/_promise_timeout_.html">&quot;promise-timeout&quot;</a>
 				</li>
 				<li>
-					<a href="_clone_.icloneoptions.html">ICloneOptions</a>
+					<a href="_promise_timeout_.promisetimeoutfunction.html">PromiseTimeoutFunction</a>
 				</li>
 			</ul>
-			<h1>Interface ICloneOptions</h1>
+			<h1>Interface PromiseTimeoutFunction</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<h4 id="cloning-options">Cloning Options</h4>
-						<p>Cloning options of the <a href="../modules/_clone_.html#clone">clone</a> function</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ICloneOptions</span>
+						<span class="target">PromiseTimeoutFunction</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3 class="tsd-before-signature">Callable</h3>
+				<ul class="tsd-signatures tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
+					<li class="tsd-signature tsd-kind-icon">__call&lt;T&gt;<span class="tsd-signature-symbol">(</span>time<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">T</span>, key<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/promise-timeout.ts#L3">promise-timeout.ts:3</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<dl class="tsd-comment-tags">
+								<dt>see</dt>
+								<dd><p>promiseTimeout</p>
+								</dd>
+							</dl>
+						</div>
+						<h4 class="tsd-type-parameters-title">Type parameters</h4>
+						<ul class="tsd-type-parameters">
+							<li>
+								<h4>T</h4>
+							</li>
+						</ul>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>time: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Time to resolve promise in miliseconds</p>
+								</div>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> value: <span class="tsd-signature-type">T</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Value to resolve promise with</p>
+								</div>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> key: <span class="tsd-signature-type">symbol</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Key to cancel the timeout if needed</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
 					</li>
 				</ul>
 			</section>
@@ -90,14 +132,15 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_clone_.icloneoptions.html#instancestorefer" class="tsd-kind-icon">instances<wbr>ToRefer</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_clone_.icloneoptions.html#propstorefer" class="tsd-kind-icon">props<wbr>ToRefer</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_promise_timeout_.promisetimeoutfunction.html#finished_already" class="tsd-kind-icon">FINISHED_<wbr>ALREADY</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_promise_timeout_.promisetimeoutfunction.html#identifier_not_found" class="tsd-kind-icon">IDENTIFIER_<wbr>NOT_<wbr>FOUND</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_promise_timeout_.promisetimeoutfunction.html#timeout_cancelled" class="tsd-kind-icon">TIMEOUT_<wbr>CANCELLED</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_clone_.icloneoptions.html#valuefilterertorefer" class="tsd-kind-icon">value<wbr>Filterer<wbr>ToRefer</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_promise_timeout_.promisetimeoutfunction.html#cancel" class="tsd-kind-icon">cancel</a></li>
 							</ul>
 						</section>
 					</div>
@@ -106,126 +149,124 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="instancestorefer" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> instances<wbr>ToRefer</h3>
-					<div class="tsd-signature tsd-kind-icon">instances<wbr>ToRefer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
+					<a name="finished_already" class="tsd-anchor"></a>
+					<h3>FINISHED_<wbr>ALREADY</h3>
+					<div class="tsd-signature tsd-kind-icon">FINISHED_<wbr>ALREADY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L29">clone.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/promise-timeout.ts#L62">promise-timeout.ts:62</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<h4 id="instance-constructors-which-cloning-unwanted">Instance constructors which cloning unwanted</h4>
-							<p>Give the instance constructors to prevent them being cloned</p>
+							<p>Will be throwed in cancelling promise when the timer has already finished or cancelled</p>
 						</div>
-						<hr>
-						<p>Example:</p>
-						<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
-
-<span class="hljs-keyword">const</span> object = {
-  width: <span class="hljs-number">250</span>,
-  element: <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">"div"</span>)
-};
-
-<span class="hljs-keyword">const</span> clonedObject = clone(object, {instancesToRefer: [ HTMLElement ]});
-<span class="hljs-comment">// clonedObject.element === object.element</span>
-</code></pre>
-						<hr>
-						<dl class="tsd-comment-tags">
-							<dt>default</dt>
-							<dd><p>[]</p>
-							</dd>
-						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="propstorefer" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> props<wbr>ToRefer</h3>
-					<div class="tsd-signature tsd-kind-icon">props<wbr>ToRefer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="identifier_not_found" class="tsd-anchor"></a>
+					<h3>IDENTIFIER_<wbr>NOT_<wbr>FOUND</h3>
+					<div class="tsd-signature tsd-kind-icon">IDENTIFIER_<wbr>NOT_<wbr>FOUND<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L77">clone.ts:77</a></li>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/promise-timeout.ts#L67">promise-timeout.ts:67</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<h4 id="properties-which-cloning-unwanted">Properties which cloning unwanted</h4>
-							<p>Give the unwanted properties to prevent them being cloned</p>
+							<p>Will be throwed in cancelling promise when the timer has not found via identifier</p>
 						</div>
-						<hr>
-						<p>Example:</p>
-						<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
-
-<span class="hljs-keyword">const</span> object = {
-  width: <span class="hljs-number">250</span>,
-  element: <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">"div"</span>)
-};
-
-<span class="hljs-keyword">const</span> clonedObject = clone(object, {propsToRefer: [ <span class="hljs-string">"element"</span> ]});
-<span class="hljs-comment">// clonedObject.element === object.element</span>
-</code></pre>
-						<hr>
-						<dl class="tsd-comment-tags">
-							<dt>default</dt>
-							<dd><p>[]</p>
-							</dd>
-						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="timeout_cancelled" class="tsd-anchor"></a>
+					<h3>TIMEOUT_<wbr>CANCELLED</h3>
+					<div class="tsd-signature tsd-kind-icon">TIMEOUT_<wbr>CANCELLED<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/promise-timeout.ts#L73">promise-timeout.ts:73</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The default timeout cancelling rejection error
+							Will be throwed when the timer has cancelled</p>
+						</div>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="valuefilterertorefer" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> value<wbr>Filterer<wbr>ToRefer</h3>
+					<a name="cancel" class="tsd-anchor"></a>
+					<h3>cancel</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">value<wbr>Filterer<wbr>ToRefer<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">cancel<span class="tsd-signature-symbol">(</span>identifier<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span>, error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L55">clone.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/promise-timeout.ts#L57">promise-timeout.ts:57</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<h4 id="value-filterer-to-pass-same-references">Value filterer to pass same references</h4>
-									<p>Being called for each value while cloning. Return true to prevent cloning for the incoming value and pass the same reference instead.</p>
+									<h4 id="promise-timeout-canceller">Promise Timeout Canceller</h4>
 								</div>
 								<hr>
-								<p>Example:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+								<p>Usage via promise instance:</p>
+								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { promiseTimeout } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
 
-<span class="hljs-keyword">const</span> john = { age: <span class="hljs-number">20</span>, willBeReferenced: <span class="hljs-literal">true</span> };
-<span class="hljs-keyword">const</span> jane = { age: <span class="hljs-number">25</span>, willBeReferenced: <span class="hljs-literal">false</span> };
+<span class="hljs-keyword">const</span> timeout = promiseTimeout(<span class="hljs-number">1000</span>);
 
-<span class="hljs-keyword">const</span> array = [john, jane];
+timeout
+ .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"this won't be logged"</span>))
+ .catch(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"this will be logged, because timer has been cancelled"</span>));
 
-<span class="hljs-keyword">const</span> clonedArray = clone(array, {valueFiltererToRefer: <span class="hljs-function"><span class="hljs-params">person</span> =&gt;</span> person.willBeReferenced });
+promiseTimeout.cancel(timeout);
+</code></pre>
+								<p>Usage via key</p>
+								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { promiseTimeout } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
 
-<span class="hljs-comment">// clonedArray[0] === array[0]</span>
-<span class="hljs-comment">// clonedArray[1] !== array[1]</span>
+<span class="hljs-keyword">const</span> key = Symbol();
+
+promiseTimeout(<span class="hljs-number">1000</span>, <span class="hljs-literal">null</span>, key)
+ .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"this won't be logged"</span>))
+ .catch(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"this will be logged, because timer has been cancelled"</span>));
+
+promiseTimeout.cancel(key);
+</code></pre>
+								<p>Static usage example:</p>
+								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-static/timeout"</span>;
+
+<span class="hljs-keyword">const</span> timeout = <span class="hljs-built_in">Promise</span>.timeout(<span class="hljs-number">1000</span>);
+
+timeout
+ .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"this won't be logged"</span>))
+ .catch(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"this will be logged, because timer has been cancelled"</span>));
+
+<span class="hljs-built_in">Promise</span>.timeout.cancel(timeout);
 </code></pre>
 								<hr>
-								<dl class="tsd-comment-tags">
-									<dt>default</dt>
-									<dd><p>() =&gt; false</p>
-									</dd>
-								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<h5>identifier: <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>incoming value to be cloned</p>
+										<p>The identifier of the promise to cancel</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> error: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The error which will be throwed by the cancelled promise</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-							<p>Return true to pass same reference, false to clone</p>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A promise which resolves if cancelling process is successfull, rejects otherwise</p>
 						</li>
 					</ul>
 				</section>
@@ -237,7 +278,7 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_clone_.html">"clone"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -270,7 +311,7 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_open_promise_.html">"open-<wbr>promise"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="../modules/_promise_timeout_.html">"promise-<wbr>timeout"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -282,24 +323,27 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_clone_.icloneoptions.html" class="tsd-kind-icon">IClone<wbr>Options</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_promise_timeout_.promisetimeoutfunction.html" class="tsd-kind-icon">Promise<wbr>Timeout<wbr>Function</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_clone_.icloneoptions.html#instancestorefer" class="tsd-kind-icon">instances<wbr>ToRefer</a>
+								<a href="_promise_timeout_.promisetimeoutfunction.html#finished_already" class="tsd-kind-icon">FINISHED_<wbr>ALREADY</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_clone_.icloneoptions.html#propstorefer" class="tsd-kind-icon">props<wbr>ToRefer</a>
+								<a href="_promise_timeout_.promisetimeoutfunction.html#identifier_not_found" class="tsd-kind-icon">IDENTIFIER_<wbr>NOT_<wbr>FOUND</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_promise_timeout_.promisetimeoutfunction.html#timeout_cancelled" class="tsd-kind-icon">TIMEOUT_<wbr>CANCELLED</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="_clone_.icloneoptions.html#valuefilterertorefer" class="tsd-kind-icon">value<wbr>Filterer<wbr>ToRefer</a>
+								<a href="_promise_timeout_.promisetimeoutfunction.html#cancel" class="tsd-kind-icon">cancel</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="../modules/_clone_.html#clone" class="tsd-kind-icon">clone</a>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="../modules/_promise_timeout_.html#promisetimeout" class="tsd-kind-icon">promise<wbr>Timeout</a>
 					</li>
 				</ul>
 			</nav>

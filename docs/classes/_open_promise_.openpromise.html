@@ -72,19 +72,21 @@
 					<div class="lead">
 						<h4 id="open-promise">Open Promise</h4>
 						<p>A promise constructor to resolve or reject from outside</p>
-						<hr>
-						<p>Example:
-							<code>`</code>typescript
-						import { OpenPromise } from &quot;@gen-tech/js-utils&quot;;</p>
 					</div>
-					<p>const aPromiseWillBeResolvedLater = new OpenPromise();</p>
-					<p>aPromiseWillBeResolvedLater.promise.then(val =&gt; console.log(val));
-						// aPromiseWillBeResolvedLater.finished // false
-						...
-					...</p>
-					<p>aPromiseWillBeResolvedLater.resolve({x: 1});
-						// aPromiseWillBeResolvedLater.finished // true
-					<code>`</code></p>
+					<hr>
+					<p>Example:</p>
+					<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { OpenPromise } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+
+<span class="hljs-keyword">const</span> aPromiseWillBeResolvedLater = <span class="hljs-keyword">new</span> OpenPromise();
+
+aPromiseWillBeResolvedLater.promise.then(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(val));
+<span class="hljs-comment">// aPromiseWillBeResolvedLater.finished // false</span>
+...
+...
+
+aPromiseWillBeResolvedLater.resolve({x: <span class="hljs-number">1</span>});
+<span class="hljs-comment">// aPromiseWillBeResolvedLater.finished // true</span>
+</code></pre>
 					<hr>
 					<dl class="tsd-comment-tags">
 						<dt>template</dt>
@@ -122,10 +124,6 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_open_promise_.openpromise.html#_rejected" class="tsd-kind-icon">_rejected</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_open_promise_.openpromise.html#_rejector" class="tsd-kind-icon">_rejector</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_open_promise_.openpromise.html#_resolved" class="tsd-kind-icon">_resolved</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_open_promise_.openpromise.html#_resolver" class="tsd-kind-icon">_resolver</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_open_promise_.openpromise.html#promise" class="tsd-kind-icon">promise</a></li>
 							</ul>
 						</section>
@@ -160,7 +158,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L32">open-promise.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L33">open-promise.ts:33</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -175,95 +173,13 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="_rejected" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _rejected</h3>
-					<div class="tsd-signature tsd-kind-icon">_rejected<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L32">open-promise.ts:32</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="_rejector" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _rejector</h3>
-					<div class="tsd-signature tsd-kind-icon">_rejector<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L24">open-promise.ts:24</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>error: <span class="tsd-signature-type">any</span></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="_resolved" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _resolved</h3>
-					<div class="tsd-signature tsd-kind-icon">_resolved<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L31">open-promise.ts:31</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="_resolver" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _resolver</h3>
-					<div class="tsd-signature tsd-kind-icon">_resolver<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L23">open-promise.ts:23</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>param<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>param: <span class="tsd-signature-type">T</span></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="promise" class="tsd-anchor"></a>
 					<h3>promise</h3>
 					<div class="tsd-signature tsd-kind-icon">promise<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L29">open-promise.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L30">open-promise.ts:30</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -285,7 +201,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L61">open-promise.ts:61</a></li>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L62">open-promise.ts:62</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -307,7 +223,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L54">open-promise.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L55">open-promise.ts:55</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -329,7 +245,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L47">open-promise.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L48">open-promise.ts:48</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -354,7 +270,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L87">open-promise.ts:87</a></li>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L88">open-promise.ts:88</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -385,7 +301,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L78">open-promise.ts:78</a></li>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L79">open-promise.ts:79</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -416,7 +332,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L69">open-promise.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/open-promise.ts#L70">open-promise.ts:70</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -444,39 +360,6 @@
 				<ul>
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_proto_array_difference_.html">"as-<wbr>proto/array-<wbr>difference"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_proto_array_intersection_.html">"as-<wbr>proto/array-<wbr>intersection"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_proto_compact_.html">"as-<wbr>proto/compact"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_proto_set_difference_.html">"as-<wbr>proto/set-<wbr>difference"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_proto_set_intersection_.html">"as-<wbr>proto/set-<wbr>intersection"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_static_clone_.html">"as-<wbr>static/clone"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_static_defer_.html">"as-<wbr>static/defer"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_static_is_falsy_.html">"as-<wbr>static/is-<wbr>falsy"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_static_is_truthy_.html">"as-<wbr>static/is-<wbr>truthy"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_static_min_max_.html">"as-<wbr>static/min-<wbr>max"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_static_noop_.html">"as-<wbr>static/noop"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_clone_.html">"clone"</a>
@@ -512,6 +395,9 @@
 						<a href="../modules/_open_promise_.html">"open-<wbr>promise"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="../modules/_promise_timeout_.html">"promise-<wbr>timeout"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_unique_id_.html">"unique-<wbr>id"</a>
 					</li>
 				</ul>
@@ -525,18 +411,6 @@
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="_open_promise_.openpromise.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_open_promise_.openpromise.html#_rejected" class="tsd-kind-icon">_rejected</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_open_promise_.openpromise.html#_rejector" class="tsd-kind-icon">_rejector</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_open_promise_.openpromise.html#_resolved" class="tsd-kind-icon">_resolved</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_open_promise_.openpromise.html#_resolver" class="tsd-kind-icon">_resolver</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_open_promise_.openpromise.html#promise" class="tsd-kind-icon">promise</a>
