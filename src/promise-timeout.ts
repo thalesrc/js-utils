@@ -37,6 +37,18 @@ export interface PromiseTimeoutFunction {
    *
    * promiseTimeout.cancel(key);
    * ```
+   * Static usage example:
+   * ```typescript
+   * import "@gen-tech/js-utils/dist/as-static/timeout";
+   *
+   * const timeout = Promise.timeout(1000);
+   *
+   * timeout
+   *  .then(() => console.log("this won't be logged"))
+   *  .catch(() => console.log("this will be logged, because timer has been cancelled"));
+   *
+   * Promise.timeout.cancel(timeout);
+   * ```
    * * * *
    * @param identifier The identifier of the promise to cancel
    * @param error The error which will be throwed by the cancelled promise
@@ -165,6 +177,13 @@ const promiseTimeoutInitializer = (() => {
  *  .then(val => {
  *    ...do something else
  *  });
+ * ```
+ * Static usage example:
+ * ```typescript
+ * import "@gen-tech/js-utils/dist/as-static/timeout";
+ *
+ * Promise.timeout(1000);
+ *  .then(() => console.log("will be logged after a second"));
  * ```
  * * * *
  * @see PromiseTimeoutFunction#cancel for cancelling
