@@ -154,7 +154,7 @@
 					<div class="tsd-signature tsd-kind-icon">FINISHED_<wbr>ALREADY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/promise-timeout.ts#L50">promise-timeout.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/promise-timeout.ts#L62">promise-timeout.ts:62</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -169,7 +169,7 @@
 					<div class="tsd-signature tsd-kind-icon">IDENTIFIER_<wbr>NOT_<wbr>FOUND<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/promise-timeout.ts#L55">promise-timeout.ts:55</a></li>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/promise-timeout.ts#L67">promise-timeout.ts:67</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -184,7 +184,7 @@
 					<div class="tsd-signature tsd-kind-icon">TIMEOUT_<wbr>CANCELLED<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/promise-timeout.ts#L61">promise-timeout.ts:61</a></li>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/promise-timeout.ts#L73">promise-timeout.ts:73</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -207,7 +207,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/promise-timeout.ts#L45">promise-timeout.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/promise-timeout.ts#L57">promise-timeout.ts:57</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -236,6 +236,17 @@ promiseTimeout(<span class="hljs-number">1000</span>, <span class="hljs-literal"
  .catch(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"this will be logged, because timer has been cancelled"</span>));
 
 promiseTimeout.cancel(key);
+</code></pre>
+								<p>Static usage example:</p>
+								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-static/timeout"</span>;
+
+<span class="hljs-keyword">const</span> timeout = <span class="hljs-built_in">Promise</span>.timeout(<span class="hljs-number">1000</span>);
+
+timeout
+ .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"this won't be logged"</span>))
+ .catch(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"this will be logged, because timer has been cancelled"</span>));
+
+<span class="hljs-built_in">Promise</span>.timeout.cancel(timeout);
 </code></pre>
 								<hr>
 							</div>
@@ -266,39 +277,6 @@ promiseTimeout.cancel(key);
 				<ul>
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_proto_array_difference_.html">"as-<wbr>proto/array-<wbr>difference"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_proto_array_intersection_.html">"as-<wbr>proto/array-<wbr>intersection"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_proto_compact_.html">"as-<wbr>proto/compact"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_proto_set_difference_.html">"as-<wbr>proto/set-<wbr>difference"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_proto_set_intersection_.html">"as-<wbr>proto/set-<wbr>intersection"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_static_clone_.html">"as-<wbr>static/clone"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_static_defer_.html">"as-<wbr>static/defer"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_static_is_falsy_.html">"as-<wbr>static/is-<wbr>falsy"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_static_is_truthy_.html">"as-<wbr>static/is-<wbr>truthy"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_static_min_max_.html">"as-<wbr>static/min-<wbr>max"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_as_static_noop_.html">"as-<wbr>static/noop"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_clone_.html">"clone"</a>

@@ -20,6 +20,7 @@ Javascript utility functions for web development
 * [is-truthy](https://gen-tech.github.io/js-utils/modules/_is_truthy_.html)
 * [min-max](https://gen-tech.github.io/js-utils/modules/_min_max_.html)
 * [noop](https://gen-tech.github.io/js-utils/modules/_noop_.html)
+* [promise-timeout](https://gen-tech.github.io/js-utils/modules/_promise_timeout_.html)
 * [unique-id](https://gen-tech.github.io/js-utils/modules/_unique_id_.html)
 
 #### Utility Classes

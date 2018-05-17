@@ -91,7 +91,7 @@
 					<div class="tsd-signature tsd-kind-icon">promise<wbr>Timeout<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_promise_timeout_.promisetimeoutfunction.html" class="tsd-signature-type">PromiseTimeoutFunction</a><span class="tsd-signature-symbol"> =&nbsp;promiseTimeoutInitializer</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/promise-timeout.ts#L172">promise-timeout.ts:172</a></li>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/promise-timeout.ts#L191">promise-timeout.ts:191</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -121,6 +121,12 @@ fetch(<span class="hljs-string">"http://localhost:8080/anEndpoint"</span>) <span
    ...do something <span class="hljs-keyword">else</span>
  });
 </code></pre>
+						<p>Static usage example:</p>
+						<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-static/timeout"</span>;
+
+<span class="hljs-built_in">Promise</span>.timeout(<span class="hljs-number">1000</span>);
+ .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"will be logged after a second"</span>));
+</code></pre>
 						<hr>
 						<dl class="tsd-comment-tags">
 							<dt>see</dt>
@@ -136,39 +142,6 @@ fetch(<span class="hljs-string">"http://localhost:8080/anEndpoint"</span>) <span
 				<ul>
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_as_proto_array_difference_.html">"as-<wbr>proto/array-<wbr>difference"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_as_proto_array_intersection_.html">"as-<wbr>proto/array-<wbr>intersection"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_as_proto_compact_.html">"as-<wbr>proto/compact"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_as_proto_set_difference_.html">"as-<wbr>proto/set-<wbr>difference"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_as_proto_set_intersection_.html">"as-<wbr>proto/set-<wbr>intersection"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_as_static_clone_.html">"as-<wbr>static/clone"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_as_static_defer_.html">"as-<wbr>static/defer"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_as_static_is_falsy_.html">"as-<wbr>static/is-<wbr>falsy"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_as_static_is_truthy_.html">"as-<wbr>static/is-<wbr>truthy"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_as_static_min_max_.html">"as-<wbr>static/min-<wbr>max"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_as_static_noop_.html">"as-<wbr>static/noop"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_clone_.html">"clone"</a>
