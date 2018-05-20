@@ -90,6 +90,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_clone_.icloneoptions.html#customcloners" class="tsd-kind-icon">custom<wbr>Cloners</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_clone_.icloneoptions.html#instancestorefer" class="tsd-kind-icon">instances<wbr>ToRefer</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_clone_.icloneoptions.html#propstorefer" class="tsd-kind-icon">props<wbr>ToRefer</a></li>
 							</ul>
@@ -106,12 +107,48 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="customcloners" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> custom<wbr>Cloners</h3>
+					<div class="tsd-signature tsd-kind-icon">custom<wbr>Cloners<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">, </span><a href="../modules/_clone_.html#tinstancecloner" class="tsd-signature-type">TInstanceCloner</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L106">clone.ts:106</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<h4 id="custom-cloner-map">Custom Cloner Map</h4>
+						</div>
+						<hr>
+						<p>Example:</p>
+						<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+
+<span class="hljs-keyword">const</span> object = {
+ width: <span class="hljs-number">250</span>,
+ element: <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">"div"</span>)
+};
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">divCloner</span>(<span class="hljs-params">objectToClone, options, internalData</span>) </span>{
+ <span class="hljs-keyword">const</span> newElement = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"div"</span>);
+ newElement.classList.add(<span class="hljs-string">"cloned"</span>);
+ <span class="hljs-keyword">return</span> newElement;
+}
+
+<span class="hljs-keyword">const</span> customCloners = <span class="hljs-keyword">new</span> Map();
+customCloners.set(HTMLDivElement, divCloner);
+
+<span class="hljs-keyword">const</span> clonedObject = clone(object);
+</code></pre>
+						<hr>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="instancestorefer" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> instances<wbr>ToRefer</h3>
 					<div class="tsd-signature tsd-kind-icon">instances<wbr>ToRefer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L29">clone.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L30">clone.ts:30</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -142,10 +179,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="propstorefer" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> props<wbr>ToRefer</h3>
-					<div class="tsd-signature tsd-kind-icon">props<wbr>ToRefer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">props<wbr>ToRefer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L77">clone.ts:77</a></li>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L78">clone.ts:78</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -186,7 +223,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L55">clone.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L56">clone.ts:56</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -262,6 +299,9 @@
 						<a href="../modules/_is_truthy_.html">"is-<wbr>truthy"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="../modules/_map_merge_.html">"map-<wbr>merge"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_min_max_.html">"min-<wbr>max"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -286,6 +326,9 @@
 						<a href="_clone_.icloneoptions.html" class="tsd-kind-icon">IClone<wbr>Options</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_clone_.icloneoptions.html#customcloners" class="tsd-kind-icon">custom<wbr>Cloners</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_clone_.icloneoptions.html#instancestorefer" class="tsd-kind-icon">instances<wbr>ToRefer</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -298,6 +341,18 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_clone_.iclonerinternaldata.html" class="tsd-kind-icon">ICloner<wbr>Internal<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="../modules/_clone_.html#polyfillrequired" class="tsd-kind-icon">Polyfill<wbr>Required</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="../modules/_clone_.html#tinstancecloner" class="tsd-kind-icon">TInstance<wbr>Cloner</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="../modules/_clone_.html#tnonoptionalcloneoptions" class="tsd-kind-icon">TNon<wbr>Optional<wbr>Clone<wbr>Options</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
 						<a href="../modules/_clone_.html#clone" class="tsd-kind-icon">clone</a>
 					</li>

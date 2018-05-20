@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;min-max&quot; | @gen-tech/js-utils</title>
+	<title>&quot;map-merge&quot; | @gen-tech/js-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_min_max_.html">&quot;min-max&quot;</a>
+					<a href="_map_merge_.html">&quot;map-merge&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;min-max&quot;</h1>
+			<h1>External module &quot;map-merge&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -71,7 +71,7 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_min_max_.html#minmax" class="tsd-kind-icon">min<wbr>Max</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_map_merge_.html#mapmerge" class="tsd-kind-icon">map<wbr>Merge</a></li>
 							</ul>
 						</section>
 					</div>
@@ -79,59 +79,44 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="minmax" class="tsd-anchor"></a>
-					<h3>min<wbr>Max</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">min<wbr>Max<span class="tsd-signature-symbol">(</span>min<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, max<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+					<a name="mapmerge" class="tsd-anchor"></a>
+					<h3>map<wbr>Merge</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">map<wbr>Merge&lt;T, U, V, Y&gt;<span class="tsd-signature-symbol">(</span>first<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">&gt;</span>, second<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Y</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Y</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/min-max.ts#L24">min-max.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/map-merge.ts#L1">map-merge.ts:1</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<h4 id="limits-the-value-by-given-parameters">Limits the value by given parameters</h4>
-								</div>
-								<hr>
-								<p>Example usage:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { minMax } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
-
-<span class="hljs-keyword">const</span> limitedValue = minMax(<span class="hljs-number">200</span>, <span class="hljs-number">300</span>, <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">1000</span>);
-</code></pre>
-								<p>Example as Math static:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-static/min-max"</span>;
-
-<span class="hljs-keyword">const</span> limitedValue = <span class="hljs-built_in">Math</span>.minMax(<span class="hljs-number">200</span>, <span class="hljs-number">300</span>, <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">1000</span>);
-</code></pre>
-								<hr>
-							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+								<li>
+									<h4>U</h4>
+								</li>
+								<li>
+									<h4>V</h4>
+								</li>
+								<li>
+									<h4>Y</h4>
+								</li>
+							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>min: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>minimum limit</p>
-									</div>
+									<h5>first: <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
-									<h5>max: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>maximum limit</p>
-									</div>
-								</li>
-								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>value to limit</p>
-									</div>
+									<h5>second: <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Y</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-							<p>the limited value <em>(returns NaN if an argument is NaN)</em></p>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Y</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -167,10 +152,10 @@
 					<li class=" tsd-kind-external-module">
 						<a href="_is_truthy_.html">"is-<wbr>truthy"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="_map_merge_.html">"map-<wbr>merge"</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="_min_max_.html">"min-<wbr>max"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -189,8 +174,8 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_min_max_.html#minmax" class="tsd-kind-icon">min<wbr>Max</a>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_map_merge_.html#mapmerge" class="tsd-kind-icon">map<wbr>Merge</a>
 					</li>
 				</ul>
 			</nav>

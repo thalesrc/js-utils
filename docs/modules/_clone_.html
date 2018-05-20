@@ -72,6 +72,15 @@
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_clone_.icloneoptions.html" class="tsd-kind-icon">IClone<wbr>Options</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_clone_.iclonerinternaldata.html" class="tsd-kind-icon">ICloner<wbr>Internal<wbr>Data</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_clone_.html#polyfillrequired" class="tsd-kind-icon">Polyfill<wbr>Required</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_clone_.html#tinstancecloner" class="tsd-kind-icon">TInstance<wbr>Cloner</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_clone_.html#tnonoptionalcloneoptions" class="tsd-kind-icon">TNon<wbr>Optional<wbr>Clone<wbr>Options</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -80,6 +89,92 @@
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_clone_.html#clone" class="tsd-kind-icon">clone</a></li>
 							</ul>
 						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
+					<a name="polyfillrequired" class="tsd-anchor"></a>
+					<h3>Polyfill<wbr>Required</h3>
+					<div class="tsd-signature tsd-kind-icon">Polyfill<wbr>Required<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L121">clone.ts:121</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
+					<a name="tinstancecloner" class="tsd-anchor"></a>
+					<h3>TInstance<wbr>Cloner</h3>
+					<div class="tsd-signature tsd-kind-icon">TInstance<wbr>Cloner<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L132">clone.ts:132</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Custom Cloner Function</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon">&lt;T&gt;<span class="tsd-signature-symbol">(</span>objectToClone<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, options<span class="tsd-signature-symbol">: </span><a href="_clone_.html#tnonoptionalcloneoptions" class="tsd-signature-type">TNonOptionalCloneOptions</a>, internalData<span class="tsd-signature-symbol">: </span><a href="../interfaces/_clone_.iclonerinternaldata.html" class="tsd-signature-type">IClonerInternalData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-type-parameters-title">Type parameters</h4>
+										<ul class="tsd-type-parameters">
+											<li>
+												<h4>T</h4>
+											</li>
+										</ul>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>objectToClone: <span class="tsd-signature-type">T</span></h5>
+											</li>
+											<li>
+												<h5>options: <a href="_clone_.html#tnonoptionalcloneoptions" class="tsd-signature-type">TNonOptionalCloneOptions</a></h5>
+											</li>
+											<li>
+												<h5>internalData: <a href="../interfaces/_clone_.iclonerinternaldata.html" class="tsd-signature-type">IClonerInternalData</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
+					<a name="tnonoptionalcloneoptions" class="tsd-anchor"></a>
+					<h3>TNon<wbr>Optional<wbr>Clone<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">TNon<wbr>Optional<wbr>Clone<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="_clone_.html#polyfillrequired" class="tsd-signature-type">PolyfillRequired</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_clone_.icloneoptions.html" class="tsd-signature-type">ICloneOptions</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">keyof ICloneOptions</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L127">clone.ts:127</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Cloning options with all properties required</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p>ICloneOptions</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 			</section>
@@ -95,7 +190,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L123">clone.ts:123</a></li>
+									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L256">clone.ts:256</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -190,6 +285,9 @@
 						<a href="_is_truthy_.html">"is-<wbr>truthy"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="_map_merge_.html">"map-<wbr>merge"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="_min_max_.html">"min-<wbr>max"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -210,6 +308,18 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="../interfaces/_clone_.icloneoptions.html" class="tsd-kind-icon">IClone<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_clone_.iclonerinternaldata.html" class="tsd-kind-icon">ICloner<wbr>Internal<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_clone_.html#polyfillrequired" class="tsd-kind-icon">Polyfill<wbr>Required</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="_clone_.html#tinstancecloner" class="tsd-kind-icon">TInstance<wbr>Cloner</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="_clone_.html#tnonoptionalcloneoptions" class="tsd-kind-icon">TNon<wbr>Optional<wbr>Clone<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
 						<a href="_clone_.html#clone" class="tsd-kind-icon">clone</a>
