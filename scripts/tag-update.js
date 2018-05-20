@@ -6,9 +6,8 @@ if (version) {
   updateJson("./package.json", {version}, error => {
     if (error) {
       throw error;
-    } else {
-      console.log("Package version updated to:", version);
     }
+    console.log("Package version updated to:", version);
   });
 } else {
   console.log("No tags found for this build, skipping version change");
