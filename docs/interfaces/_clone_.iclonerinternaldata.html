@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;min-max&quot; | @gen-tech/js-utils</title>
+	<title>IClonerInternalData | @gen-tech/js-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,86 +54,91 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_min_max_.html">&quot;min-max&quot;</a>
+					<a href="../modules/_clone_.html">&quot;clone&quot;</a>
+				</li>
+				<li>
+					<a href="_clone_.iclonerinternaldata.html">IClonerInternalData</a>
 				</li>
 			</ul>
-			<h1>External module &quot;min-max&quot;</h1>
+			<h1>Interface IClonerInternalData</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<h4 id="internal-data-for-cloning-process">Internal Data For Cloning Process</h4>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">IClonerInternalData</span>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Functions</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_min_max_.html#minmax" class="tsd-kind-icon">min<wbr>Max</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_clone_.iclonerinternaldata.html#clonedobjects" class="tsd-kind-icon">cloned<wbr>Objects</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_clone_.iclonerinternaldata.html#finalizers" class="tsd-kind-icon">finalizers</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_clone_.iclonerinternaldata.html#key" class="tsd-kind-icon">key</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_clone_.iclonerinternaldata.html#parent" class="tsd-kind-icon">parent</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="minmax" class="tsd-anchor"></a>
-					<h3>min<wbr>Max</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">min<wbr>Max<span class="tsd-signature-symbol">(</span>min<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, max<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/min-max.ts#L24">min-max.ts:24</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<h4 id="limits-the-value-by-given-parameters">Limits the value by given parameters</h4>
-								</div>
-								<hr>
-								<p>Example usage:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { minMax } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
-
-<span class="hljs-keyword">const</span> limitedValue = minMax(<span class="hljs-number">200</span>, <span class="hljs-number">300</span>, <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">1000</span>);
-</code></pre>
-								<p>Example as Math static:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-static/min-max"</span>;
-
-<span class="hljs-keyword">const</span> limitedValue = <span class="hljs-built_in">Math</span>.minMax(<span class="hljs-number">200</span>, <span class="hljs-number">300</span>, <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">1000</span>);
-</code></pre>
-								<hr>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>min: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>minimum limit</p>
-									</div>
-								</li>
-								<li>
-									<h5>max: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>maximum limit</p>
-									</div>
-								</li>
-								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>value to limit</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-							<p>the limited value <em>(returns NaN if an argument is NaN)</em></p>
-						</li>
-					</ul>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="clonedobjects" class="tsd-anchor"></a>
+					<h3>cloned<wbr>Objects</h3>
+					<div class="tsd-signature tsd-kind-icon">cloned<wbr>Objects<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Symbol</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L113">clone.ts:113</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="finalizers" class="tsd-anchor"></a>
+					<h3>finalizers</h3>
+					<div class="tsd-signature tsd-kind-icon">finalizers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L116">clone.ts:116</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="key" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> key</h3>
+					<div class="tsd-signature tsd-kind-icon">key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L115">clone.ts:115</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="parent" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> parent</h3>
+					<div class="tsd-signature tsd-kind-icon">parent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/clone.ts#L114">clone.ts:114</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -143,54 +148,87 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_clone_.html">"clone"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_compact_.html">"compact"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_defer_.html">"defer"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_difference_.html">"difference"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_intersection_.html">"intersection"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_is_falsy_.html">"is-<wbr>falsy"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_is_truthy_.html">"is-<wbr>truthy"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_map_merge_.html">"map-<wbr>merge"</a>
-					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_min_max_.html">"min-<wbr>max"</a>
+						<a href="../modules/_clone_.html">"clone"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_noop_.html">"noop"</a>
+						<a href="../modules/_compact_.html">"compact"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_open_promise_.html">"open-<wbr>promise"</a>
+						<a href="../modules/_defer_.html">"defer"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_promise_timeout_.html">"promise-<wbr>timeout"</a>
+						<a href="../modules/_difference_.html">"difference"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_unique_id_.html">"unique-<wbr>id"</a>
+						<a href="../modules/_index_.html">"index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_intersection_.html">"intersection"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_is_falsy_.html">"is-<wbr>falsy"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_is_truthy_.html">"is-<wbr>truthy"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_map_merge_.html">"map-<wbr>merge"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_min_max_.html">"min-<wbr>max"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_noop_.html">"noop"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_open_promise_.html">"open-<wbr>promise"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_promise_timeout_.html">"promise-<wbr>timeout"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_unique_id_.html">"unique-<wbr>id"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_min_max_.html#minmax" class="tsd-kind-icon">min<wbr>Max</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_clone_.icloneoptions.html" class="tsd-kind-icon">IClone<wbr>Options</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_clone_.iclonerinternaldata.html" class="tsd-kind-icon">ICloner<wbr>Internal<wbr>Data</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_clone_.iclonerinternaldata.html#clonedobjects" class="tsd-kind-icon">cloned<wbr>Objects</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_clone_.iclonerinternaldata.html#finalizers" class="tsd-kind-icon">finalizers</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_clone_.iclonerinternaldata.html#key" class="tsd-kind-icon">key</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_clone_.iclonerinternaldata.html#parent" class="tsd-kind-icon">parent</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="../modules/_clone_.html#polyfillrequired" class="tsd-kind-icon">Polyfill<wbr>Required</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="../modules/_clone_.html#tinstancecloner" class="tsd-kind-icon">TInstance<wbr>Cloner</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="../modules/_clone_.html#tnonoptionalcloneoptions" class="tsd-kind-icon">TNon<wbr>Optional<wbr>Clone<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="../modules/_clone_.html#clone" class="tsd-kind-icon">clone</a>
 					</li>
 				</ul>
 			</nav>
