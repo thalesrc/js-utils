@@ -14,6 +14,7 @@ Javascript utility functions for web development
 #### Utility Functions
 * [clone](https://gen-tech.github.io/js-utils/modules/_clone_.html)
 * [compact](https://gen-tech.github.io/js-utils/modules/_compact_.html)
+* [debounce](https://gen-tech.github.io/js-utils/modules/_debounce_.html)
 * [defer](https://gen-tech.github.io/js-utils/modules/_defer_.html)
 * [difference](https://gen-tech.github.io/js-utils/modules/_difference_.html)
 * [intersection](https://gen-tech.github.io/js-utils/modules/_intersection_.html)

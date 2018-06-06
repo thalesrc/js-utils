@@ -8,7 +8,7 @@ interface ICacheObject {
   promise: OpenPromise;
 }
 
-const DEFAULT_DEBOUNCE_TIME = 180;
+export const DEFAULT_DEBOUNCE_TIME = 180;
 const KEY_REFERENCES = new Map<Function, symbol>();
 const CACHE = new Map<symbol, ICacheObject>();
 
@@ -37,19 +37,59 @@ export function debounceWithKey<T>(
   timeout
     .then(() => {
       CACHE.delete(key);
-      const result = callback.call(thisObject, args);
+      const result = callback.call(thisObject, ...args);
       promise.bindPromise(result);
       return result;
     })
     .catch(err => {
       if (err !== promiseTimeout.TIMEOUT_CANCELLED) {
-        throw err;
+        promise.reject(err);
       }
     });
 
   return promise.promise;
 }
 
+/**
+ * #### Debounces a function that delays invoking until after given time have elapsed since the last time the debounced function was invoked
+ *
+ * * * *
+ * Example usage:
+ * ```typescript
+ * import { debounce } from "@gen-tech/js-utils";
+ *
+ * function foo() {
+ *   console.log("hello");
+ * }
+ *
+ * for (let i = 0; i < 5; i++) {
+ *   debounce(foo);
+ * }
+ *
+ * // logs "hello" only once
+ * ```
+ *
+ * Static usage example:
+ * ```typescript
+ * import "@gen-tech/js-utils/dist/as-proto/debounce";
+ *
+ * function foo() {
+ *   console.log("hello");
+ * }
+ *
+ * for (let i = 0; i < 5; i++) {
+ *   foo.debounce();
+ * }
+ *
+ * // logs "hello" only once
+ * ```
+ * * * *
+ * @param callback The function to execute only last of multiple execute requests by given time
+ * @param [time = 180] Time for debouncing
+ * @param [thisObject = null] This object to execute the callback function with
+ * @param args Function arguments
+ * @return A promise which resolves right after the debouncing sequence has been finished
+ */
 export function debounce<T>(
   callback: TDebounceFunction<T>,
   time = DEFAULT_DEBOUNCE_TIME,
