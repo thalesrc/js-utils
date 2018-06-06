@@ -1,5 +1,6 @@
 export { clone } from "./clone";
 export * from "./compact";
+export { debounce } from "./debounce";
 export * from "./defer";
 export { difference } from "./difference";
 export { intersection } from "./intersection";

@@ -85,7 +85,11 @@ export class OpenPromise<T = any> {
    * Binds a promise to the inner promise to resolve or reject with it
    * @param promise A promise to bind inner promise
    */
-	public bindPromise(promise: Promise<T>): void {
-		promise.then(e => this.resolve(e)).catch(e => this.reject(e));
+	public bindPromise(promise: Promise<T> | T): void {
+    if (promise instanceof Promise) {
+      promise.then(e => this.resolve(e)).catch(e => this.reject(e));
+    } else {
+      this.resolve(promise);
+    }
 	}
 }
