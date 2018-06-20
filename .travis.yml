@@ -9,6 +9,14 @@ branches:
   - /^(\d+\.){2}\d+$/
 before_script: node ./scripts/tag-update $TRAVIS_TAG
 after_success: npm run cover
+before_deploy: npm run prepare-github-pages
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
 deploy:
   provider: npm
   skip_cleanup: true
