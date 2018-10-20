@@ -2,7 +2,6 @@ import { expect } from 'chai';
 import 'mocha';
 
 import "./debounce";
-import { debounce } from "../debounce";
 
 describe('Debounce Proto Function', () => {
   it('should debounce', done => {
