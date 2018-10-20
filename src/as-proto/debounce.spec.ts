@@ -33,7 +33,7 @@ describe('Debounce Proto Function', () => {
       .then(() => {
         const sequence = new Date().getTime() - startedAt;
         expect(sequence).greaterThan(49);
-        expect(sequence).lessThan(55);
+        expect(sequence).lessThan(60);
 
         expect(bar.x).to.eq(8);
 

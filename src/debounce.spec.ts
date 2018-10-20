@@ -47,7 +47,7 @@ describe('Debounce Function', () => {
 
         expect(foo).to.eq(1);
         expect(executedIn).greaterThan(49);
-        expect(executedIn).lessThan(55);
+        expect(executedIn).lessThan(60);
 
         done();
       });
