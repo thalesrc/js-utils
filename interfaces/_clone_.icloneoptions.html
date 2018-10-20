@@ -121,7 +121,7 @@
 						</div>
 						<hr>
 						<p>Example:</p>
-						<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+						<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
 
 <span class="hljs-keyword">const</span> object = {
  width: <span class="hljs-number">250</span>,
@@ -137,8 +137,7 @@
 <span class="hljs-keyword">const</span> customCloners = <span class="hljs-keyword">new</span> Map();
 customCloners.set(HTMLDivElement, divCloner);
 
-<span class="hljs-keyword">const</span> clonedObject = clone(object);
-</code></pre>
+<span class="hljs-keyword">const</span> clonedObject = clone(object);</code></pre>
 						<hr>
 					</div>
 				</section>
@@ -158,7 +157,7 @@ customCloners.set(HTMLDivElement, divCloner);
 						</div>
 						<hr>
 						<p>Example:</p>
-						<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+						<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
 
 <span class="hljs-keyword">const</span> object = {
   width: <span class="hljs-number">250</span>,
@@ -166,8 +165,7 @@ customCloners.set(HTMLDivElement, divCloner);
 };
 
 <span class="hljs-keyword">const</span> clonedObject = clone(object, {instancesToRefer: [ HTMLElement ]});
-<span class="hljs-comment">// clonedObject.element === object.element</span>
-</code></pre>
+<span class="hljs-comment">// clonedObject.element === object.element</span></code></pre>
 						<hr>
 						<dl class="tsd-comment-tags">
 							<dt>default</dt>
@@ -192,7 +190,7 @@ customCloners.set(HTMLDivElement, divCloner);
 						</div>
 						<hr>
 						<p>Example:</p>
-						<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+						<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
 
 <span class="hljs-keyword">const</span> object = {
   width: <span class="hljs-number">250</span>,
@@ -200,8 +198,7 @@ customCloners.set(HTMLDivElement, divCloner);
 };
 
 <span class="hljs-keyword">const</span> clonedObject = clone(object, {propsToRefer: [ <span class="hljs-string">"element"</span> ]});
-<span class="hljs-comment">// clonedObject.element === object.element</span>
-</code></pre>
+<span class="hljs-comment">// clonedObject.element === object.element</span></code></pre>
 						<hr>
 						<dl class="tsd-comment-tags">
 							<dt>default</dt>
@@ -233,7 +230,7 @@ customCloners.set(HTMLDivElement, divCloner);
 								</div>
 								<hr>
 								<p>Example:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
 
 <span class="hljs-keyword">const</span> john = { age: <span class="hljs-number">20</span>, willBeReferenced: <span class="hljs-literal">true</span> };
 <span class="hljs-keyword">const</span> jane = { age: <span class="hljs-number">25</span>, willBeReferenced: <span class="hljs-literal">false</span> };
@@ -243,8 +240,7 @@ customCloners.set(HTMLDivElement, divCloner);
 <span class="hljs-keyword">const</span> clonedArray = clone(array, {valueFiltererToRefer: <span class="hljs-function"><span class="hljs-params">person</span> =&gt;</span> person.willBeReferenced });
 
 <span class="hljs-comment">// clonedArray[0] === array[0]</span>
-<span class="hljs-comment">// clonedArray[1] !== array[1]</span>
-</code></pre>
+<span class="hljs-comment">// clonedArray[1] !== array[1]</span></code></pre>
 								<hr>
 								<dl class="tsd-comment-tags">
 									<dt>default</dt>

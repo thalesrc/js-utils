@@ -201,7 +201,7 @@
 								<p><em>References Functions &amp; Symbols by default</em></p>
 								<hr>
 								<p>Example:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
 
 <span class="hljs-keyword">const</span> object = {a: <span class="hljs-number">1</span>, b: {c: <span class="hljs-literal">true</span>, d: [<span class="hljs-string">"x"</span>, <span class="hljs-string">"y"</span>]}};
 
@@ -213,14 +213,12 @@
 <span class="hljs-comment">// Clone all but reference "d"</span>
 <span class="hljs-keyword">const</span> clonedObject = clone(object, {propsToRefer: [<span class="hljs-string">"d"</span>]});
 <span class="hljs-comment">// {a: 1, b: {c: true, d: ["x", "y"]}}</span>
-<span class="hljs-comment">// object.b.d === clonedObject.b.d // true</span>
-</code></pre>
+<span class="hljs-comment">// object.b.d === clonedObject.b.d // true</span></code></pre>
 								<p>Static usage example:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-static/clone"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-static/clone"</span>;
 
 <span class="hljs-keyword">const</span> object = {a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>};
-<span class="hljs-keyword">const</span> clonedObject = <span class="hljs-built_in">Object</span>.clone(object); <span class="hljs-comment">// {a: 1, b: 2}</span>
-</code></pre>
+<span class="hljs-keyword">const</span> clonedObject = <span class="hljs-built_in">Object</span>.clone(object); <span class="hljs-comment">// {a: 1, b: 2}</span></code></pre>
 								<hr>
 								<dl class="tsd-comment-tags">
 									<dt>see</dt>

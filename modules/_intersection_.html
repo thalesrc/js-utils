@@ -124,27 +124,24 @@
 								<p>Gets the intersection of the two arrays or sets</p>
 								<hr>
 								<p>Example:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { intersection } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { intersection } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
 
 <span class="hljs-keyword">const</span> base = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>];
 
 intersection(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"x"</span>]); <span class="hljs-comment">// ["a", "b", "a", "b"]</span>
-intersection(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"x"</span>], <span class="hljs-literal">false</span>); <span class="hljs-comment">// ["a", "b"]</span>
-</code></pre>
+intersection(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"x"</span>], <span class="hljs-literal">false</span>); <span class="hljs-comment">// ["a", "b"]</span></code></pre>
 								<p>Array Prototype Example:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-proto/array-intersection"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-proto/array-intersection"</span>;
 
 <span class="hljs-keyword">const</span> base = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>];
 
-base.intersection([<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>]); <span class="hljs-comment">// ["a", "b", "a", "b"]</span>
-</code></pre>
+base.intersection([<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>]); <span class="hljs-comment">// ["a", "b", "a", "b"]</span></code></pre>
 								<p>Set Prototype Example:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-proto/set-intersection"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-proto/set-intersection"</span>;
 
 <span class="hljs-keyword">const</span> base = <span class="hljs-keyword">new</span> Set([<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>]);
 
-base.intersection([<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>]); <span class="hljs-comment">// Set(["a", "b"])</span>
-</code></pre>
+base.intersection([<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>]); <span class="hljs-comment">// Set(["a", "b"])</span></code></pre>
 								<hr>
 							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>

@@ -98,23 +98,21 @@
 								</div>
 								<hr>
 								<p>Example usage:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { isTruthy } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { isTruthy } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
 
 isTruthy(<span class="hljs-literal">undefined</span>); <span class="hljs-comment">// false</span>
 isTruthy(<span class="hljs-literal">true</span>); <span class="hljs-comment">// true</span>
 isTruthy([]) <span class="hljs-comment">// true</span>
 
-<span class="hljs-keyword">const</span> truthyValues = [<span class="hljs-string">"a"</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">""</span>, <span class="hljs-string">"c"</span>].filter(isTruthy); <span class="hljs-comment">// ["a", "b", "c"]</span>
-</code></pre>
+<span class="hljs-keyword">const</span> truthyValues = [<span class="hljs-string">"a"</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">""</span>, <span class="hljs-string">"c"</span>].filter(isTruthy); <span class="hljs-comment">// ["a", "b", "c"]</span></code></pre>
 								<p>Static usage example:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-static/is-truthy"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-static/is-truthy"</span>;
 
 <span class="hljs-built_in">Boolean</span>.isTruthy(<span class="hljs-literal">undefined</span>); <span class="hljs-comment">// false</span>
 <span class="hljs-built_in">Boolean</span>.isTruthy(<span class="hljs-literal">true</span>); <span class="hljs-comment">// true</span>
 <span class="hljs-built_in">Boolean</span>.isTruthy([]) <span class="hljs-comment">// true</span>
 
-<span class="hljs-keyword">const</span> truthyValues = [<span class="hljs-string">"a"</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">""</span>, <span class="hljs-string">"c"</span>].filter(<span class="hljs-built_in">Boolean</span>.isTruthy); <span class="hljs-comment">// ["a", "b", "c"]</span>
-</code></pre>
+<span class="hljs-keyword">const</span> truthyValues = [<span class="hljs-string">"a"</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">""</span>, <span class="hljs-string">"c"</span>].filter(<span class="hljs-built_in">Boolean</span>.isTruthy); <span class="hljs-comment">// ["a", "b", "c"]</span></code></pre>
 								<hr>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>

@@ -101,32 +101,28 @@
 						</div>
 						<hr>
 						<p>Example:</p>
-						<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { promiseTimeout } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+						<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { promiseTimeout } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
 
 promiseTimeout(<span class="hljs-number">1000</span>);
- .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"will be logged after a second"</span>));
-</code></pre>
+ .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"will be logged after a second"</span>));</code></pre>
 						<p>Example with a resolve value:</p>
-						<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { promiseTimeout } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+						<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { promiseTimeout } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
 
 promiseTimeout(<span class="hljs-number">1000</span>, <span class="hljs-string">"foo"</span>);
- .then(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"will log 'foo' after a second"</span>, val));
-</code></pre>
+ .then(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"will log 'foo' after a second"</span>, val));</code></pre>
 						<p>Can be used in promise chaining:</p>
-						<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { promiseTimeout } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+						<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { promiseTimeout } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
 
 fetch(<span class="hljs-string">"http://localhost:8080/anEndpoint"</span>) <span class="hljs-comment">// Fetch something</span>
  .then(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> promiseTimeout(<span class="hljs-number">1000</span>, val)) <span class="hljs-comment">// Wait a second after response</span>
  .then(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> {
    ...do something <span class="hljs-keyword">else</span>
- });
-</code></pre>
+ });</code></pre>
 						<p>Static usage example:</p>
-						<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-static/timeout"</span>;
+						<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-static/timeout"</span>;
 
 <span class="hljs-built_in">Promise</span>.timeout(<span class="hljs-number">1000</span>);
- .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"will be logged after a second"</span>));
-</code></pre>
+ .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"will be logged after a second"</span>));</code></pre>
 						<hr>
 						<dl class="tsd-comment-tags">
 							<dt>see</dt>

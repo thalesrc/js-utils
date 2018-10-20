@@ -124,27 +124,24 @@
 								<p>Gets the difference of the two arrays or sets</p>
 								<hr>
 								<p>Example:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { difference } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { difference } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
 
 <span class="hljs-keyword">const</span> base = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>];
 
 difference(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>]); <span class="hljs-comment">// ["c", "d", "c", "d"]</span>
-difference(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>], <span class="hljs-literal">true</span>); <span class="hljs-comment">// ["c", "d", "a", "b", "c", "d"]</span>
-</code></pre>
+difference(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>], <span class="hljs-literal">true</span>); <span class="hljs-comment">// ["c", "d", "a", "b", "c", "d"]</span></code></pre>
 								<p>Array Prototype Example:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-proto/array-difference"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-proto/array-difference"</span>;
 
 <span class="hljs-keyword">const</span> base = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>];
 
-base.difference([<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>]); <span class="hljs-comment">// ["c", "d", "c", "d"]</span>
-</code></pre>
+base.difference([<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>]); <span class="hljs-comment">// ["c", "d", "c", "d"]</span></code></pre>
 								<p>Set Prototype Example:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-proto/set-difference"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-proto/set-difference"</span>;
 
 <span class="hljs-keyword">const</span> base = <span class="hljs-keyword">new</span> Set([<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>]);
 
-base.difference([<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>]); <span class="hljs-comment">// Set(["c", "d"])</span>
-</code></pre>
+base.difference([<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>]); <span class="hljs-comment">// Set(["c", "d"])</span></code></pre>
 								<hr>
 							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>

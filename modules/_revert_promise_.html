@@ -99,7 +99,7 @@
 								</div>
 								<hr>
 								<p>Example usage:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { revertPromise } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { revertPromise } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
 
 <span class="hljs-keyword">const</span> errorPromise = <span class="hljs-built_in">Promise</span>.reject(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'foo'</span>));
 
@@ -109,10 +109,9 @@ revertPromise(errorPromise)
  })
  .catch(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"this won't be logged"</span>, res);
- });
-</code></pre>
+ });</code></pre>
 								<p>Proto usage example:</p>
-								<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-proto/promise-revert"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-proto/promise-revert"</span>;
 
 <span class="hljs-built_in">Promise</span>.reject(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'foo'</span>))
  .revert()
@@ -121,8 +120,7 @@ revertPromise(errorPromise)
  })
  .catch(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"this won't be logged"</span>, res);
- });
-</code></pre>
+ });</code></pre>
 								<hr>
 							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
