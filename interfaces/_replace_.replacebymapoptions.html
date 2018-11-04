@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;noop&quot; | @gen-tech/js-utils</title>
+	<title>ReplaceByMapOptions | @gen-tech/js-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,64 +54,97 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_noop_.html">&quot;noop&quot;</a>
+					<a href="../modules/_replace_.html">&quot;replace&quot;</a>
+				</li>
+				<li>
+					<a href="_replace_.replacebymapoptions.html">ReplaceByMapOptions</a>
 				</li>
 			</ul>
-			<h1>External module &quot;noop&quot;</h1>
+			<h1>Interface ReplaceByMapOptions&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Replace by Item Matcher Map Options Interface</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>template</dt>
+						<dd><p>T typeof the items of the array</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>T</h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">ReplaceByMapOptions</span>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Functions</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_noop_.html#noop" class="tsd-kind-icon">noop</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_replace_.replacebymapoptions.html#itemstoreplace" class="tsd-kind-icon">items<wbr>ToReplace</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_replace_.replacebymapoptions.html#multi" class="tsd-kind-icon">multi</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="noop" class="tsd-anchor"></a>
-					<h3>noop</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">noop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/noop.ts#L20">noop.ts:20</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<h4 id="noop-function">Noop function</h4>
-									<hr>
-									<p>Example usage:
-										<code>`</code>typescript
-									import { noop } from &quot;@gen-tech/js-utils&quot;;</p>
-								</div>
-								<p>noop();
-								document.onload = noop;</p>
-								<pre><code><span class="hljs-keyword">Static</span> usage example:
-```typescript
-import <span class="hljs-string">"@gen-tech/js-utils/dist/as-static/noop"</span>;
-
-<span class="hljs-function"><span class="hljs-keyword">Function</span>.<span class="hljs-title">noop</span><span class="hljs-params">()</span></span>;
-document.onload = <span class="hljs-function"><span class="hljs-keyword">Function</span>.<span class="hljs-title">noop</span></span>;</code></pre><hr>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="itemstoreplace" class="tsd-anchor"></a>
+					<h3>items<wbr>ToReplace</h3>
+					<div class="tsd-signature tsd-kind-icon">items<wbr>ToReplace<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/replace.ts#L38">replace.ts:38</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Items&#39; Matcher Map to replace</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="multi" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> multi</h3>
+					<div class="tsd-signature tsd-kind-icon">multi<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/replace.ts#L45">replace.ts:45</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Set as <code>true</code> to replace all items in the array if matches with the key of the matcher map while iterating</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>false</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -122,62 +155,80 @@ document.onload = <span class="hljs-function"><span class="hljs-keyword">Functio
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_clone_.html">"clone"</a>
+						<a href="../modules/_clone_.html">"clone"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_compact_.html">"compact"</a>
+						<a href="../modules/_compact_.html">"compact"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_debounce_.html">"debounce"</a>
+						<a href="../modules/_debounce_.html">"debounce"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_defer_.html">"defer"</a>
+						<a href="../modules/_defer_.html">"defer"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_difference_.html">"difference"</a>
+						<a href="../modules/_difference_.html">"difference"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_index_.html">"index"</a>
+						<a href="../modules/_index_.html">"index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_intersection_.html">"intersection"</a>
+						<a href="../modules/_intersection_.html">"intersection"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_is_falsy_.html">"is-<wbr>falsy"</a>
+						<a href="../modules/_is_falsy_.html">"is-<wbr>falsy"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_is_truthy_.html">"is-<wbr>truthy"</a>
+						<a href="../modules/_is_truthy_.html">"is-<wbr>truthy"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_map_merge_.html">"map-<wbr>merge"</a>
+						<a href="../modules/_map_merge_.html">"map-<wbr>merge"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_min_max_.html">"min-<wbr>max"</a>
+						<a href="../modules/_min_max_.html">"min-<wbr>max"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_noop_.html">"noop"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_open_promise_.html">"open-<wbr>promise"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_promise_timeout_.html">"promise-<wbr>timeout"</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_noop_.html">"noop"</a>
+						<a href="../modules/_replace_.html">"replace"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_open_promise_.html">"open-<wbr>promise"</a>
+						<a href="../modules/_revert_promise_.html">"revert-<wbr>promise"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_promise_timeout_.html">"promise-<wbr>timeout"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_replace_.html">"replace"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_revert_promise_.html">"revert-<wbr>promise"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_unique_id_.html">"unique-<wbr>id"</a>
+						<a href="../modules/_unique_id_.html">"unique-<wbr>id"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_noop_.html#noop" class="tsd-kind-icon">noop</a>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_replace_.replacebymapoptions.html" class="tsd-kind-icon">Replace<wbr>ByMap<wbr>Options</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_replace_.replacebymapoptions.html#itemstoreplace" class="tsd-kind-icon">items<wbr>ToReplace</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_replace_.replacebymapoptions.html#multi" class="tsd-kind-icon">multi</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_replace_.replaceitemsoptions.html" class="tsd-kind-icon">Replace<wbr>Items<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="../modules/_replace_.html#replace" class="tsd-kind-icon">replace</a>
 					</li>
 				</ul>
 			</nav>
