@@ -10,4 +10,6 @@ export * from "./min-max";
 export * from "./noop";
 export * from "./open-promise";
 export * from "./promise-timeout";
+export * from "./replace";
+export { revertPromise } from "./revert-promise";
 export * from "./unique-id";
