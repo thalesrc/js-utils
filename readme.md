@@ -25,6 +25,7 @@ Javascript utility functions for web development
 * [min-max](https://gen-tech.github.io/js-utils/modules/_min_max_.html)
 * [noop](https://gen-tech.github.io/js-utils/modules/_noop_.html)
 * [promise-timeout](https://gen-tech.github.io/js-utils/modules/_promise_timeout_.html)
+* [replace](https://gen-tech.github.io/js-utils/modules/_replace_.html)
 * [revert-promise](https://gen-tech.github.io/js-utils/modules/_revert_promise_.html)
 * [unique-id](https://gen-tech.github.io/js-utils/modules/_unique_id_.html)
 

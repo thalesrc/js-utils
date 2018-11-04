@@ -12,6 +12,7 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "noResolve": false,
+    "downlevelIteration": true,
     "lib": [
       "dom",
       "es2015"
