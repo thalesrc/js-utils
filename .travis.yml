@@ -7,7 +7,7 @@ branches:
   only:
   - master
   - /^(\d+\.){2}\d+$/
-before_script: npm run update-version $TRAVIS_TAG
+before_script: npm run update-version $TRAVIS_TAG --safe
 after_success: npm run cover
 before_deploy: npm run prepare-github-pages
 deploy:
@@ -22,6 +22,7 @@ deploy:
     skip_cleanup: true
     email: alisahinozcelik@gmail.com
     api_key: $NPM_TOKEN
+    before_script: npm run update-version $TRAVIS_TAG
     on:
       tags: true
       repo: gen-tech/js-utils
