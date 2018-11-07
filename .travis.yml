@@ -22,7 +22,6 @@ deploy:
     skip_cleanup: true
     email: alisahinozcelik@gmail.com
     api_key: $NPM_TOKEN
-    before_script: npm run update-version $TRAVIS_TAG
     on:
       tags: true
       repo: gen-tech/js-utils
