@@ -27,13 +27,11 @@
     "url": "https://github.com/gen-tech/js-utils.git"
   },
   "scripts": {
-    "prepare": "tsc",
-    "prepublish": "npm run update-version $TRAVIS_TAG",
+    "prepare": "gtvu $TRAVIS_TAG && tsc",
     "document": "typedoc --out docs --excludeNotExported --excludePrivate --disableOutputCheck --gitRevision master --exclude \"**/+(as-proto|as-static)/**/*ts\"",
     "prepare-github-pages": "npm run document && echo \"\" > ./docs/.nojekyll",
     "test": "nyc mocha --recursive --compilers ts:ts-node/register src/*.spec.ts src/**/*.spec.ts",
-    "cover": "nyc report --reporter=text-lcov | coveralls",
-    "update-version": "gtvu"
+    "cover": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": "alisahinozcelik@gmail.com",
   "license": "MIT",
