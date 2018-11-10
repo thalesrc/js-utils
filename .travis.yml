@@ -7,7 +7,7 @@ branches:
   only:
   - master
   - /^(\d+\.){2}\d+$/
-before_script: npm run update-version $TRAVIS_TAG -- --safe
+# before_script: npm run update-version $TRAVIS_TAG -- --safe
 after_success: npm run cover
 before_deploy: npm run prepare-github-pages
 deploy:
