@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;replace&quot; | @gen-tech/js-utils</title>
+	<title>&quot;replace&quot; | @thalesrc/js-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@gen-tech/js-utils</a>
+					<a href="../index.html" class="title">@thalesrc/js-utils</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -98,7 +98,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/replace.ts#L94">replace.ts:94</a></li>
+									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/replace.ts#L94">replace.ts:94</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -108,13 +108,13 @@
 								<p>Replaces an item with passed one of an array</p>
 								<hr>
 								<p>Example:</p>
-								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { replace } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { replace } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
 
 <span class="hljs-keyword">const</span> array = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>];
 
 replace(array, <span class="hljs-string">"b"</span>, <span class="hljs-string">"x"</span>); <span class="hljs-comment">// ["a", "x", "c", "a", "b", "c"]</span></code></pre>
 								<p>Array Prototype Example:</p>
-								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-proto/array-replace"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@thalesrc/js-utils/dist/as-proto/array-replace"</span>;
 
 <span class="hljs-keyword">const</span> array = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>];
 
@@ -159,7 +159,7 @@ array.replace(<span class="hljs-string">"b"</span>, <span class="hljs-string">"x
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/replace.ts#L123">replace.ts:123</a></li>
+									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/replace.ts#L123">replace.ts:123</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -169,13 +169,13 @@ array.replace(<span class="hljs-string">"b"</span>, <span class="hljs-string">"x
 								<p>Deletes items and replaces new ones from passed starting index of an array</p>
 								<hr>
 								<p>Example:</p>
-								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { replace } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { replace } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
 
 <span class="hljs-keyword">const</span> array = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>];
 
 replace(array, {startingIndex: <span class="hljs-number">3</span>, deleteCount: <span class="hljs-number">1</span>, itemsToReplace: [<span class="hljs-string">'x'</span>, <span class="hljs-string">'y'</span>]}); <span class="hljs-comment">// ["a", "b", "c", "x", "y", "b", "c"];</span></code></pre>
 								<p>Array Prototype Example:</p>
-								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-proto/array-replace"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@thalesrc/js-utils/dist/as-proto/array-replace"</span>;
 
 <span class="hljs-keyword">const</span> array = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>];
 
@@ -214,7 +214,7 @@ array.replace({startingIndex: <span class="hljs-number">3</span>, deleteCount: <
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gen-tech/js-utils/blob/master/src/replace.ts#L160">replace.ts:160</a></li>
+									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/replace.ts#L160">replace.ts:160</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -224,7 +224,7 @@ array.replace({startingIndex: <span class="hljs-number">3</span>, deleteCount: <
 								<p>Deletes items and replaces new ones by passed matcher map</p>
 								<hr>
 								<p>Example:</p>
-								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { replace } <span class="hljs-keyword">from</span> <span class="hljs-string">"@gen-tech/js-utils"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { replace } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
 
 <span class="hljs-keyword">const</span> array = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>];
 <span class="hljs-keyword">const</span> map = <span class="hljs-keyword">new</span> Map();
@@ -234,7 +234,7 @@ map.set(<span class="hljs-string">"b"</span>, <span class="hljs-string">"y"</spa
 replace(array, {itemsToReplace: map}); <span class="hljs-comment">// ["x", "y", "c", "a", "b", "c"];</span>
 replace(array, {itemsToReplace: map, multi: <span class="hljs-literal">true</span>}); <span class="hljs-comment">// ["x", "y", "c", "x", "y", "c"];</span></code></pre>
 								<p>Array Prototype Example:</p>
-								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@gen-tech/js-utils/dist/as-proto/array-replace"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@thalesrc/js-utils/dist/as-proto/array-replace"</span>;
 
 <span class="hljs-keyword">const</span> array = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>];
 <span class="hljs-keyword">const</span> map = <span class="hljs-keyword">new</span> Map();
