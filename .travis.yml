@@ -24,4 +24,4 @@ deploy:
     api_key: $NPM_TOKEN
     on:
       tags: true
-      repo: gen-tech/js-utils
+      repo: thalesrc/js-utils

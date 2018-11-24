@@ -70,7 +70,7 @@ const REPLACE_BY_MAP_DEFAULT_OPTIONS: Required<ReplaceByMapOptions<any>> = {
  * * * *
  * Example:
  * ```typescript
- * import { replace } from "@gen-tech/js-utils";
+ * import { replace } from "@thalesrc/js-utils";
  *
  * const array = ["a", "b", "c", "a", "b", "c"];
  *
@@ -78,7 +78,7 @@ const REPLACE_BY_MAP_DEFAULT_OPTIONS: Required<ReplaceByMapOptions<any>> = {
  * ```
  * Array Prototype Example:
  * ```typescript
- * import "@gen-tech/js-utils/dist/as-proto/array-replace";
+ * import "@thalesrc/js-utils/dist/as-proto/array-replace";
  *
  * const array = ["a", "b", "c", "a", "b", "c"];
  *
@@ -100,7 +100,7 @@ export function replace<T>(array: T[], itemToRemove: T, itemToReplace: T): T[];
  * * * *
  * Example:
  * ```typescript
- * import { replace } from "@gen-tech/js-utils";
+ * import { replace } from "@thalesrc/js-utils";
  *
  * const array = ["a", "b", "c", "a", "b", "c"];
  *
@@ -108,7 +108,7 @@ export function replace<T>(array: T[], itemToRemove: T, itemToReplace: T): T[];
  * ```
  * Array Prototype Example:
  * ```typescript
- * import "@gen-tech/js-utils/dist/as-proto/array-replace";
+ * import "@thalesrc/js-utils/dist/as-proto/array-replace";
  *
  * const array = ["a", "b", "c", "a", "b", "c"];
  *
@@ -129,7 +129,7 @@ export function replace<T>(array: T[], replaceOptions: ReplaceItemsOptions<T>): 
  * * * *
  * Example:
  * ```typescript
- * import { replace } from "@gen-tech/js-utils";
+ * import { replace } from "@thalesrc/js-utils";
  *
  * const array = ["a", "b", "c", "a", "b", "c"];
  * const map = new Map();
@@ -141,7 +141,7 @@ export function replace<T>(array: T[], replaceOptions: ReplaceItemsOptions<T>): 
  * ```
  * Array Prototype Example:
  * ```typescript
- * import "@gen-tech/js-utils/dist/as-proto/array-replace";
+ * import "@thalesrc/js-utils/dist/as-proto/array-replace";
  *
  * const array = ["a", "b", "c", "a", "b", "c"];
  * const map = new Map();

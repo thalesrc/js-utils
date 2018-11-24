@@ -15,7 +15,7 @@ export interface PromiseTimeoutFunction {
    * * * *
    * Usage via promise instance:
    * ```typescript
-   * import { promiseTimeout } from "@gen-tech/js-utils";
+   * import { promiseTimeout } from "@thalesrc/js-utils";
    *
    * const timeout = promiseTimeout(1000);
    *
@@ -27,7 +27,7 @@ export interface PromiseTimeoutFunction {
    * ```
    * Usage via key
    * ```typescript
-   * import { promiseTimeout } from "@gen-tech/js-utils";
+   * import { promiseTimeout } from "@thalesrc/js-utils";
    *
    * const key = Symbol();
    *
@@ -39,7 +39,7 @@ export interface PromiseTimeoutFunction {
    * ```
    * Static usage example:
    * ```typescript
-   * import "@gen-tech/js-utils/dist/as-static/timeout";
+   * import "@thalesrc/js-utils/dist/as-static/timeout";
    *
    * const timeout = Promise.timeout(1000);
    *
@@ -156,21 +156,21 @@ const promiseTimeoutInitializer = (() => {
  * * * *
  * Example:
  * ```typescript
- * import { promiseTimeout } from "@gen-tech/js-utils";
+ * import { promiseTimeout } from "@thalesrc/js-utils";
  *
  * promiseTimeout(1000);
  *  .then(() => console.log("will be logged after a second"));
  * ```
  * Example with a resolve value:
  * ```typescript
- * import { promiseTimeout } from "@gen-tech/js-utils";
+ * import { promiseTimeout } from "@thalesrc/js-utils";
  *
  * promiseTimeout(1000, "foo");
  *  .then(val => console.log("will log 'foo' after a second", val));
  * ```
  * Can be used in promise chaining:
  * ```typescript
- * import { promiseTimeout } from "@gen-tech/js-utils";
+ * import { promiseTimeout } from "@thalesrc/js-utils";
  *
  * fetch("http://localhost:8080/anEndpoint") // Fetch something
  *  .then(val => promiseTimeout(1000, val)) // Wait a second after response
@@ -180,7 +180,7 @@ const promiseTimeoutInitializer = (() => {
  * ```
  * Static usage example:
  * ```typescript
- * import "@gen-tech/js-utils/dist/as-static/timeout";
+ * import "@thalesrc/js-utils/dist/as-static/timeout";
  *
  * Promise.timeout(1000);
  *  .then(() => console.log("will be logged after a second"));

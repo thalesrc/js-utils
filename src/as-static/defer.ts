@@ -8,7 +8,7 @@ declare global {
      * * * *
      * Example as promise static method
      * ```typescript
-     * import "@gen-tech/js-utils/dist/as-static/defer";
+     * import "@thalesrc/js-utils/dist/as-static/defer";
      *
      * Promise.defer(() => aFunctionToDefer())
      *  .then(res => ...)

@@ -7,7 +7,7 @@ declare global {
      * * * *
      * Static usage example:
      * ```typescript
-     * import "@gen-tech/js-utils/dist/as-static/noop";
+     * import "@thalesrc/js-utils/dist/as-static/noop";
      *
      * Function.noop();
      * document.onload = Function.noop;

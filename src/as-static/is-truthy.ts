@@ -8,7 +8,7 @@ declare global {
      * * * *
      * Example usage:
      * ```typescript
-     * import "@gen-tech/js-utils/dist/as-static/is-truthy";
+     * import "@thalesrc/js-utils/dist/as-static/is-truthy";
      *
      * Boolean.isTruthy(undefined); // false
      * Boolean.isTruthy(true); // true

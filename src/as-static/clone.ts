@@ -12,7 +12,7 @@ declare global {
      * * * *
      * Example:
      * ```typescript
-     * import { clone } from "@gen-tech/js-utils";
+     * import { clone } from "@thalesrc/js-utils";
      *
      * const object = {a: 1, b: {c: true, d: ["x", "y"]}};
      *
@@ -29,7 +29,7 @@ declare global {
      *
      * Static usage example:
      * ```typescript
-     * import "@gen-tech/js-utils/dist/as-static/clone";
+     * import "@thalesrc/js-utils/dist/as-static/clone";
      *
      * const object = {a: 1, b: 2};
      * const clonedObject = Object.clone(object); // {a: 1, b: 2}

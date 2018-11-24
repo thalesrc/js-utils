@@ -11,7 +11,7 @@ export type TInclusion = any[] | Set<any>;
  * * * *
  * Example:
  * ```typescript
- * import { intersection } from "@gen-tech/js-utils";
+ * import { intersection } from "@thalesrc/js-utils";
  *
  * const base = ["a", "b", "c", "d", "a", "b", "c", "d"];
  *
@@ -20,7 +20,7 @@ export type TInclusion = any[] | Set<any>;
  * ```
  * Array Prototype Example:
  * ```typescript
- * import "@gen-tech/js-utils/dist/as-proto/array-intersection";
+ * import "@thalesrc/js-utils/dist/as-proto/array-intersection";
  *
  * const base = ["a", "b", "c", "d", "a", "b", "c", "d"];
  *
@@ -28,7 +28,7 @@ export type TInclusion = any[] | Set<any>;
  * ```
  * Set Prototype Example:
  * ```typescript
- * import "@gen-tech/js-utils/dist/as-proto/set-intersection";
+ * import "@thalesrc/js-utils/dist/as-proto/set-intersection";
  *
  * const base = new Set(["a", "b", "c", "d"]);
  *

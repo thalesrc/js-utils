@@ -5,7 +5,7 @@
  * * * *
  * Example:
  * ```typescript
- * import { OpenPromise } from "@gen-tech/js-utils";
+ * import { OpenPromise } from "@thalesrc/js-utils";
  *
  * const aPromiseWillBeResolvedLater = new OpenPromise();
  *

@@ -1,10 +1,10 @@
 {
-  "name": "@gen-tech/js-utils",
+  "name": "@thalesrc/js-utils",
   "version": "0.0.0",
   "description": "Javascript utility functions for web development",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "homepage": "https://gen-tech.github.io/js-utils",
+  "homepage": "https://thalesrc.github.io/js-utils",
   "keywords": [
     "object",
     "deep clone",
@@ -24,7 +24,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/gen-tech/js-utils.git"
+    "url": "https://github.com/thalesrc/js-utils.git"
   },
   "scripts": {
     "prepublishOnly": "gtvu $TRAVIS_TAG && tsc",

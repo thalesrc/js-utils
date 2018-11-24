@@ -56,7 +56,7 @@ export function debounceWithKey<T>(
  * * * *
  * Example usage:
  * ```typescript
- * import { debounce } from "@gen-tech/js-utils";
+ * import { debounce } from "@thalesrc/js-utils";
  *
  * function foo() {
  *   console.log("hello");
@@ -71,7 +71,7 @@ export function debounceWithKey<T>(
  *
  * Static usage example:
  * ```typescript
- * import "@gen-tech/js-utils/dist/as-proto/debounce";
+ * import "@thalesrc/js-utils/dist/as-proto/debounce";
  *
  * function foo() {
  *   console.log("hello");

@@ -19,7 +19,7 @@ function* uniqueIdGenerator(prefix?: string) {
  * * * *
  * Example usage:
  * ```typescript
- * import { uniqueId } from "@gen-tech/js-utils";
+ * import { uniqueId } from "@thalesrc/js-utils";
  *
  * uniqueId(); // 0
  * uniqueId(); // 1

@@ -4,14 +4,14 @@
  * * * *
  * Example usage:
  * ```typescript
- * import { minMax } from "@gen-tech/js-utils";
+ * import { minMax } from "@thalesrc/js-utils";
  *
  * const limitedValue = minMax(200, 300, Math.random() * 1000);
  * ```
  *
  * Example as Math static:
  * ```typescript
- * import "@gen-tech/js-utils/dist/as-static/min-max";
+ * import "@thalesrc/js-utils/dist/as-static/min-max";
  *
  * const limitedValue = Math.minMax(200, 300, Math.random() * 1000);
  * ```

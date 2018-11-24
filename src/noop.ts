@@ -3,14 +3,14 @@
  * * * *
  * Example usage:
  * ```typescript
- * import { noop } from "@gen-tech/js-utils";
+ * import { noop } from "@thalesrc/js-utils";
  *
  * noop();
  * document.onload = noop;
  * ```
  * Static usage example:
  * ```typescript
- * import "@gen-tech/js-utils/dist/as-static/noop";
+ * import "@thalesrc/js-utils/dist/as-static/noop";
  *
  * Function.noop();
  * document.onload = Function.noop;

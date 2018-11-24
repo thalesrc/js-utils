@@ -10,7 +10,7 @@ declare global {
      * * * *
      * Example:
      * ```typescript
-     * import "@gen-tech/js-utils/dist/as-proto/array-intersection";
+     * import "@thalesrc/js-utils/dist/as-proto/array-intersection";
      *
      * const base = ["a", "b", "c", "d", "a", "b", "c", "d"];
      *

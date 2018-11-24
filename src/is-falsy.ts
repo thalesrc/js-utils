@@ -4,7 +4,7 @@
  * * * *
  * Example usage:
  * ```typescript
- * import { isFalsy } from "@gen-tech/js-utils";
+ * import { isFalsy } from "@thalesrc/js-utils";
  *
  * isFalsy(undefined); // true
  * isFalsy(true); // false
@@ -14,7 +14,7 @@
  * ```
  * Static usage example:
  * ```typescript
- * import "@gen-tech/js-utils/dist/as-static/is-falsy";
+ * import "@thalesrc/js-utils/dist/as-static/is-falsy";
  *
  * Boolean.isFalsy(undefined); // true
  * Boolean.isFalsy(true); // false

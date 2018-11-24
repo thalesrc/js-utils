@@ -8,7 +8,7 @@ declare global {
      * * * *
      * Example usage:
      * ```typescript
-     * import "@gen-tech/js-utils/dist/as-proto/debounce";
+     * import "@thalesrc/js-utils/dist/as-proto/debounce";
      *
      * function foo() {
      *   console.log("hello");

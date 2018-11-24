@@ -5,7 +5,7 @@
  * * * *
  * Example usage:
  * ```typescript
- * import { revertPromise } from "@gen-tech/js-utils";
+ * import { revertPromise } from "@thalesrc/js-utils";
  *
  * const errorPromise = Promise.reject(new Error('foo'));
  *
@@ -20,7 +20,7 @@
  *
  * Proto usage example:
  * ```typescript
- * import "@gen-tech/js-utils/dist/as-proto/promise-revert";
+ * import "@thalesrc/js-utils/dist/as-proto/promise-revert";
  *
  * Promise.reject(new Error('foo'))
  *  .revert()

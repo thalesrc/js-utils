@@ -6,7 +6,7 @@ import { noop } from "./noop";
  * * * *
  * Example usage:
  * ```typescript
- * import { defer } from "@gen-tech/js-utils";
+ * import { defer } from "@thalesrc/js-utils";
  *
  * defer(() => aFunctionToDefer())
  *  .then(res => ...)
@@ -14,7 +14,7 @@ import { noop } from "./noop";
  * ```
  * Example as promise static method
  * ```typescript
- * import "@gen-tech/js-utils/dist/as-static/defer";
+ * import "@thalesrc/js-utils/dist/as-static/defer";
  *
  * Promise.defer(() => aFunctionToDefer())
  *  .then(res => ...)

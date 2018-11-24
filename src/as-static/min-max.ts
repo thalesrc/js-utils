@@ -7,7 +7,7 @@ declare global {
      *
      * * * *
      * ```typescript
-     * import "@gen-tech/js-utils/dist/as-proto/min-max";
+     * import "@thalesrc/js-utils/dist/as-proto/min-max";
      *
      * const limitedValue = Math.minMax(200, 300, Math.random() * 1000);
      * ```
