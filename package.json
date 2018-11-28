@@ -31,7 +31,7 @@
     "document": "typedoc --out docs --excludeNotExported --excludePrivate --disableOutputCheck --gitRevision master --exclude \"**/+(as-proto|as-static)/**/*ts\"",
     "prepare-github-pages": "npm run document && echo \"\" > ./docs/.nojekyll",
     "test": "nyc mocha --recursive --compilers ts:ts-node/register src/*.spec.ts src/**/*.spec.ts",
-    "cover": "nyc report --reporter=text-lcov | coveralls"
+    "cover": "nyc report --reporter=text-lcov | codecov"
   },
   "author": "alisahinozcelik@gmail.com",
   "license": "MIT",
@@ -43,7 +43,7 @@
     "@types/chai": "^4.1.6",
     "@types/mocha": "^5.2.5",
     "chai": "^4.2.0",
-    "coveralls": "^3.0.2",
+    "codecov.io": "^0.1.6",
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
     "ts-node": "^7.0.1",
