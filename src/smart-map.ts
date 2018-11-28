@@ -1,5 +1,5 @@
 // Symbols to protect overriding private methods & properties of SmartMap Class
-const KEY__WEAKMAP = Symbol('SmartMap.weakMap');
+const KEY__WEAKMAP: unique symbol = Symbol('SmartMap.weakMap');
 
 /**
  * ### SmartMap
