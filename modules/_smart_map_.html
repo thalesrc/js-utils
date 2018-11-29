@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;defer&quot; | @thalesrc/js-utils</title>
+	<title>&quot;smart-map&quot; | @thalesrc/js-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_defer_.html">&quot;defer&quot;</a>
+					<a href="_smart_map_.html">&quot;smart-map&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;defer&quot;</h1>
+			<h1>External module &quot;smart-map&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -69,82 +69,12 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Functions</h3>
+							<h3>Classes</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_defer_.html#defer" class="tsd-kind-icon">defer</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter"><a href="../classes/_smart_map_.smartmap.html" class="tsd-kind-icon">Smart<wbr>Map</a></li>
 							</ul>
 						</section>
 					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-					<a name="defer" class="tsd-anchor"></a>
-					<h3>defer</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">defer&lt;T&gt;<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/defer.ts#L28">defer.ts:28</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<h4 id="delays-the-execution-of-the-passed-function-to-increase-the-render-performance">Delays the execution of the passed function to increase the render performance</h4>
-								</div>
-								<hr>
-								<p>Example usage:</p>
-								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { defer } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
-
-defer(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> aFunctionToDefer())
- .then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> ...)
- .catch(<span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> ...);</code></pre>
-								<p>Example as promise static method</p>
-								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@thalesrc/js-utils/dist/as-static/defer"</span>;
-
-<span class="hljs-built_in">Promise</span>.defer(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> aFunctionToDefer())
- .then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> ...)
- .catch(<span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> ...);</code></pre>
-								<hr>
-							</div>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>T</h4>
-									<div class="tsd-comment tsd-typography">
-										<p>type of the return value of the callback</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> callback: <span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> =&nbsp;noop as () &#x3D;&gt; T</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Callback function to be executed</p>
-									</div>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>A promise which resolves with the value of the callback right after the execution</p>
-						</li>
-					</ul>
 				</section>
 			</section>
 		</div>
@@ -163,7 +93,7 @@ defer(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</spa
 					<li class=" tsd-kind-external-module">
 						<a href="_debounce_.html">"debounce"</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="_defer_.html">"defer"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -202,7 +132,7 @@ defer(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</spa
 					<li class=" tsd-kind-external-module">
 						<a href="_revert_promise_.html">"revert-<wbr>promise"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="_smart_map_.html">"smart-<wbr>map"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -212,8 +142,8 @@ defer(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</spa
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_defer_.html#defer" class="tsd-kind-icon">defer</a>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="../classes/_smart_map_.smartmap.html" class="tsd-kind-icon">Smart<wbr>Map</a>
 					</li>
 				</ul>
 			</nav>
