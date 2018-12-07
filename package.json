@@ -27,7 +27,6 @@
     "url": "https://github.com/thalesrc/js-utils.git"
   },
   "scripts": {
-    "prepublishOnly": "gtvu $TRAVIS_TAG && tsc",
     "document": "typedoc --out docs --excludeNotExported --excludePrivate --disableOutputCheck --gitRevision master --exclude \"**/+(as-proto|as-static)/**/*ts\"",
     "prepare-github-pages": "npm run document && echo \"\" > ./docs/.nojekyll",
     "test": "nyc mocha --recursive --compilers ts:ts-node/register src/*.spec.ts src/**/*.spec.ts",
