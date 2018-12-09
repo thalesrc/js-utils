@@ -19,9 +19,11 @@ Javascript utility functions for web development
 * [debounce](https://thalesrc.github.io/js-utils/modules/_debounce_.html)
 * [defer](https://thalesrc.github.io/js-utils/modules/_defer_.html)
 * [difference](https://thalesrc.github.io/js-utils/modules/_difference_.html)
+* [function-of](https://thalesrc.github.io/js-utils/modules/_function_of_.html)
 * [intersection](https://thalesrc.github.io/js-utils/modules/_intersection_.html)
 * [is-falsy](https://thalesrc.github.io/js-utils/modules/_is_falsy_.html)
 * [is-truthy](https://thalesrc.github.io/js-utils/modules/_is_truthy_.html)
+* [map-merge](https://thalesrc.github.io/js-utils/modules/_map_merge_.html)
 * [min-max](https://thalesrc.github.io/js-utils/modules/_min_max_.html)
 * [noop](https://thalesrc.github.io/js-utils/modules/_noop_.html)
 * [promise-timeout](https://thalesrc.github.io/js-utils/modules/_promise_timeout_.html)
@@ -31,5 +33,6 @@ Javascript utility functions for web development
 
 #### Utility Classes
 * [open-promise](https://thalesrc.github.io/js-utils/modules/_open_promise_.html)
+* [smart-map](https://thalesrc.github.io/js-utils/modules/_smart_map_.html)
 
 All Documentation => [thalesrc.github.io/js-utils](https://thalesrc.github.io/js-utils)
