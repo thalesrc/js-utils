@@ -1,7 +1,9 @@
+import { SmartMap } from './smart-map';
+
 /**
  * Cache object to store previously created functions
  */
-const CACHE = new Map<any, () => any>();
+const CACHE = new SmartMap<any, () => any>();
 
 /**
  * ### Function Of
@@ -30,7 +32,7 @@ const CACHE = new Map<any, () => any>();
  * // ["thales rocks", "thales rocks", "thales rocks", "thales rocks", "thales rocks", "thales rocks"]
  * ```
  * * * *
- * @param returnValue The value which is the created function returns
+ * @param returnValue The value which created function returns
  * @returns A function which returns the `returnValue`
  */
 export function functionOf<T>(returnValue: T): (...args: any[]) => T {
