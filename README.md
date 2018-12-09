@@ -2,7 +2,7 @@
 Javascript utility functions for web development
 
 [![travis](https://travis-ci.org/thalesrc/js-utils.svg)](https://travis-ci.org/thalesrc/js-utils)
-[![Coverage Status](https://coveralls.io/repos/github/thalesrc/js-utils/badge.svg?branch=master)](https://coveralls.io/github/thalesrc/js-utils?branch=master)
+[![codecov](https://codecov.io/gh/thalesrc/js-utils/branch/master/graph/badge.svg)](https://codecov.io/gh/thalesrc/js-utils)
 [![npm](https://img.shields.io/npm/v/@thalesrc/js-utils.svg)](https://www.npmjs.com/package/@thalesrc/js-utils)
 [![npm](https://img.shields.io/npm/dw/@thalesrc/js-utils.svg)](https://www.npmjs.com/package/@thalesrc/js-utils)
 [![patreon](https://img.shields.io/badge/patreon-alisahin-orange.svg)](https://www.patreon.com/alisahin)

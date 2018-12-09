@@ -7,7 +7,6 @@ branches:
   only:
   - master
   - /^(\d+\.){2}\d+$/
-# before_script: npm run update-version $TRAVIS_TAG -- --safe
 after_success: npm run cover
 before_deploy: npm run prepare-github-pages
 deploy:
@@ -18,10 +17,8 @@ deploy:
     local-dir: docs
     on:
       branch: master
-  - provider: npm
-    skip_cleanup: true
-    email: alisahinozcelik@gmail.com
-    api_key: $NPM_TOKEN
+  - provider: script
+    skip-cleanup: true
+    script: npm run prepare-and-publish
     on:
       tags: true
-      repo: thalesrc/js-utils

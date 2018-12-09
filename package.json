@@ -2,8 +2,8 @@
   "name": "@thalesrc/js-utils",
   "version": "0.0.0",
   "description": "Javascript utility functions for web development",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "index.js",
+  "typings": "index.d.ts",
   "homepage": "https://thalesrc.github.io/js-utils",
   "keywords": [
     "object",
@@ -27,11 +27,16 @@
     "url": "https://github.com/thalesrc/js-utils.git"
   },
   "scripts": {
-    "prepublishOnly": "gtvu $TRAVIS_TAG && tsc",
     "document": "typedoc --out docs --excludeNotExported --excludePrivate --disableOutputCheck --gitRevision master --exclude \"**/+(as-proto|as-static)/**/*ts\"",
     "prepare-github-pages": "npm run document && echo \"\" > ./docs/.nojekyll",
     "test": "nyc mocha --recursive --compilers ts:ts-node/register src/*.spec.ts src/**/*.spec.ts",
-    "cover": "nyc report --reporter=text-lcov | coveralls"
+    "cover": "nyc report --reporter=text-lcov | codecov",
+    "publish:config-npm": "replace '<EMAIL>' $NPM_EMAIL .npmrc && replace '<TOKEN>' $NPM_TOKEN .npmrc",
+    "publish:copy-files": "cpy 'LICENSE' 'README.md' '.npmrc' '.npmignore' 'package.json' dist",
+    "publish:pack": "cd dist && npm pack",
+    "publish:prepare": "gtvu $TRAVIS_TAG && tsc && npm run publish:config-npm && npm run publish:copy-files && npm run publish:pack",
+    "publish:publish": "npm publish ./dist/thalesrc-js-utils-$TRAVIS_TAG.tgz",
+    "prepare-and-publish": "npm run publish:prepare && npm run publish:publish"
   },
   "author": "alisahinozcelik@gmail.com",
   "license": "MIT",
@@ -43,9 +48,11 @@
     "@types/chai": "^4.1.6",
     "@types/mocha": "^5.2.5",
     "chai": "^4.2.0",
-    "coveralls": "^3.0.2",
+    "codecov.io": "^0.1.6",
+    "cpy-cli": "^2.0.0",
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
+    "replace": "^1.0.0",
     "ts-node": "^7.0.1",
     "typedoc": "^0.13.0",
     "typescript": "^3.1.3",
