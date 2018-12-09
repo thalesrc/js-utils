@@ -29,7 +29,7 @@
   "scripts": {
     "document": "typedoc --out docs --excludeNotExported --excludePrivate --disableOutputCheck --gitRevision master --exclude \"**/+(as-proto|as-static)/**/*ts\"",
     "prepare-github-pages": "npm run document && echo \"\" > ./docs/.nojekyll",
-    "test": "nyc mocha --recursive --compilers ts:ts-node/register src/*.spec.ts src/**/*.spec.ts",
+    "test": "nyc mocha --recursive --compilers ts:ts-node/register src/**/*.spec.ts",
     "cover": "nyc report --reporter=text-lcov | codecov",
     "publish:config-npm": "replace '<EMAIL>' $NPM_EMAIL .npmrc && replace '<TOKEN>' $NPM_TOKEN .npmrc",
     "publish:copy-files": "cpy 'LICENSE' 'README.md' '.npmrc' '.npmignore' 'package.json' dist",
@@ -67,8 +67,8 @@
     ],
     "exclude": [
       "node_modules/",
-      "./src/index.ts",
-      "./src/**/*.spec.ts",
+      "**/index.ts",
+      "**/*.spec.ts",
       "**/*.d.ts"
     ],
     "extension": [
