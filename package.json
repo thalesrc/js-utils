@@ -20,7 +20,9 @@
     "math",
     "min max",
     "noop",
-    "unique id"
+    "unique id",
+    "replace",
+    "remove"
   ],
   "repository": {
     "type": "git",
@@ -29,7 +31,7 @@
   "scripts": {
     "document": "typedoc --out docs --excludeNotExported --excludePrivate --disableOutputCheck --gitRevision master --exclude \"**/+(as-proto|as-static)/**/*ts\"",
     "prepare-github-pages": "npm run document && echo \"\" > ./docs/.nojekyll",
-    "test": "nyc mocha --recursive --compilers ts:ts-node/register src/**/*.spec.ts",
+    "test": "nyc mocha --recursive --require ts-node/register src/**/*.spec.ts",
     "cover": "nyc report --reporter=text-lcov | codecov",
     "publish:config-npm": "replace '<EMAIL>' $NPM_EMAIL .npmrc && replace '<TOKEN>' $NPM_TOKEN .npmrc",
     "publish:copy-files": "cpy 'LICENSE' 'README.md' '.npmrc' '.npmignore' 'package.json' dist",
@@ -50,12 +52,12 @@
     "chai": "^4.2.0",
     "codecov.io": "^0.1.6",
     "cpy-cli": "^2.0.0",
-    "mocha": "^5.2.0",
-    "nyc": "^13.1.0",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
     "replace": "^1.0.0",
-    "ts-node": "^7.0.1",
+    "ts-node": "^8.3.0",
     "typedoc": "^0.13.0",
-    "typescript": "^3.1.3",
+    "typescript": "^3.6.2",
     "update-json": "^1.0.0"
   },
   "dependencies": {
