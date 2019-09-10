@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;promise-timeout&quot; | @thalesrc/js-utils</title>
+	<title>&quot;remove&quot; | @thalesrc/js-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_promise_timeout_.html">&quot;promise-timeout&quot;</a>
+					<a href="_remove_.html">&quot;remove&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;promise-timeout&quot;</h1>
+			<h1>External module &quot;remove&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -69,67 +69,67 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Interfaces</h3>
+							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter"><a href="../interfaces/_promise_timeout_.promisetimeoutfunction.html" class="tsd-kind-icon">Promise<wbr>Timeout<wbr>Function</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Variables</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_promise_timeout_.html#promisetimeout" class="tsd-kind-icon">promise<wbr>Timeout</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_remove_.html#remove" class="tsd-kind-icon">remove</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Variables</h2>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
-					<a name="promisetimeout" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> promise<wbr>Timeout</h3>
-					<div class="tsd-signature tsd-kind-icon">promise<wbr>Timeout<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_promise_timeout_.promisetimeoutfunction.html" class="tsd-signature-type">PromiseTimeoutFunction</a><span class="tsd-signature-symbol"> =&nbsp;promiseTimeoutInitializer</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/promise-timeout.ts#L191">promise-timeout.ts:191</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<h4 id="promise-timeout">Promise Timeout</h4>
-							<p>Returns a promise which resolves after given time</p>
-						</div>
-						<hr>
-						<p>Example:</p>
-						<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { promiseTimeout } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+					<a name="remove" class="tsd-anchor"></a>
+					<h3>remove</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">remove&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, multi<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/remove.ts#L23">remove.ts:23</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<h4 id="remove">Remove</h4>
+								</div>
+								<p>Removes an item from the array</p>
+								<p>Removes all item references if multi is set to <code>true</code></p>
+								<hr>
+								<p>Example:</p>
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { remove } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
 
-promiseTimeout(<span class="hljs-number">1000</span>);
- .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"will be logged after a second"</span>));</code></pre>
-						<p>Example with a resolve value:</p>
-						<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { promiseTimeout } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
+<span class="hljs-keyword">const</span> array = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>];
 
-promiseTimeout(<span class="hljs-number">1000</span>, <span class="hljs-string">"foo"</span>);
- .then(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"will log 'foo' after a second"</span>, val));</code></pre>
-						<p>Can be used in promise chaining:</p>
-						<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { promiseTimeout } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
-
-fetch(<span class="hljs-string">"http://localhost:8080/anEndpoint"</span>) <span class="hljs-comment">// Fetch something</span>
- .then(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> promiseTimeout(<span class="hljs-number">1000</span>, val)) <span class="hljs-comment">// Wait a second after response</span>
- .then(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> {
-   ...do something <span class="hljs-keyword">else</span>
- });</code></pre>
-						<p>Static usage example:</p>
-						<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@thalesrc/js-utils/dist/as-static/timeout"</span>;
-
-<span class="hljs-built_in">Promise</span>.timeout(<span class="hljs-number">1000</span>);
- .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"will be logged after a second"</span>));</code></pre>
-						<hr>
-						<dl class="tsd-comment-tags">
-							<dt>see</dt>
-							<dd><p>PromiseTimeoutFunction#cancel for cancelling</p>
-							</dd>
-						</dl>
-					</div>
+remove(array, <span class="hljs-string">"b"</span>); <span class="hljs-comment">// ["a", "c", "a", "b", "c"]</span>
+remove(array, <span class="hljs-string">"b"</span>, <span class="hljs-literal">true</span>); <span class="hljs-comment">// ["a", "c", "a", "c"]</span></code></pre>
+								<hr>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>item: <span class="tsd-signature-type">T</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> multi: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>New array</p>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -181,10 +181,10 @@ fetch(<span class="hljs-string">"http://localhost:8080/anEndpoint"</span>) <span
 					<li class=" tsd-kind-external-module">
 						<a href="_open_promise_.html">"open-<wbr>promise"</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="_promise_timeout_.html">"promise-<wbr>timeout"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="_remove_.html">"remove"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -203,11 +203,8 @@ fetch(<span class="hljs-string">"http://localhost:8080/anEndpoint"</span>) <span
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="../interfaces/_promise_timeout_.promisetimeoutfunction.html" class="tsd-kind-icon">Promise<wbr>Timeout<wbr>Function</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="_promise_timeout_.html#promisetimeout" class="tsd-kind-icon">promise<wbr>Timeout</a>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_remove_.html#remove" class="tsd-kind-icon">remove</a>
 					</li>
 				</ul>
 			</nav>
