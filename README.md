@@ -30,6 +30,7 @@ Javascript utility functions for web development
 * [replace](https://thalesrc.github.io/js-utils/modules/_replace_.html)
 * [revert-promise](https://thalesrc.github.io/js-utils/modules/_revert_promise_.html)
 * [unique-id](https://thalesrc.github.io/js-utils/modules/_unique_id_.html)
+* [uniquify](https://thalesrc.github.io/js-utils/modules/_uniquify_.html)
 
 #### Utility Classes
 * [open-promise](https://thalesrc.github.io/js-utils/modules/_open_promise_.html)
