@@ -14,3 +14,4 @@ export * from "./remove";
 export * from "./replace";
 export { revertPromise } from "./revert-promise";
 export * from "./unique-id";
+export * from "./uniquify";
