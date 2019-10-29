@@ -10,7 +10,7 @@ declare global {
      * * * *
      * Example:
      * ```typescript
-     * import "@thalesrc/js-utils/dist/as-static/function-of";
+     * import "@thalesrc/js-utils/as-static/function-of";
      *
      * const base = [1, 2, 5, {}, "x", "y"];
      * const mapTo = Function.of("thales rocks");
