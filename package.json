@@ -9,6 +9,8 @@
     "object",
     "deep clone",
     "array",
+    "async",
+    "map",
     "compact",
     "difference",
     "intersecion",

@@ -14,6 +14,7 @@ Javascript utility functions for web development
 `npm install @thalesrc/js-utils --save`
 
 #### Utility Functions
+* [async-map](https://thalesrc.github.io/js-utils/modules/_async_map_.html)
 * [clone](https://thalesrc.github.io/js-utils/modules/_clone_.html)
 * [compact](https://thalesrc.github.io/js-utils/modules/_compact_.html)
 * [debounce](https://thalesrc.github.io/js-utils/modules/_debounce_.html)

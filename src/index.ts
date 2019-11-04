@@ -1,3 +1,4 @@
+export * from "./async-map";
 export { clone } from "./clone";
 export * from "./compact";
 export { debounce } from "./debounce";
