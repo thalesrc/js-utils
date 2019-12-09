@@ -99,10 +99,10 @@
 								<p>Creates a function which returns the value given</p>
 								<hr>
 								<p>Example:</p>
-								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-title">Of</span> } <span class="hljs-title">from</span> "@<span class="hljs-title">thalesrc</span>/<span class="hljs-title">js</span>-<span class="hljs-title">utils</span>"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { functionOf } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
 
 <span class="hljs-keyword">const</span> base = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, {}, <span class="hljs-string">"x"</span>, <span class="hljs-string">"y"</span>];
-<span class="hljs-keyword">const</span> mapTo = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-title">Of</span>(<span class="hljs-params">"thales rocks"</span>)</span>;
+<span class="hljs-keyword">const</span> mapTo = functionOf(<span class="hljs-string">"thales rocks"</span>);
 
 <span class="hljs-keyword">const</span> mapped = base.map(mapTo);
 <span class="hljs-comment">// ["thales rocks", "thales rocks", "thales rocks", "thales rocks", "thales rocks", "thales rocks"]</span></code></pre>
