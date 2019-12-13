@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import "./promise-revert";
+import './promise-revert';
 
 class CustomError {
   constructor(public message: string) {}
@@ -9,22 +9,22 @@ class CustomError {
 
 describe('Promise Revert Proto Function', () => {
   it('should throw error when its resolved', done => {
-    Promise.resolve("foo")
+    Promise.resolve('foo')
       .revert()
       .then(() => {
-        throw new CustomError("bar");
+        throw new CustomError('bar');
       })
       .catch(err => {
-        expect(err).to.eq("foo");
+        expect(err).to.eq('foo');
         done();
       });
   });
 
   it('should resolve when its rejected', done => {
-    Promise.reject("foo")
+    Promise.reject('foo')
       .revert()
       .then(res => {
-        expect(res).to.eq("foo");
+        expect(res).to.eq('foo');
         done();
       });
   });
