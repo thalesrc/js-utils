@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;async-map&quot; | @thalesrc/js-utils</title>
+	<title>&quot;async-try-catch&quot; | @thalesrc/js-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_async_map_.html">&quot;async-map&quot;</a>
+					<a href="_async_try_catch_.html">&quot;async-try-catch&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;async-map&quot;</h1>
+			<h1>External module &quot;async-try-catch&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -71,7 +71,7 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_async_map_.html#asyncmap" class="tsd-kind-icon">async<wbr>Map</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_async_try_catch_.html#asynctrycatch" class="tsd-kind-icon">async<wbr>Try<wbr>Catch</a></li>
 							</ul>
 						</section>
 					</div>
@@ -80,34 +80,38 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-					<a name="asyncmap" class="tsd-anchor"></a>
-					<h3>async<wbr>Map</h3>
+					<a name="asynctrycatch" class="tsd-anchor"></a>
+					<h3>async<wbr>Try<wbr>Catch</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">async<wbr>Map&lt;T, U&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, mapper<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">async<wbr>Try<wbr>Catch&lt;T, E&gt;<span class="tsd-signature-symbol">(</span>promise<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/async-map.ts#L24">async-map.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/async-try-catch.ts#L27">async-try-catch.ts:27</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<h4 id="async-map">Async Map</h4>
+									<h4 id="async-try-catch">Async Try Catch</h4>
 								</div>
-								<p>Maps an array asynchronously</p>
+								<p>Merges result and error in the same callback</p>
 								<hr>
 								<p>Example:</p>
-								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { asyncMap } <span class="hljs-string">"@thalesrc/js-utils"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { asyncTryCatch } <span class="hljs-string">"@thalesrc/js-utils"</span>;
 
-<span class="hljs-keyword">const</span> array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fooFunction</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> promise = anAsyncCall();
+  <span class="hljs-keyword">const</span> [error, result] = <span class="hljs-keyword">await</span> asyncTryCatch(promise);
 
-asyncMap(array, <span class="hljs-keyword">async</span> value =&gt; {
- <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> addOneAfterASecond(value);
-}).then(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
- <span class="hljs-built_in">console</span>.log(result); <span class="hljs-comment">// [2, 3, 4]</span>
-});</code></pre>
+  <span class="hljs-keyword">if</span> (error) {
+    <span class="hljs-comment">// handle error</span>
+  }
+
+  <span class="hljs-comment">// do stuff</span>
+}
+</code></pre>
 								<hr>
 							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -116,50 +120,20 @@ asyncMap(array, <span class="hljs-keyword">async</span> value =&gt; {
 									<h4>T</h4>
 								</li>
 								<li>
-									<h4>U</h4>
+									<h4>E</h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>promise: <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Array to map</p>
+										<p>Promise to try</p>
 									</div>
-								</li>
-								<li>
-									<h5>mapper: <span class="tsd-signature-type">function</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Callback async function to map the array</p>
-									</div>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">&gt;</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>value: <span class="tsd-signature-type">T</span></h5>
-														</li>
-														<li>
-															<h5>index: <span class="tsd-signature-type">number</span></h5>
-														</li>
-														<li>
-															<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">&gt;</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>A promise contains asynchronusly mapped array result</p>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Error and result array</p>
 						</li>
 					</ul>
 				</section>
@@ -171,10 +145,10 @@ asyncMap(array, <span class="hljs-keyword">async</span> value =&gt; {
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="_async_map_.html">"async-<wbr>map"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="_async_try_catch_.html">"async-<wbr>try-<wbr>catch"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -245,7 +219,7 @@ asyncMap(array, <span class="hljs-keyword">async</span> value =&gt; {
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_async_map_.html#asyncmap" class="tsd-kind-icon">async<wbr>Map</a>
+						<a href="_async_try_catch_.html#asynctrycatch" class="tsd-kind-icon">async<wbr>Try<wbr>Catch</a>
 					</li>
 				</ul>
 			</nav>
