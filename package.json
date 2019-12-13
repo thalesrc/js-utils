@@ -11,6 +11,7 @@
     "array",
     "async",
     "map",
+    "try catch",
     "compact",
     "difference",
     "intersecion",

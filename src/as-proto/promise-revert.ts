@@ -1,4 +1,4 @@
-import { revertPromise } from "../revert-promise";
+import { revertPromise } from '../revert-promise';
 
 declare global {
   export interface Promise<T> {
@@ -31,4 +31,4 @@ declare global {
 
 Promise.prototype.revert = function<T = any>(this: Promise<any>): Promise<T> {
   return revertPromise<T>(this);
-}
+};
