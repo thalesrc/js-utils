@@ -60,7 +60,7 @@
     "replace": "^1.0.0",
     "ts-node": "^8.3.0",
     "typedoc": "^0.13.0",
-    "typescript": "^3.6.2",
+    "typescript": "^3.4.5",
     "update-json": "^1.0.0"
   },
   "dependencies": {
