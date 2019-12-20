@@ -1,14 +1,22 @@
-node_modules/
-docs/
-.vscode/
+# Source
 src/
-*.tgz
+
+# Dependencies
+node_modules/
 package-lock.json
 
+# Development
 .editorconfig
 tslint.json
-.travis.yml
 
 # Testing
 .nyc_output/
 coverage/
+
+# Tools
+.github/
+.vscode/
+
+# Etc
+docs/
+*.tgz
