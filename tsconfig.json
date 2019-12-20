@@ -17,7 +17,7 @@
       "dom",
       "es2015"
     ],
-    "outDir": "dist"
+    "outDir": "./"
   },
   "include": [
     "src/**/*.ts"
