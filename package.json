@@ -32,12 +32,17 @@
     "url": "https://github.com/thalesrc/js-utils.git"
   },
   "scripts": {
+    "clean:docs": "rimraf docs",
+    "clean:dist": "rimraf dist",
+    "clean:modules": "rimraf node_modules package-lock.json",
     "document": "typedoc --tsconfig config/tsconfig.doc.json",
-    "doc": "typedoc",
-    "prepare:github-pages": "npm run document && echo \"\" > ./docs/.nojekyll",
     "test": "jest",
     "test:coverage": "jest --collectCoverage",
-    "prepublishOnly": "tsc -p config/tsconfig.lib.json"
+    "prepare:github-pages": "npm run clean:docs && npm run document && echo \"\" > ./docs/.nojekyll",
+    "prepare:package": "npm run clean:dist && tsc -p config/tsconfig.lib.json",
+    "prepare:legacy": "tsc -p config/tsconfig.lib.legacy.json",
+    "version-update": "npm version $PACKAGE_VERSION --no-git-tag-version",
+    "change-ts-version": "rjp ./package.json typescript ~3.4.5"
   },
   "author": "alisahinozcelik@gmail.com",
   "license": "MIT",
@@ -48,6 +53,8 @@
     "@types/jest": "^24.0.24",
     "@types/node": "^12.12.21",
     "jest": "^24.9.0",
+    "replace-json-property": "^1.4.3",
+    "rimraf": "^3.0.0",
     "ts-jest": "^24.2.0",
     "typedoc": "^0.15.5",
     "typescript": "^3.6.2"
