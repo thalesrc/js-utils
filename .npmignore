@@ -1,6 +1,7 @@
 node_modules/
 docs/
 .vscode/
+.github/
 config/
 src/
 *.tgz
