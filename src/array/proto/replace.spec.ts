@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import "./array-replace";
-import { replace } from "../replace";
+import './array-replace';
+import { replace } from '../replace';
 
 describe('Array Replace Proto Function', () => {
   it('should work as same', () => {

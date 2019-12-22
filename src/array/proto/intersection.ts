@@ -1,4 +1,4 @@
-import { intersection, TInclusion } from "../intersection";
+import { intersection, TInclusion } from '../intersection';
 
 declare global {
   export interface Array<T> {
@@ -29,4 +29,4 @@ declare global {
 
 Array.prototype.intersection = function(inclusion: TInclusion, allEquals = true) {
   return intersection(this, inclusion, allEquals);
-}
+};

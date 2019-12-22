@@ -1,4 +1,4 @@
-import { defer } from "../defer";
+import { defer } from '../defer';
 
 declare global {
   export interface PromiseConstructor {

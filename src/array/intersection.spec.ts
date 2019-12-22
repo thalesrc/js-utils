@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import { intersection } from "./intersection";
+import { intersection } from './intersection';
 
 describe('Intersection Function', () => {
   it('should return intersection of array base and array inclusion', () => {
@@ -43,7 +43,7 @@ describe('Intersection Function', () => {
 
   it('should work properly when inclusion array has values which base hasn\'t', () => {
     const foo = [1, 2, 3, 1, 2, 3];
-    const bar = [1, 2, "x", "y"];
+    const bar = [1, 2, 'x', 'y'];
 
     expect(intersection(foo, bar)).to.eql([1, 2, 1, 2]);
     expect(intersection(foo, bar, false)).to.eql([1, 2]);

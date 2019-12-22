@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import { replace } from "./replace";
+import { replace } from './replace';
 
 describe('Replace Function', () => {
   let foo: number[];

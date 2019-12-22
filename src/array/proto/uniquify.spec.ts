@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import "./array-uniquify";
-import { uniquify } from "../uniquify";
+import './array-uniquify';
+import { uniquify } from '../uniquify';
 
 describe('Array Uniquify Proto Function', () => {
   it('should work as same', () => {

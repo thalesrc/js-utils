@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import "./difference";
-import { difference } from "../difference";
+import './difference';
+import { difference } from '../difference';
 
 describe('Set Difference Proto Function', () => {
   it('should work as same', () => {

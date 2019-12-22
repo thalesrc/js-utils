@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import "./array-remove";
-import { remove } from "../remove";
+import './array-remove';
+import { remove } from '../remove';
 
 describe('Array Remove Proto Function', () => {
   it('should work as same', () => {

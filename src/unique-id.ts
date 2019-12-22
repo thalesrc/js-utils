@@ -8,7 +8,7 @@ function* uniqueIdGenerator(prefix?: string) {
   let counter = 0;
 
   while (true) {
-    yield prefix ? prefix + "-" + counter++ : counter++;
+    yield prefix ? prefix + '-' + counter++ : counter++;
   }
 }
 

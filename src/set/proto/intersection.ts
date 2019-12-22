@@ -1,4 +1,4 @@
-import { intersection, TInclusion } from "../../array/intersection";
+import { intersection, TInclusion } from '../../array/intersection';
 
 declare global {
   export interface Set<T> {
@@ -28,4 +28,4 @@ declare global {
 
 Set.prototype.intersection = function<T>(this: Set<T>, inclusion: TInclusion, allEquals = true) {
   return intersection(this, inclusion, allEquals);
-}
+};

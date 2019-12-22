@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import "./clone";
-import { clone } from "../clone";
+import './clone';
+import { clone } from '../clone';
 
 describe('Clone Static Function', () => {
   it('should act as same', () => {

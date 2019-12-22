@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import "./array-intersection";
-import { intersection } from "../intersection";
+import './array-intersection';
+import { intersection } from '../intersection';
 
 describe('Array Intersecion Proto Function', () => {
   it('should work as same', () => {

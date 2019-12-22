@@ -1,20 +1,20 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import { clone } from "./clone";
+import { clone } from './clone';
 
 describe('Clone Function', () => {
   it('should clone primitives properly', () => {
     expect(clone(0)).to.eq(0);
     expect(clone(NaN)).to.eql(NaN);
-    expect(clone("foo")).to.eq("foo");
+    expect(clone('foo')).to.eq('foo');
     expect(clone(false)).to.eq(false);
     expect(clone(undefined)).to.eq(undefined);
     expect(clone(null)).to.eq(null);
   });
 
   it('should reference functions and symbols by default', () => {
-    const sym = Symbol("foo");
+    const sym = Symbol('foo');
     expect(clone(sym)).to.eq(sym);
 
     function foo() {}
@@ -41,7 +41,7 @@ describe('Clone Function', () => {
   });
 
   it('should clone map', () => {
-    const foo = new Map([["x", 1], ["y", 2]]);
+    const foo = new Map([['x', 1], ['y', 2]]);
     const bar = clone(foo);
 
     expect(bar).not.to.eq(foo);
@@ -49,7 +49,7 @@ describe('Clone Function', () => {
   });
 
   it('should clone set', () => {
-    const foo = new Set(["a", "b"]);
+    const foo = new Set(['a', 'b']);
     const bar = clone(foo);
 
     expect(bar).not.to.eq(foo);
@@ -58,9 +58,9 @@ describe('Clone Function', () => {
 
   it('should clone object deeply', () => {
     const map = new Map();
-    map.set(1, "a");
+    map.set(1, 'a');
 
-    const foo = {x: 1, y: 2, z: {a: "a", b: "b"}, t: [1, 2], m: map};
+    const foo = {x: 1, y: 2, z: {a: 'a', b: 'b'}, t: [1, 2], m: map};
     const bar = clone(foo);
 
     expect(bar).to.eql(foo);
@@ -77,7 +77,7 @@ describe('Clone Function', () => {
 
 
   it('should clone array deeply', () => {
-    const foo: any = [[1, 2], {a: 1, b: ["x", "y"]}];
+    const foo: any = [[1, 2], {a: 1, b: ['x', 'y']}];
     const bar = clone(foo);
 
     expect(bar).to.eql(foo);
@@ -137,7 +137,7 @@ describe('Clone Function', () => {
     expect(bar.d.get(anObjKey)).to.eq(foo.d.get(anObjKey));
   });
 
-  it("should clone via custom cloner", () => {
+  it('should clone via custom cloner', () => {
     class A {
       public customCloned = false;
     }
@@ -154,7 +154,7 @@ describe('Clone Function', () => {
     expect(bar[0].customCloned).to.eq(true);
   });
 
-  it("should overcome circular reference", () => {
+  it('should overcome circular reference', () => {
     const foo: {[key: string]: any} = {};
     const bar: {[key: string]: any} = {};
     const x: {[key: string]: any} = {};

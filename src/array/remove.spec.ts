@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import { remove } from "./remove";
+import { remove } from './remove';
 
 describe('Remove Function', () => {
   let foo: number[];

@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import { difference } from "./difference";
+import { difference } from './difference';
 
 describe('Difference Function', () => {
   it('should return difference of array base and array substractor', () => {
@@ -43,7 +43,7 @@ describe('Difference Function', () => {
 
   it('should work properly when substraction array has values which base hasn\'t', () => {
     const foo = [1, 2, 3, 1, 2, 3];
-    const bar = [1, 2, "x", "y"];
+    const bar = [1, 2, 'x', 'y'];
 
     expect(difference(foo, bar)).to.eql([3, 3]);
     expect(difference(foo, bar, true)).to.eql([3, 1, 2, 3]);

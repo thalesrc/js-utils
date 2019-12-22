@@ -1,4 +1,4 @@
-import { asyncMap } from "../async-map";
+import { asyncMap } from '../async-map';
 
 declare global {
   export interface Array<T> {
@@ -27,4 +27,4 @@ declare global {
 
 Array.prototype.asyncMap = async function<T, U>(this: T[], callbackFn: (value: T, index: number, array: T[]) => Promise<U>): Promise<U[]> {
   return await asyncMap(this, callbackFn);
-}
+};

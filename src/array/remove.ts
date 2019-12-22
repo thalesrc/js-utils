@@ -30,7 +30,7 @@ export function remove<T = any>(array: T[], item: T, multi = false): T[] {
   do {
     array = [...array.slice(0, index), ...array.slice(index + 1)];
     index = array.indexOf(item);
-  } while (multi && index > -1)
+  } while (multi && index > -1);
 
   return array;
 }

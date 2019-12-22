@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import { OpenPromise } from "./open-promise";
+import { OpenPromise } from './open-promise';
 import { noop } from './noop';
 
 class CustomError {
@@ -30,16 +30,16 @@ describe('Open Promise Class', () => {
 
     op.promise
       .then(value => {
-        throw new CustomError("bar");
+        throw new CustomError('bar');
       })
       .catch((err: CustomError) => {
         expect(new Date().getTime() - startedAt).to.greaterThan(49);
-        expect(err.message).to.eq("foo");
+        expect(err.message).to.eq('foo');
         done();
-      })
+      });
 
     setTimeout(() => {
-      op.reject(new CustomError("foo"));
+      op.reject(new CustomError('foo'));
     }, 50);
   });
 
@@ -61,7 +61,7 @@ describe('Open Promise Class', () => {
     op.promise.catch(noop);
 
     expect(op.rejected).to.eq(false);
-    op.reject(new CustomError("foo"));
+    op.reject(new CustomError('foo'));
 
     setTimeout(() => {
       expect(op.resolved).to.eq(false);
@@ -78,7 +78,7 @@ describe('Open Promise Class', () => {
     expect(op.finished).to.eq(false);
     expect(op2.finished).to.eq(false);
     op.resolve(1);
-    op2.reject(new CustomError("foo"));
+    op2.reject(new CustomError('foo'));
 
     setTimeout(() => {
       expect(op.finished).to.eq(true);
@@ -106,14 +106,14 @@ describe('Open Promise Class', () => {
 
     op.promise
       .then(() => {
-        throw new CustomError("bar");
+        throw new CustomError('bar');
       })
       .catch((err: CustomError) => {
         expect(new Date().getTime() - startedAt).to.greaterThan(49);
-        expect(err.message).to.eq("foo");
+        expect(err.message).to.eq('foo');
         done();
       });
 
-    op.bindPromise(new Promise((resolve, reject) => setTimeout(reject.bind(null, new CustomError("foo")), 50)));
+    op.bindPromise(new Promise((resolve, reject) => setTimeout(reject.bind(null, new CustomError('foo')), 50)));
   });
 });

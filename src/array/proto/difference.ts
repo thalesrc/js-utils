@@ -1,4 +1,4 @@
-import { difference, TSubstraction } from "../difference";
+import { difference, TSubstraction } from '../difference';
 
 declare global {
   export interface Array<T> {
@@ -29,4 +29,4 @@ declare global {
 
 Array.prototype.difference = function(substraction: TSubstraction, allDiff = false) {
   return difference(this, substraction, allDiff);
-}
+};

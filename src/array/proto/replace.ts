@@ -1,4 +1,4 @@
-import { replace, ReplaceItemsOptions, ReplaceByMapOptions } from "../replace";
+import { replace, ReplaceItemsOptions, ReplaceByMapOptions } from '../replace';
 
 declare global {
   export interface Array<T> {
@@ -76,4 +76,4 @@ declare global {
 
 Array.prototype.replace = <any>function<T>(options: T | ReplaceItemsOptions<T> | ReplaceByMapOptions<T>, itemToReplace: T): T[] {
   return replace.call(null, this, ...arguments);
-}
+};

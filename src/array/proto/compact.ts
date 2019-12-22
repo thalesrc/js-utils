@@ -1,4 +1,4 @@
-import { compact } from "../compact";
+import { compact } from '../compact';
 
 declare global {
   export interface Array<T> {
@@ -17,4 +17,4 @@ declare global {
 
 Array.prototype.compact = function() {
   return compact(this);
-}
+};

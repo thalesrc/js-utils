@@ -1,4 +1,4 @@
-import { minMax } from "../min-max";
+import { minMax } from '../min-max';
 
 declare global {
   export interface Math {

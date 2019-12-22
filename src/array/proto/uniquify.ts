@@ -1,4 +1,4 @@
-import { uniquify } from "../uniquify";
+import { uniquify } from '../uniquify';
 
 declare global {
   export interface Array<T> {
@@ -25,4 +25,4 @@ declare global {
 
 Array.prototype.uniquify = <any>function<T>(this: T[]): T[] {
   return uniquify(this);
-}
+};

@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { fail } from 'assert';
 import 'mocha';
 
-import { defer } from "./defer";
+import { defer } from './defer';
 
 class CustomError {
   constructor(public message: string) {}
@@ -46,22 +46,22 @@ describe('Defer Function', () => {
   });
 
   it('should return a promise which resolves the callback return value', done => {
-    defer(() => "test")
+    defer(() => 'test')
       .then(value => {
-        expect(value).to.eq("test");
+        expect(value).to.eq('test');
         done();
       });
   });
 
   it('should catch callback errors', done => {
     defer(() => {
-      throw new CustomError("foo");
+      throw new CustomError('foo');
     })
       .then(value => {
         throw new CustomError("couldn't catch error");
       })
       .catch((err: CustomError) => {
-        expect(err.message).to.eq("foo");
+        expect(err.message).to.eq('foo');
         done();
       });
   });

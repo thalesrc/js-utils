@@ -1,4 +1,4 @@
-import { noop } from "../function/noop";
+import { noop } from '../function/noop';
 
 /**
  * #### Delays the execution of the passed function to increase the render performance

@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import { debounce, debounceWithKey } from "./debounce";
+import { debounce, debounceWithKey } from './debounce';
 
 class CustomError {
   constructor(public message: string) {}
@@ -83,7 +83,7 @@ describe('Debounce Function', () => {
 
   it('should throw the callback error if thrown', done => {
     function baz() {
-      throw new CustomError("baz error");
+      throw new CustomError('baz error');
     }
 
     debounce(baz)
@@ -91,7 +91,7 @@ describe('Debounce Function', () => {
         throw new CustomError("couldn't catch error");
       })
       .catch(err => {
-        expect(err.message).to.eq("baz error");
+        expect(err.message).to.eq('baz error');
         done();
       });
   });

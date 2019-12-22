@@ -1,4 +1,4 @@
-import { remove } from "../remove";
+import { remove } from '../remove';
 
 declare global {
   export interface Array<T> {
@@ -26,6 +26,6 @@ declare global {
   }
 }
 
-Array.prototype.remove = <any>function<T>(this: T[], itemToRemove: T, multi: boolean = false): T[] {
+Array.prototype.remove = <any>function<T>(this: T[], itemToRemove: T, multi = false): T[] {
   return remove.call(null, this, ...arguments);
-}
+};

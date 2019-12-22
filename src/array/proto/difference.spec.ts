@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import "./array-difference";
-import { difference } from "../difference";
+import './array-difference';
+import { difference } from '../difference';
 
 describe('Array Difference Proto Function', () => {
   it('should work as same', () => {

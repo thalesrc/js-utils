@@ -1,4 +1,4 @@
-import { isTruthy } from "../is-truthy";
+import { isTruthy } from '../is-truthy';
 
 /**
  * #### Filters falsy values of the given array
@@ -28,5 +28,5 @@ import { isTruthy } from "../is-truthy";
  * @returns __a	new__ compacted array
  */
 export function compact<T = any>(arrayToCompact: T[]): T[] {
-	return arrayToCompact.filter(isTruthy);
+  return arrayToCompact.filter(isTruthy);
 }

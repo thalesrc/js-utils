@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import { minMax } from "./min-max";
+import { minMax } from './min-max';
 
 describe('MinMax Function', () => {
   it('should return min limit when the value below limit', () => {

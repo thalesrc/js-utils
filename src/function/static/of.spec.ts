@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import "./of";
-import { of } from "../of";
+import './of';
+import { of } from '../of';
 
 describe('Function Of Static Function', () => {
   it('should work as same', () => {

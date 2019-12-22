@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import { timeout } from "./timeout";
+import { timeout } from './timeout';
 
 class CustomError {
   constructor(public message: string) {}
@@ -21,10 +21,10 @@ describe('Timeout Promise Function', () => {
   it('should resolve "foo" after 50ms', done => {
     const startedAt = new Date().getTime();
 
-    timeout(50, "foo")
+    timeout(50, 'foo')
       .then(val => {
         expect(new Date().getTime() - startedAt).to.greaterThan(49);
-        expect(val).to.eq("foo");
+        expect(val).to.eq('foo');
         done();
       });
   });
@@ -34,7 +34,7 @@ describe('Timeout Promise Function', () => {
 
     timeout
       .then(() => {
-        throw new CustomError("bar");
+        throw new CustomError('bar');
       })
       .catch(err => {
         expect(err).not.to.instanceof(CustomError);
@@ -49,7 +49,7 @@ describe('Timeout Promise Function', () => {
 
     timeout(100, undefined, key)
       .then(() => {
-        throw new CustomError("bar");
+        throw new CustomError('bar');
       })
       .catch(err => {
         expect(err).not.to.instanceof(CustomError);
@@ -64,7 +64,7 @@ describe('Timeout Promise Function', () => {
 
     timeout(100, undefined, key)
       .then(() => {
-        throw new CustomError("bar");
+        throw new CustomError('bar');
       })
       .catch(err => {
         expect(err).to.eql(timeout.TIMEOUT_CANCELLED);
@@ -77,7 +77,7 @@ describe('Timeout Promise Function', () => {
   it('should throw related error when identifier not found', done => {
     const byKey = timeout.cancel(Symbol())
       .then(() => {
-        throw new CustomError("foo");
+        throw new CustomError('foo');
       })
       .catch(err => {
         expect(err).to.eql(timeout.IDENTIFIER_NOT_FOUND);
@@ -85,7 +85,7 @@ describe('Timeout Promise Function', () => {
 
     const byPromise = timeout.cancel(Promise.resolve())
       .then(() => {
-        throw new CustomError("foo");
+        throw new CustomError('foo');
       })
       .catch(err => {
         expect(err).to.eql(timeout.IDENTIFIER_NOT_FOUND);
@@ -108,7 +108,7 @@ describe('Timeout Promise Function', () => {
     setTimeout(() => {
       const _resolved = timeout.cancel(resolved)
         .then(() => {
-          throw new CustomError("foo");
+          throw new CustomError('foo');
         })
         .catch(err => {
           expect(err).to.eql(timeout.FINISHED_ALREADY);
@@ -116,7 +116,7 @@ describe('Timeout Promise Function', () => {
 
       const _rejected = timeout.cancel(rejected)
         .then(() => {
-          throw new CustomError("foo");
+          throw new CustomError('foo');
         })
         .catch(err => {
           expect(err).to.eql(timeout.FINISHED_ALREADY);
@@ -133,13 +133,13 @@ describe('Timeout Promise Function', () => {
 
     timeout
       .then(() => {
-        throw new CustomError("bar");
+        throw new CustomError('bar');
       })
       .catch(err => {
-        expect(err).to.eq("foo");
+        expect(err).to.eq('foo');
         done();
       });
 
-    timeout.cancel(timeout, "foo");
+    timeout.cancel(timeout, 'foo');
   });
 });
