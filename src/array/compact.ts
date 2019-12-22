@@ -17,7 +17,7 @@ import { isTruthy } from '../is-truthy';
  *
  * Example as Array Prototype:
  * ```typescript
- * import "@thalesrc/js-utils/dist/as-proto/compact";
+ * import "@thalesrc/js-utils/array/proto/compact";
  *
  * const arr = [undefined, "", false, 0, 1, "1"];
  * const compacted = arr.compact(); // [1, "1"];

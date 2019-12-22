@@ -2,7 +2,7 @@ export * from './array';
 // export * from './boolean';
 export * from './function';
 export * from './map';
-export * from './number';
+export * from './math';
 export * from './object';
 export * from './promise';
 // export * from './set';

@@ -1,4 +1,4 @@
-import { debounce, DEFAULT_DEBOUNCE_TIME } from '../../promise/debounce';
+import { debounce, DEFAULT_DEBOUNCE_TIME } from '../debounce';
 
 declare global {
   export interface Function {
@@ -8,7 +8,7 @@ declare global {
      * * * *
      * Example usage:
      * ```typescript
-     * import "@thalesrc/js-utils/dist/as-proto/debounce";
+     * import "@thalesrc/js-utils/function/proto/debounce";
      *
      * function foo() {
      *   console.log("hello");

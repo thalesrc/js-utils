@@ -10,7 +10,7 @@ declare global {
      * * * *
      * Example:
      * ```typescript
-     * import "@thalesrc/js-utils/dist/as-proto/array-difference";
+     * import "@thalesrc/js-utils/array/proto/array-difference";
      *
      * const base = ["a", "b", "c", "d", "a", "b", "c", "d"];
      *

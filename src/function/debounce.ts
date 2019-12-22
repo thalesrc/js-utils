@@ -1,4 +1,4 @@
-import { timeout } from './timeout';
+import { timeout } from '../promise/timeout';
 import { OpenPromise } from '../open-promise';
 
 export type TDebounceFunction<T> = (...args: any[]) => (T | Promise<T>);
@@ -56,7 +56,7 @@ export function debounceWithKey<T>(
  * * * *
  * Example usage:
  * ```typescript
- * import { debounce } from "@thalesrc/js-utils";
+ * import { debounce } from "@thalesrc/js-utils/promise";
  *
  * function foo() {
  *   console.log("hello");

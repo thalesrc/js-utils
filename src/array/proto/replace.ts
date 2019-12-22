@@ -10,7 +10,7 @@ declare global {
      * * * *
      * Example:
      * ```typescript
-     * import "@thalesrc/js-utils/dist/as-proto/array-replace";
+     * import "@thalesrc/js-utils/array/proto/replace";
      *
      * const array = ["a", "b", "c", "a", "b", "c"];
      *
@@ -32,7 +32,7 @@ declare global {
      * * * *
      * Example:
      * ```typescript
-     * import "@thalesrc/js-utils/dist/as-proto/array-replace";
+     * import "@thalesrc/js-utils/array/proto/replace";
      *
      * const array = ["a", "b", "c", "a", "b", "c"];
      *
@@ -54,7 +54,7 @@ declare global {
      * * * *
      * Example:
      * ```typescript
-     * import "@thalesrc/js-utils/dist/as-proto/array-replace";
+     * import "@thalesrc/js-utils/array/proto/replace";
      *
      * const array = ["a", "b", "c", "a", "b", "c"];
      * const map = new Map();

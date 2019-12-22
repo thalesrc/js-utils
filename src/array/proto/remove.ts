@@ -12,7 +12,7 @@ declare global {
      * * * *
      * Example:
      * ```typescript
-     * import "@thalesrc/js-utils/dist/as-proto/array-remove";
+     * import "@thalesrc/js-utils/array/proto/remove";
      *
      * const array = ["a", "b", "c", "a", "b", "c"];
      *

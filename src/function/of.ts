@@ -23,7 +23,7 @@ const CACHE = new SmartMap<any, () => any>();
  * ```
  * Function Static Example:
  * ```typescript
- * import "@thalesrc/js-utils/dist/as-static/function-of";
+ * import "@thalesrc/js-utils/function/static/of";
  *
  * const base = [1, 2, 5, {}, "x", "y"];
  * const mapTo = Function.of("thales rocks");

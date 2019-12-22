@@ -9,7 +9,7 @@ declare global {
      * * * *
      * Example:
      * ```typescript
-     * import "@thalesrc/js-utils/dist/as-static/timeout";
+     * import "@thalesrc/js-utils/promise/static/timeout";
      *
      * Promise.timeout(1000);
      *  .then(() => console.log("will be logged after a second"));

@@ -4,31 +4,33 @@
 export type TInclusion = any[] | Set<any>;
 
 /**
- * #### Intersection
+ * Intersection
  *
  * Gets the intersection of the two arrays or sets
  *
  * * * *
- * Example:
+ * _Example:_
  * ```typescript
- * import { intersection } from "@thalesrc/js-utils";
+ * import { intersection } from "@thalesrc/js-utils/array";
  *
  * const base = ["a", "b", "c", "d", "a", "b", "c", "d"];
  *
  * intersection(base, ["a", "b", "x"]); // ["a", "b", "a", "b"]
  * intersection(base, ["a", "b", "x"], false); // ["a", "b"]
  * ```
- * Array Prototype Example:
+ *
+ * _Array Prototype Example:_
  * ```typescript
- * import "@thalesrc/js-utils/dist/as-proto/array-intersection";
+ * import "@thalesrc/js-utils/array/proto/intersection";
  *
  * const base = ["a", "b", "c", "d", "a", "b", "c", "d"];
  *
  * base.intersection(["a", "b"]); // ["a", "b", "a", "b"]
  * ```
- * Set Prototype Example:
+ *
+ * _Set Prototype Example:_
  * ```typescript
- * import "@thalesrc/js-utils/dist/as-proto/set-intersection";
+ * import "@thalesrc/js-utils/set/proto/intersection";
  *
  * const base = new Set(["a", "b", "c", "d"]);
  *

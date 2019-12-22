@@ -1,16 +1,32 @@
 /**
- * #### Async Try Catch
+ * #### Try Catch
  *
  * Merges result and error in the same callback
  *
  * * * *
  * Example:
  * ```typescript
- * import { asyncTryCatch } "@thalesrc/js-utils";
+ * import { tryCatch } from "@thalesrc/js-utils/promise";
  *
  * async function fooFunction() {
  *   const promise = anAsyncCall();
- *   const [error, result] = await asyncTryCatch(promise);
+ *   const [error, result] = await tryCatch(promise);
+ *
+ *   if (error) {
+ *     // handle error
+ *   }
+ *
+ *   // do stuff
+ * }
+ *
+ * ```
+ *
+ * Prototype Example:
+ * ```typescript
+ * import "@thalesrc/js-utils/promise/proto/try-catch";
+ *
+ * async function fooFunction() {
+ *   const [error, result] = await anAsyncCall().tryCatch();
  *
  *   if (error) {
  *     // handle error

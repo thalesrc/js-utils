@@ -10,7 +10,7 @@ declare global {
      * * * *
      * Example:
      * ```typescript
-     * import "@thalesrc/js-utils/dist/as-proto/array-uniquify";
+     * import "@thalesrc/js-utils/array/proto/uniquify";
      *
      * const array = ["a", "b", "c", "a", "b", "c"];
      *

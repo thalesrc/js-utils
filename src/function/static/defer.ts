@@ -1,16 +1,16 @@
 import { defer } from '../defer';
 
 declare global {
-  export interface PromiseConstructor {
+  export interface FunctionConstructor {
     /**
      * #### Delays the execution of the passed function to increase the render performance
      *
      * * * *
      * Example as promise static method
      * ```typescript
-     * import "@thalesrc/js-utils/dist/as-static/defer";
+     * import "@thalesrc/js-utils/function/static/defer";
      *
-     * Promise.defer(() => aFunctionToDefer())
+     * Function.defer(() => aFunctionToDefer())
      *  .then(res => ...)
      *  .catch(err => ...);
      * ```
@@ -23,4 +23,4 @@ declare global {
   }
 }
 
-Promise.defer = defer;
+Function.defer = defer;

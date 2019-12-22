@@ -6,11 +6,20 @@
  * * * *
  * Example:
  * ```typescript
- * import { uniquify } "@thalesrc/js-utils";
+ * import { uniquify } "@thalesrc/js-utils/array";
  *
  * const array = ["a", "b", "c", "a", "b", "c"];
  *
  * uniquify(array); // ["a", "b", "c"]
+ * ```
+ *
+ * Prototype Example:
+ * ```typescript
+ * import "@thalesrc/js-utils/array/proto/uniquify";
+ *
+ * const array = ["a", "b", "c", "a", "b", "c"];
+ *
+ * array.uniquify(); // ["a", "b", "c"]
  * ```
  * * * *
  * @return The new uniquified array

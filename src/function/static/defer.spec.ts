@@ -10,7 +10,7 @@ describe('Defer Static Function', () => {
   it('should defer execution', done => {
     let counter = 0;
 
-    Promise.defer(() => {
+    Function.defer(() => {
       expect(counter).toBe(1000000);
       done();
     });
@@ -25,7 +25,7 @@ describe('Defer Static Function', () => {
   it('should return a deferred void promise if callback is not defined', done => {
     let counter = 0;
 
-    Promise.defer()
+    Function.defer()
       .then(() => {
         expect(counter).toBe(1);
         done();
@@ -35,7 +35,7 @@ describe('Defer Static Function', () => {
 
   it('should return a promise which resolves after callback execution', done => {
     let counter = 0;
-    Promise.defer(() => counter++)
+    Function.defer(() => counter++)
       .then(() => {
         expect(counter).toBe(1);
         done();
@@ -44,7 +44,7 @@ describe('Defer Static Function', () => {
   });
 
   it('should return a promise which resolves the callback return value', done => {
-    Promise.defer(() => 'test')
+    Function.defer(() => 'test')
       .then(value => {
         expect(value).toBe('test');
         done();
@@ -52,7 +52,7 @@ describe('Defer Static Function', () => {
   });
 
   it('should catch callback errors', done => {
-    Promise.defer(() => {
+    Function.defer(() => {
       throw new CustomError('foo');
     })
       .then(value => {

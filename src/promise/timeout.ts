@@ -2,7 +2,7 @@ import { OpenPromise } from '../open-promise';
 
 export interface PromiseTimeoutFunction {
   /**
-   * @see promiseTimeout
+   * @see timeout
    * @param time Time to resolve promise in miliseconds
    * @param value Value to resolve promise with
    * @param key Key to cancel the timeout if needed
@@ -15,31 +15,32 @@ export interface PromiseTimeoutFunction {
    * * * *
    * Usage via promise instance:
    * ```typescript
-   * import { promiseTimeout } from "@thalesrc/js-utils";
+   * import { timeout } from "@thalesrc/js-utils/promise";
    *
-   * const timeout = promiseTimeout(1000);
+   * const timeout = timeout(1000);
    *
    * timeout
    *  .then(() => console.log("this won't be logged"))
    *  .catch(() => console.log("this will be logged, because timer has been cancelled"));
    *
-   * promiseTimeout.cancel(timeout);
+   * timeout.cancel(timeout);
    * ```
+   *
    * Usage via key
    * ```typescript
-   * import { promiseTimeout } from "@thalesrc/js-utils";
+   * import { timeout } from "@thalesrc/js-utils/promise";
    *
    * const key = Symbol();
    *
-   * promiseTimeout(1000, null, key)
+   * timeout(1000, null, key)
    *  .then(() => console.log("this won't be logged"))
    *  .catch(() => console.log("this will be logged, because timer has been cancelled"));
    *
-   * promiseTimeout.cancel(key);
+   * timeout.cancel(key);
    * ```
    * Static usage example:
    * ```typescript
-   * import "@thalesrc/js-utils/dist/as-static/timeout";
+   * import "@thalesrc/js-utils/promise/static/timeout";
    *
    * const timeout = Promise.timeout(1000);
    *
@@ -156,31 +157,31 @@ const promiseTimeoutInitializer = (() => {
  * * * *
  * Example:
  * ```typescript
- * import { promiseTimeout } from "@thalesrc/js-utils";
+ * import { timeout } from "@thalesrc/js-utils/promise";
  *
- * promiseTimeout(1000);
+ * timeout(1000);
  *  .then(() => console.log("will be logged after a second"));
  * ```
  * Example with a resolve value:
  * ```typescript
- * import { promiseTimeout } from "@thalesrc/js-utils";
+ * import { timeout } from "@thalesrc/js-utils/promise";
  *
- * promiseTimeout(1000, "foo");
+ * timeout(1000, "foo");
  *  .then(val => console.log("will log 'foo' after a second", val));
  * ```
  * Can be used in promise chaining:
  * ```typescript
- * import { promiseTimeout } from "@thalesrc/js-utils";
+ * import { timeout } from "@thalesrc/js-utils/promise";
  *
  * fetch("http://localhost:8080/anEndpoint") // Fetch something
- *  .then(val => promiseTimeout(1000, val)) // Wait a second after response
+ *  .then(val => timeout(1000, val)) // Wait a second after response
  *  .then(val => {
  *    ...do something else
  *  });
  * ```
  * Static usage example:
  * ```typescript
- * import "@thalesrc/js-utils/dist/as-static/timeout";
+ * import "@thalesrc/js-utils/promise/static/timeout";
  *
  * Promise.timeout(1000);
  *  .then(() => console.log("will be logged after a second"));

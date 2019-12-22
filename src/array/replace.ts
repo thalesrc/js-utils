@@ -70,15 +70,16 @@ const REPLACE_BY_MAP_DEFAULT_OPTIONS: Required<ReplaceByMapOptions<any>> = {
  * * * *
  * Example:
  * ```typescript
- * import { replace } from "@thalesrc/js-utils";
+ * import { replace } from "@thalesrc/js-utils/array";
  *
  * const array = ["a", "b", "c", "a", "b", "c"];
  *
  * replace(array, "b", "x"); // ["a", "x", "c", "a", "b", "c"]
  * ```
+ *
  * Array Prototype Example:
  * ```typescript
- * import "@thalesrc/js-utils/dist/as-proto/array-replace";
+ * import "@thalesrc/js-utils/array/proto/replace";
  *
  * const array = ["a", "b", "c", "a", "b", "c"];
  *

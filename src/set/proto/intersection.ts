@@ -10,7 +10,7 @@ declare global {
      * * * *
      * Example:
      * ```typescript
-     * import "@thalesrc/js-utils/dist/as-proto/set-intersection";
+     * import "@thalesrc/js-utils/set/proto/intersection";
      *
      * const base = new Set(["a", "b", "c", "d"]);
      *

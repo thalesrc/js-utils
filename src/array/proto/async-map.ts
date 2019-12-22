@@ -10,7 +10,7 @@ declare global {
      * * * *
      * Example:
      * ```typescript
-     * import "@thalesrc/js-utils/as-proto/array-async-map";
+     * import "@thalesrc/js-utils/array/proto/async-map";
      *
      * const array = [1, 2, 3];
      *

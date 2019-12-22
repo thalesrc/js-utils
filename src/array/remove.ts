@@ -8,12 +8,22 @@
  * * * *
  * Example:
  * ```typescript
- * import { remove } from "@thalesrc/js-utils";
+ * import { remove } from "@thalesrc/js-utils/array";
  *
  * const array = ["a", "b", "c", "a", "b", "c"];
  *
  * remove(array, "b"); // ["a", "c", "a", "b", "c"]
  * remove(array, "b", true); // ["a", "c", "a", "c"]
+ * ```
+ *
+ * Prototype Example:
+ * ```typescript
+ * import "@thalesrc/js-utils/array/proto/remove";
+ *
+ * const array = ["a", "b", "c", "a", "b", "c"];
+ *
+ * array.remove("b"); // ["a", "c", "a", "b", "c"]
+ * array.remove("b", true); // ["a", "c", "a", "c"]
  * ```
  * * * *
  * @param array: Array to remove the item

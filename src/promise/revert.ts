@@ -5,11 +5,11 @@
  * * * *
  * Example usage:
  * ```typescript
- * import { revertPromise } from "@thalesrc/js-utils";
+ * import { revert } from "@thalesrc/js-utils/promise";
  *
  * const errorPromise = Promise.reject(new Error('foo'));
  *
- * revertPromise(errorPromise)
+ * revert(errorPromise)
  *  .then(err => {
  *    console.log("this will be logged", err);
  *  })
@@ -20,7 +20,7 @@
  *
  * Proto usage example:
  * ```typescript
- * import "@thalesrc/js-utils/dist/as-proto/promise-revert";
+ * import "@thalesrc/js-utils/promise/proto/revert";
  *
  * Promise.reject(new Error('foo'))
  *  .revert()

@@ -10,7 +10,7 @@ declare global {
      * * * *
      * Example:
      * ```typescript
-     * import "@thalesrc/js-utils/dist/as-proto/set-difference";
+     * import "@thalesrc/js-utils/set/proto/difference";
      *
      * const base = new Set(["a", "b", "c", "d"]);
      *

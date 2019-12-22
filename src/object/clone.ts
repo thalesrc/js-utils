@@ -14,7 +14,7 @@ export interface ICloneOptions {
    * * * *
    * Example:
    * ```typescript
-   * import { clone } from "@thalesrc/js-utils";
+   * import { clone } from "@thalesrc/js-utils/object";
    *
    * const object = {
    *   width: 250,
@@ -36,7 +36,7 @@ export interface ICloneOptions {
    * * * *
    * Example:
    * ```typescript
-   * import { clone } from "@thalesrc/js-utils";
+   * import { clone } from "@thalesrc/js-utils/object";
    *
    * const john = { age: 20, willBeReferenced: true };
    * const jane = { age: 25, willBeReferenced: false };
@@ -62,7 +62,7 @@ export interface ICloneOptions {
    * * * *
    * Example:
    * ```typescript
-   * import { clone } from "@thalesrc/js-utils";
+   * import { clone } from "@thalesrc/js-utils/object";
    *
    * const object = {
    *   width: 250,
@@ -83,7 +83,7 @@ export interface ICloneOptions {
    * * * *
    * Example:
    * ```typescript
-   * import { clone } from "@thalesrc/js-utils";
+   * import { clone } from "@thalesrc/js-utils/object";
    *
    * const object = {
    *  width: 250,
@@ -226,7 +226,7 @@ function objectCloner(objectToClone, options: TNonOptionalCloneOptions, internal
  * * * *
  * Example:
  * ```typescript
- * import { clone } from "@thalesrc/js-utils";
+ * import { clone } from "@thalesrc/js-utils/object";
  *
  * const object = {a: 1, b: {c: true, d: ["x", "y"]}};
  *
@@ -243,7 +243,7 @@ function objectCloner(objectToClone, options: TNonOptionalCloneOptions, internal
  *
  * Static usage example:
  * ```typescript
- * import "@thalesrc/js-utils/dist/as-static/clone";
+ * import "@thalesrc/js-utils/object/static/clone";
  *
  * const object = {a: 1, b: 2};
  * const clonedObject = Object.clone(object); // {a: 1, b: 2}
