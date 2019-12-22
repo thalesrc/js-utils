@@ -6,7 +6,8 @@
 		"moduleResolution": "node",
 		"declaration": true,
 		"experimentalDecorators": true,
-		"emitDecoratorMetadata": true,
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
 		"lib": [
 			"esnext",
 			"esnext.asynciterable"
