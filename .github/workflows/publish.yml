@@ -19,9 +19,9 @@ jobs:
       - run: npm test
       - run: npm run version-update
       - run: npm run prepare:package
+      - run: npm run change-ts-version
       - run: rm -rf node_modules
       - run: rm ./package-lock.json
-      - run: npm run change-ts-version
       - run: npm install
       - run: npm run prepare:legacy
       - run: npm publish
