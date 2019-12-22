@@ -34,7 +34,6 @@
   "scripts": {
     "clean:docs": "rimraf docs",
     "clean:dist": "rimraf dist",
-    "clean:modules": "rimraf node_modules package-lock.json",
     "document": "typedoc --tsconfig config/tsconfig.doc.json",
     "test": "jest",
     "test:coverage": "jest --collectCoverage",
