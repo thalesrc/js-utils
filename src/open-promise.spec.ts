@@ -1,8 +1,7 @@
-import { expect } from 'chai';
-import 'mocha';
+import 'jest';
 
-import { OpenPromise } from "./open-promise";
-import { noop } from './noop';
+import { OpenPromise } from './open-promise';
+import { noop } from './function/noop';
 
 class CustomError {
   constructor(public message: string) {}
@@ -14,8 +13,8 @@ describe('Open Promise Class', () => {
     const startedAt = new Date().getTime();
 
     op.promise.then(value => {
-      expect(new Date().getTime() - startedAt).to.greaterThan(49);
-      expect(value).to.eq(1);
+      expect(new Date().getTime() - startedAt).toBeGreaterThan(49);
+      expect(value).toBe(1);
       done();
     });
 
@@ -30,28 +29,28 @@ describe('Open Promise Class', () => {
 
     op.promise
       .then(value => {
-        throw new CustomError("bar");
+        throw new CustomError('bar');
       })
       .catch((err: CustomError) => {
-        expect(new Date().getTime() - startedAt).to.greaterThan(49);
-        expect(err.message).to.eq("foo");
+        expect(new Date().getTime() - startedAt).toBeGreaterThan(49);
+        expect(err.message).toBe('foo');
         done();
-      })
+      });
 
     setTimeout(() => {
-      op.reject(new CustomError("foo"));
+      op.reject(new CustomError('foo'));
     }, 50);
   });
 
   it('should return resolved state properly', done => {
     const op = new OpenPromise<number>();
 
-    expect(op.resolved).to.eq(false);
+    expect(op.resolved).toBe(false);
     op.resolve(1);
 
     setTimeout(() => {
-      expect(op.resolved).to.eq(true);
-      expect(op.rejected).to.eq(false);
+      expect(op.resolved).toBe(true);
+      expect(op.rejected).toBe(false);
       done();
     }, 50);
   });
@@ -60,12 +59,12 @@ describe('Open Promise Class', () => {
     const op = new OpenPromise<number>();
     op.promise.catch(noop);
 
-    expect(op.rejected).to.eq(false);
-    op.reject(new CustomError("foo"));
+    expect(op.rejected).toBe(false);
+    op.reject(new CustomError('foo'));
 
     setTimeout(() => {
-      expect(op.resolved).to.eq(false);
-      expect(op.rejected).to.eq(true);
+      expect(op.resolved).toBe(false);
+      expect(op.rejected).toBe(true);
       done();
     }, 50);
   });
@@ -75,14 +74,14 @@ describe('Open Promise Class', () => {
     const op2 = new OpenPromise<number>();
     op2.promise.catch(noop);
 
-    expect(op.finished).to.eq(false);
-    expect(op2.finished).to.eq(false);
+    expect(op.finished).toBe(false);
+    expect(op2.finished).toBe(false);
     op.resolve(1);
-    op2.reject(new CustomError("foo"));
+    op2.reject(new CustomError('foo'));
 
     setTimeout(() => {
-      expect(op.finished).to.eq(true);
-      expect(op2.finished).to.eq(true);
+      expect(op.finished).toBe(true);
+      expect(op2.finished).toBe(true);
       done();
     }, 50);
   });
@@ -92,8 +91,8 @@ describe('Open Promise Class', () => {
     const startedAt = new Date().getTime();
 
     op.promise.then(val => {
-      expect(new Date().getTime() - startedAt).to.greaterThan(49);
-      expect(val).to.eq(1);
+      expect(new Date().getTime() - startedAt).toBeGreaterThan(49);
+      expect(val).toBe(1);
       done();
     });
 
@@ -106,14 +105,14 @@ describe('Open Promise Class', () => {
 
     op.promise
       .then(() => {
-        throw new CustomError("bar");
+        throw new CustomError('bar');
       })
       .catch((err: CustomError) => {
-        expect(new Date().getTime() - startedAt).to.greaterThan(49);
-        expect(err.message).to.eq("foo");
+        expect(new Date().getTime() - startedAt).toBeGreaterThan(49);
+        expect(err.message).toBe('foo');
         done();
       });
 
-    op.bindPromise(new Promise((resolve, reject) => setTimeout(reject.bind(null, new CustomError("foo")), 50)));
+    op.bindPromise(new Promise((resolve, reject) => setTimeout(reject.bind(null, new CustomError('foo')), 50)));
   });
 });

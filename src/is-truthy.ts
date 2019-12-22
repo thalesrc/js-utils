@@ -26,5 +26,5 @@
  * @param value value to be checked
  */
 export function isTruthy(value: any): boolean {
-	return !!value;
+  return !!value;
 }

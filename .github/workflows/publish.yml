@@ -1,0 +1,28 @@
+name: Npm Package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set env
+        run: echo ::set-env name=PACKAGE_VERSION::$(echo ${GITHUB_REF:10})
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm install
+      - run: npm test
+      - run: npm run version-update
+      - run: npm run prepare:package
+      - run: npm run clean:modules
+      - run: npm run change-ts-version
+      - run: npm install
+      - run: npm run prepare:legacy
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

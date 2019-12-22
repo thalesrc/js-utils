@@ -1,6 +1,7 @@
 node_modules/
 docs/
 .vscode/
+config/
 src/
 *.tgz
 package-lock.json
@@ -12,3 +13,4 @@ tslint.json
 # Testing
 .nyc_output/
 coverage/
+jest.config.json

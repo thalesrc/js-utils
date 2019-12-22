@@ -1,0 +1,20 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true
+  },
+  "typedocOptions": {
+    "mode": "modules",
+    "out": "docs",
+    "excludeNotExported": true,
+    "excludePrivate": true,
+    "excludeExternals": true,
+    "disableOutputCheck": true,
+    "gitRevision": "master",
+    "exclude": [
+      "**/index.ts",
+      "**/+(proto|static)/*",
+      "**/*.spec.ts"
+    ]
+  }
+}
