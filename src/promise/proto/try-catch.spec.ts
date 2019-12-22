@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import './promise-try-catch';
+import './try-catch';
 
 describe('Promise Try Catch Proto Function', () => {
   it('should resolve when its resolved', done => {

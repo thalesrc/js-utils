@@ -1,6 +1,6 @@
-import { difference } from "../array/difference";
-import { intersection } from "../array/intersection";
-import { mapMerge } from '../map/map-merge';
+import { difference } from '../array/difference';
+import { intersection } from '../array/intersection';
+import { merge } from '../map/merge';
 
 /**
  * #### Cloning Options
@@ -104,7 +104,7 @@ export interface ICloneOptions {
    * * * *
    */
   customCloners?: Map<Function, TInstanceCloner>;
-};
+}
 
 /**
  * #### Internal Data For Cloning Process
@@ -134,7 +134,7 @@ export type TInstanceCloner = <T>(objectToClone: T, options: TNonOptionalCloneOp
 /**
  * A placeholder to symbolize the cloning progress of `objectToClone` hasn't finished yet
  */
-const CLONING_IN_PROGRESS = Symbol("Cloning In Progress");
+const CLONING_IN_PROGRESS = Symbol('Cloning In Progress');
 
 /**
  * Function Map to clone specific objects types
@@ -193,14 +193,14 @@ function objectCloner(objectToClone, options: TNonOptionalCloneOptions, internal
   /**
    * New Object Clone
    */
-	const _clone = {};
+  const _clone = {};
 
   /**
    * Object cloner
    * @param key incoming property of object to clone
    */
-	function cloneObject(key) {
-		_clone[key] = cloner(objectToClone[key], options, {...internalData, parent: _clone, key});
+  function cloneObject(key) {
+    _clone[key] = cloner(objectToClone[key], options, {...internalData, parent: _clone, key});
   }
 
   const allProperties = [...Object.keys(objectToClone), ...Object.getOwnPropertySymbols(objectToClone)];
@@ -213,7 +213,7 @@ function objectCloner(objectToClone, options: TNonOptionalCloneOptions, internal
   // Clone remaining properties
   difference(allProperties, propsToRefer).forEach(cloneObject);
 
-	return _clone;
+  return _clone;
 }
 
 /**
@@ -265,13 +265,13 @@ export function clone<T>(
   /**
    * Whole options with defaults
    */
-  const mergedCloners = mapMerge(customCloners, DEFAULT_INSTANCE_CLONERS);
+  const mergedCloners = merge(customCloners, DEFAULT_INSTANCE_CLONERS);
   const allOptions: TNonOptionalCloneOptions = {instancesToRefer, propsToRefer, valueFiltererToRefer, customCloners: mergedCloners};
 
   const finalizers = [];
   const cloned = cloner(objectToClone, allOptions, {clonedObjects: new Map(), finalizers});
 
-  finalizers.forEach(callback => {callback()});
+  finalizers.forEach(callback => {callback(); });
 
   return cloned;
 }
@@ -285,13 +285,13 @@ function cloner<T>(
   const { clonedObjects, finalizers, parent, key } = internalData;
 
   // Pass primitives & functions
-	if (objectToClone === null || !(objectToClone instanceof Object) || objectToClone instanceof Function) {
-		return objectToClone;
+  if (objectToClone === null || !(objectToClone instanceof Object) || objectToClone instanceof Function) {
+    return objectToClone;
   }
 
   // Pass unwanted references
-	if (instancesToRefer.some(instance => objectToClone instanceof instance)) {
-		return objectToClone;
+  if (instancesToRefer.some(instance => objectToClone instanceof instance)) {
+    return objectToClone;
   }
 
   // Pass filterer results

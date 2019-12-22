@@ -13,10 +13,10 @@ const CACHE = new SmartMap<any, () => any>();
  * * * *
  * Example:
  * ```typescript
- * import { functionOf } from "@thalesrc/js-utils";
+ * import { of } from "@thalesrc/js-utils/function";
  *
  * const base = [1, 2, 5, {}, "x", "y"];
- * const mapTo = functionOf("thales rocks");
+ * const mapTo = of("thales rocks");
  *
  * const mapped = base.map(mapTo);
  * // ["thales rocks", "thales rocks", "thales rocks", "thales rocks", "thales rocks", "thales rocks"]
@@ -35,9 +35,9 @@ const CACHE = new SmartMap<any, () => any>();
  * @param returnValue The value which created function returns
  * @returns A function which returns the `returnValue`
  */
-export function functionOf<T>(returnValue: T): (...args: any[]) => T {
+export function of<T>(returnValue: T): (...args: any[]) => T {
   if (!CACHE.has(returnValue)) {
-    CACHE.set(returnValue, function() {return returnValue;});
+    CACHE.set(returnValue, function() {return returnValue; });
   }
 
   return CACHE.get(returnValue);

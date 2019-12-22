@@ -1,4 +1,4 @@
-import { functionOf } from "../function-of";
+import { of } from '../of';
 
 declare global {
   export interface FunctionConstructor {
@@ -10,7 +10,7 @@ declare global {
      * * * *
      * Example:
      * ```typescript
-     * import "@thalesrc/js-utils/as-static/function-of";
+     * import "@thalesrc/js-utils/function/static/of";
      *
      * const base = [1, 2, 5, {}, "x", "y"];
      * const mapTo = Function.of("thales rocks");
@@ -22,8 +22,8 @@ declare global {
      * @param returnValue The value which created function returns
      * @returns A function which returns the `returnValue`
      */
-    of: typeof functionOf;
+    of: typeof of;
   }
 }
 
-Function.of = functionOf;
+Function.of = of;

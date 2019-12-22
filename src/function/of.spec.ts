@@ -1,11 +1,11 @@
 import 'mocha';
 import { expect } from 'chai';
-import { functionOf } from "./function-of";
+import { of } from "./of";
 
 describe('FunctionOf Function', () => {
   it('should create a function which returns given function', () => {
-    const returnFoo = functionOf("foo");
-    const returnBar = functionOf("bar");
+    const returnFoo = of("foo");
+    const returnBar = of("bar");
     const fooResult = returnFoo();
     const barResult = returnBar();
 
@@ -14,9 +14,9 @@ describe('FunctionOf Function', () => {
   });
 
   it('should cache created functions and should use from there', () => {
-    const previouslyCreated = functionOf('foo');
+    const previouslyCreated = of('foo');
 
-    expect(previouslyCreated).to.eq(functionOf('foo'));
-    expect(functionOf('foo')).to.eq(functionOf('foo'));
+    expect(previouslyCreated).to.eq(of('foo'));
+    expect(of('foo')).to.eq(of('foo'));
   });
 });

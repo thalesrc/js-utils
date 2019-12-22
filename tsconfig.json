@@ -2,18 +2,17 @@
 	"compilerOptions": {
 		"module": "esnext",
 		"target": "esnext",
-		"outDir": "./",
+		"outDir": "./dist",
 		"moduleResolution": "node",
 		"declaration": true,
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
 		"lib": [
 			"esnext",
-			"esnext.asynciterable",
-			"dom"
+			"esnext.asynciterable"
     ],
     "types": [
-      "@types/chrome"
+      "node"
     ]
 	},
 	"include": [

@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import { revertPromise } from "./revert-promise";
+import { revert } from "./revert";
 
 class CustomError {
   constructor(public message: string) {}
@@ -9,7 +9,7 @@ class CustomError {
 
 describe('Promise Revert Function', () => {
   it('should throw error when its resolved', done => {
-    revertPromise(Promise.resolve("foo"))
+    revert(Promise.resolve("foo"))
       .then(() => {
         throw new CustomError("bar");
       })
@@ -20,7 +20,7 @@ describe('Promise Revert Function', () => {
   });
 
   it('should resolve when its rejected', done => {
-    revertPromise(Promise.reject("foo"))
+    revert(Promise.reject("foo"))
       .then(res => {
         expect(res).to.eq("foo");
         done();

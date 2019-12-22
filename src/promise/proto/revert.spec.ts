@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import './promise-revert';
+import './revert';
 
 class CustomError {
   constructor(public message: string) {}

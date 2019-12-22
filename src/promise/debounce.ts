@@ -1,4 +1,4 @@
-import { promiseTimeout } from "./promise-timeout";
+import { timeout } from "./timeout";
 import { OpenPromise } from '../open-promise';
 
 export type TDebounceFunction<T> = (...args: any[]) => (T | Promise<T>);
@@ -26,12 +26,12 @@ export function debounceWithKey<T>(
     const stocked = CACHE.get(key);
     timeout = stocked.timeout;
     promise = stocked.promise;
-    promiseTimeout.cancel(timeout);
+    timeout.cancel(timeout);
   } else {
     promise = new OpenPromise();
   }
 
-  timeout = promiseTimeout(time);
+  timeout = timeout(time);
   CACHE.set(key, {promise, timeout});
 
   timeout
@@ -42,7 +42,7 @@ export function debounceWithKey<T>(
       return result;
     })
     .catch(err => {
-      if (err !== promiseTimeout.TIMEOUT_CANCELLED) {
+      if (err !== timeout.TIMEOUT_CANCELLED) {
         promise.reject(err);
       }
     });

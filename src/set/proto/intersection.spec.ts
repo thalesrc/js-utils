@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import "./set-intersection";
+import "./intersection";
 import { intersection } from "../intersection";
 
 describe('Set Intersection Proto Function', () => {

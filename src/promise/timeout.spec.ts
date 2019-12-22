@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import { promiseTimeout } from "./promise-timeout";
+import { timeout } from "./timeout";
 
 class CustomError {
   constructor(public message: string) {}
@@ -11,7 +11,7 @@ describe('Timeout Promise Function', () => {
   it('should resolve after 50ms', done => {
     const startedAt = new Date().getTime();
 
-    promiseTimeout(50)
+    timeout(50)
       .then(() => {
         expect(new Date().getTime() - startedAt).to.greaterThan(49);
         done();
@@ -21,7 +21,7 @@ describe('Timeout Promise Function', () => {
   it('should resolve "foo" after 50ms', done => {
     const startedAt = new Date().getTime();
 
-    promiseTimeout(50, "foo")
+    timeout(50, "foo")
       .then(val => {
         expect(new Date().getTime() - startedAt).to.greaterThan(49);
         expect(val).to.eq("foo");
@@ -30,7 +30,7 @@ describe('Timeout Promise Function', () => {
   });
 
   it('should be able to cancel with own instance', done => {
-    const timeout = promiseTimeout(100);
+    const timeout = timeout(100);
 
     timeout
       .then(() => {
@@ -41,13 +41,13 @@ describe('Timeout Promise Function', () => {
         done();
       });
 
-    promiseTimeout.cancel(timeout);
+    timeout.cancel(timeout);
   });
 
   it('should be able to cancel with a key', done => {
     const key = Symbol();
 
-    promiseTimeout(100, undefined, key)
+    timeout(100, undefined, key)
       .then(() => {
         throw new CustomError("bar");
       })
@@ -56,39 +56,39 @@ describe('Timeout Promise Function', () => {
         done();
       });
 
-    promiseTimeout.cancel(key);
+    timeout.cancel(key);
   });
 
   it('should throw default error when cancelled', done => {
     const key = Symbol();
 
-    promiseTimeout(100, undefined, key)
+    timeout(100, undefined, key)
       .then(() => {
         throw new CustomError("bar");
       })
       .catch(err => {
-        expect(err).to.eql(promiseTimeout.TIMEOUT_CANCELLED);
+        expect(err).to.eql(timeout.TIMEOUT_CANCELLED);
         done();
       });
 
-    promiseTimeout.cancel(key);
+    timeout.cancel(key);
   });
 
   it('should throw related error when identifier not found', done => {
-    const byKey = promiseTimeout.cancel(Symbol())
+    const byKey = timeout.cancel(Symbol())
       .then(() => {
         throw new CustomError("foo");
       })
       .catch(err => {
-        expect(err).to.eql(promiseTimeout.IDENTIFIER_NOT_FOUND);
+        expect(err).to.eql(timeout.IDENTIFIER_NOT_FOUND);
       });
 
-    const byPromise = promiseTimeout.cancel(Promise.resolve())
+    const byPromise = timeout.cancel(Promise.resolve())
       .then(() => {
         throw new CustomError("foo");
       })
       .catch(err => {
-        expect(err).to.eql(promiseTimeout.IDENTIFIER_NOT_FOUND);
+        expect(err).to.eql(timeout.IDENTIFIER_NOT_FOUND);
       });
 
     Promise.all([byKey, byPromise]).then(() => {
@@ -98,28 +98,28 @@ describe('Timeout Promise Function', () => {
 
 
   it('should throw related error when timeout finished already', done => {
-    const resolved = promiseTimeout(10);
-    const rejected = promiseTimeout(10);
+    const resolved = timeout(10);
+    const rejected = timeout(10);
 
     rejected.catch(() => {});
 
-    promiseTimeout.cancel(rejected);
+    timeout.cancel(rejected);
 
     setTimeout(() => {
-      const _resolved = promiseTimeout.cancel(resolved)
+      const _resolved = timeout.cancel(resolved)
         .then(() => {
           throw new CustomError("foo");
         })
         .catch(err => {
-          expect(err).to.eql(promiseTimeout.FINISHED_ALREADY);
+          expect(err).to.eql(timeout.FINISHED_ALREADY);
         });
 
-      const _rejected = promiseTimeout.cancel(rejected)
+      const _rejected = timeout.cancel(rejected)
         .then(() => {
           throw new CustomError("foo");
         })
         .catch(err => {
-          expect(err).to.eql(promiseTimeout.FINISHED_ALREADY);
+          expect(err).to.eql(timeout.FINISHED_ALREADY);
         });
 
       Promise.all([_resolved, _rejected]).then(() => {
@@ -129,7 +129,7 @@ describe('Timeout Promise Function', () => {
   });
 
   it('should throw custom error when cancelling', done => {
-    const timeout = promiseTimeout(100);
+    const timeout = timeout(100);
 
     timeout
       .then(() => {
@@ -140,6 +140,6 @@ describe('Timeout Promise Function', () => {
         done();
       });
 
-    promiseTimeout.cancel(timeout, "foo");
+    timeout.cancel(timeout, "foo");
   });
 });

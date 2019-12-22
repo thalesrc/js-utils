@@ -1,12 +1,12 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import "./function-of";
-import { functionOf } from "../function-of";
+import "./of";
+import { of } from "../of";
 
 describe('Function Of Static Function', () => {
   it('should work as same', () => {
-    const foo = functionOf('foo');
+    const foo = of('foo');
     const fooStatic = Function.of('foo');
 
     expect(foo).to.eql(fooStatic);

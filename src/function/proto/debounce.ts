@@ -1,4 +1,4 @@
-import { debounce, DEFAULT_DEBOUNCE_TIME } from "../../promise/debounce";
+import { debounce, DEFAULT_DEBOUNCE_TIME } from '../../promise/debounce';
 
 declare global {
   export interface Function {

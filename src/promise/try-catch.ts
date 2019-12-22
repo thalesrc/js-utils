@@ -24,7 +24,7 @@
  * @param promise Promise to try
  * @returns Error and result array
  */
-export async function asyncTryCatch<T, E = any>(promise: Promise<T>): Promise<[E, T]> {
+export async function tryCatch<T, E = any>(promise: Promise<T>): Promise<[E, T]> {
   try {
     const result = await promise;
     return [null, result];

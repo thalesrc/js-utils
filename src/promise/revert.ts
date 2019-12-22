@@ -35,6 +35,6 @@
  * @param promise The promise to revert its statements
  * @return the reverted promise
  */
-export function revertPromise<T = any>(promise: Promise<any>): Promise<T> {
+export function revert<T = any>(promise: Promise<any>): Promise<T> {
   return promise.then(res => {throw res; }, err => err);
 }

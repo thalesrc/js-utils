@@ -1,4 +1,4 @@
-import { OpenPromise } from "../open-promise";
+import { OpenPromise } from '../open-promise';
 
 export interface PromiseTimeoutFunction {
   /**
@@ -103,28 +103,28 @@ const promiseTimeoutInitializer = (() => {
   Object.defineProperties(timeout, {
     FINISHED_ALREADY: {
       writable: false,
-      value: Symbol("Timeout finished already")
+      value: Symbol('Timeout finished already')
     },
     IDENTIFIER_NOT_FOUND: {
       writable: false,
-      value: Symbol("Timeout not found via identifier")
+      value: Symbol('Timeout not found via identifier')
     },
     TIMEOUT_CANCELLED: {
       writable: false,
-      value: Symbol("Timeout cancelled")
+      value: Symbol('Timeout cancelled')
     }
   });
 
   (<PromiseTimeoutFunction>timeout).cancel = async (identifier: Promise<any> | symbol, error?: any) => {
     const { FINISHED_ALREADY, IDENTIFIER_NOT_FOUND, TIMEOUT_CANCELLED } = <PromiseTimeoutFunction>timeout;
 
-    if (typeof error === "undefined") {
+    if (typeof error === 'undefined') {
       error = TIMEOUT_CANCELLED;
     }
 
     let cache: ITimeoutCache;
 
-    if (typeof identifier === "symbol") {
+    if (typeof identifier === 'symbol') {
       cache = KEY_CACHE.get(identifier);
     } else {
       cache = REFERANCE_CACHE.get(identifier);
@@ -138,10 +138,10 @@ const promiseTimeoutInitializer = (() => {
       throw FINISHED_ALREADY;
     }
 
-    clearTimeout(cache.id);
+    clearTimeout(cache.id as any);
     cache.openPromise.reject(error);
 
-    if (typeof identifier === "symbol") {
+    if (typeof identifier === 'symbol') {
       KEY_CACHE.delete(identifier);
     }
   };
@@ -188,4 +188,4 @@ const promiseTimeoutInitializer = (() => {
  * * * *
  * @see PromiseTimeoutFunction#cancel for cancelling
  */
-export const promiseTimeout: PromiseTimeoutFunction = promiseTimeoutInitializer;
+export const timeout: PromiseTimeoutFunction = promiseTimeoutInitializer;

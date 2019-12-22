@@ -1,4 +1,4 @@
-import { asyncTryCatch } from '../async-try-catch';
+import { tryCatch } from '../try-catch';
 
 declare global {
   export interface Promise<T> {
@@ -30,5 +30,5 @@ declare global {
 }
 
 Promise.prototype.tryCatch = function<T, E>(this: Promise<T>): Promise<[E, T]> {
-  return asyncTryCatch<T, E>(this);
+  return tryCatch<T, E>(this);
 };

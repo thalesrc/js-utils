@@ -1,4 +1,4 @@
-import { promiseTimeout, PromiseTimeoutFunction } from "../promise-timeout";
+import { timeout, PromiseTimeoutFunction } from '../timeout';
 
 declare global {
   export interface PromiseConstructor {
@@ -21,4 +21,4 @@ declare global {
   }
 }
 
-Promise.timeout = promiseTimeout;
+Promise.timeout = timeout;
