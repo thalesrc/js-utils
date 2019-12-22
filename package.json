@@ -39,7 +39,7 @@
     "test": "jest",
     "test:coverage": "jest --collectCoverage",
     "prepare:github-pages": "npm run clean:docs && npm run document && echo \"\" > ./docs/.nojekyll",
-    "prepare:package": "npm run clean:dist && tsc -p config/tsconfig.lib.json",
+    "prepare:package": "tsc -p ./config/tsconfig.lib.json",
     "prepare:legacy": "tsc -p config/tsconfig.lib.legacy.json",
     "version-update": "npm version $PACKAGE_VERSION --no-git-tag-version",
     "change-ts-version": "rjp ./package.json typescript ~3.4.5"
