@@ -1,4 +1,4 @@
-import { SmartMap } from './smart-map';
+import { SmartMap } from '../smart-map';
 
 /**
  * Cache object to store previously created functions

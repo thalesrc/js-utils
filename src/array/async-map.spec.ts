@@ -1,7 +1,7 @@
 import 'mocha';
 import { expect } from 'chai';
 import { asyncMap } from "./async-map";
-import { promiseTimeout } from "./promise-timeout";
+import { promiseTimeout } from "../promise/promise-timeout";
 
 describe('AsyncMap Function', () => {
   it('should map asynchronous', done => {

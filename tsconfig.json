@@ -1,29 +1,25 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "noImplicitAny": false,
-    "preserveConstEnums": true,
-    "noEmitHelpers": true,
-    "importHelpers": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "sourceMap": true,
-    "target": "es6",
-    "allowSyntheticDefaultImports": true,
-    "declaration": true,
-    "noResolve": false,
-    "downlevelIteration": true,
-    "lib": [
-      "dom",
-      "es2015"
+	"compilerOptions": {
+		"module": "esnext",
+		"target": "esnext",
+		"outDir": "./",
+		"moduleResolution": "node",
+		"declaration": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"lib": [
+			"esnext",
+			"esnext.asynciterable",
+			"dom"
     ],
-    "outDir": "dist"
-  },
-  "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "src/**/*.spec.ts"
-  ]
+    "types": [
+      "@types/chrome"
+    ]
+	},
+	"include": [
+		"src/"
+	],
+	"exclude": [
+		"node_modules/"
+	]
 }

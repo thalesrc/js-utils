@@ -1,4 +1,4 @@
-import { OpenPromise } from "./open-promise";
+import { OpenPromise } from "../open-promise";
 
 export interface PromiseTimeoutFunction {
   /**

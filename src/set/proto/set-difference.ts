@@ -1,4 +1,4 @@
-import { difference, TSubstraction } from "../difference";
+import { difference, TSubstraction } from "../../array/difference";
 
 declare global {
   export interface Set<T> {

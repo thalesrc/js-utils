@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import "./array-async-map";
-import "../as-static/timeout";
+import "./async-map";
+import "../../promise/static/timeout";
 import { asyncMap } from "../async-map";
 
 describe('Array Async Map Proto Function', () => {

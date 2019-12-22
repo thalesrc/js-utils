@@ -1,6 +1,6 @@
-import { difference } from "./difference";
-import { intersection } from "./intersection";
-import { mapMerge } from './map-merge';
+import { difference } from "../array/difference";
+import { intersection } from "../array/intersection";
+import { mapMerge } from '../map/map-merge';
 
 /**
  * #### Cloning Options

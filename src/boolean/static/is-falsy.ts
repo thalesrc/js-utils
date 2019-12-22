@@ -1,4 +1,4 @@
-import { isFalsy } from "../is-falsy";
+import { isFalsy } from "../../is-falsy";
 
 declare global {
   export interface BooleanConstructor {

@@ -1,4 +1,4 @@
-import { intersection, TInclusion } from "../intersection";
+import { intersection, TInclusion } from "../../array/intersection";
 
 declare global {
   export interface Set<T> {
