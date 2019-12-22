@@ -1,8 +1,7 @@
-import { expect } from 'chai';
-import 'mocha';
+import 'jest';
 
 import './intersection';
-import { intersection } from '../intersection';
+import { intersection } from '../../array/intersection';
 
 describe('Set Intersection Proto Function', () => {
   it('should work as same', () => {
@@ -10,10 +9,10 @@ describe('Set Intersection Proto Function', () => {
     const bar = [1, 2];
     const baz = new Set([2, 3]);
 
-    expect(foo.intersection(bar)).to.eql(intersection(foo, bar));
-    expect(foo.intersection(baz)).to.eql(intersection(foo, baz));
+    expect(foo.intersection(bar)).toEqual(intersection(foo, bar));
+    expect(foo.intersection(baz)).toEqual(intersection(foo, baz));
 
-    expect(foo.intersection(bar, false)).to.eql(intersection(foo, bar, false));
-    expect(foo.intersection(baz, false)).to.eql(intersection(foo, baz, false));
+    expect(foo.intersection(bar, false)).toEqual(intersection(foo, bar, false));
+    expect(foo.intersection(baz, false)).toEqual(intersection(foo, baz, false));
   });
 });

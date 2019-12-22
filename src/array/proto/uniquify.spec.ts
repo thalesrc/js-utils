@@ -1,7 +1,6 @@
-import { expect } from 'chai';
-import 'mocha';
+import 'jest';
 
-import './array-uniquify';
+import './uniquify';
 import { uniquify } from '../uniquify';
 
 describe('Array Uniquify Proto Function', () => {
@@ -9,7 +8,7 @@ describe('Array Uniquify Proto Function', () => {
     const foo = [1, 2, 3, 1, 2, 3];
     const bar = [1, 2];
 
-    expect(foo.uniquify()).to.eql(uniquify(foo));
-    expect(bar.uniquify()).to.eql(uniquify(bar));
+    expect(foo.uniquify()).toEqual(uniquify(foo));
+    expect(bar.uniquify()).toEqual(uniquify(bar));
   });
 });

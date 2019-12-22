@@ -1,8 +1,7 @@
-import { expect } from 'chai';
-import 'mocha';
+import 'jest';
 
 import './difference';
-import { difference } from '../difference';
+import { difference } from '../../array/difference';
 
 describe('Set Difference Proto Function', () => {
   it('should work as same', () => {
@@ -10,10 +9,10 @@ describe('Set Difference Proto Function', () => {
     const bar = [1, 2];
     const baz = new Set([2, 3]);
 
-    expect(foo.difference(bar)).to.eql(difference(foo, bar));
-    expect(foo.difference(baz)).to.eql(difference(foo, baz));
+    expect(foo.difference(bar)).toEqual(difference(foo, bar));
+    expect(foo.difference(baz)).toEqual(difference(foo, baz));
 
-    expect(foo.difference(bar, true)).to.eql(difference(foo, bar, true));
-    expect(foo.difference(baz, true)).to.eql(difference(foo, baz, true));
+    expect(foo.difference(bar, true)).toEqual(difference(foo, bar, true));
+    expect(foo.difference(baz, true)).toEqual(difference(foo, baz, true));
   });
 });

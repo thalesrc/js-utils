@@ -1,5 +1,5 @@
-import 'mocha';
-import { expect } from 'chai';
+import 'jest';
+
 import { asyncMap } from './async-map';
 import { timeout } from '../promise/timeout';
 
@@ -9,7 +9,7 @@ describe('AsyncMap Function', () => {
 
     asyncMap(foo, async value => timeout(Math.random() * 100).then(() => value + 1))
       .then(result => {
-        expect(result).to.eql([2, 3, 4]);
+        expect(result).toEqual([2, 3, 4]);
         done();
       });
   });

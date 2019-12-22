@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import 'mocha';
+import 'jest';
 
 import './of';
 import { of } from '../of';
@@ -9,6 +8,6 @@ describe('Function Of Static Function', () => {
     const foo = of('foo');
     const fooStatic = Function.of('foo');
 
-    expect(foo).to.eql(fooStatic);
+    expect(foo).toEqual(fooStatic);
   });
 });

@@ -8,7 +8,7 @@ import { isTruthy } from '../is-truthy';
  * * * *
  * Example usage:
  * ```typescript
- * import { compact } from "@thalesrc/js-utils";
+ * import { compact } from "@thalesrc/js-utils/array";
  *
  * const arr = [undefined, "", false, 0, 1, "1"];
  * const compacted = compact(arr); // [1, "1"];

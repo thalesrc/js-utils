@@ -1,5 +1,5 @@
-import 'mocha';
-import { expect } from 'chai';
+import 'jest';
+
 import { of } from './of';
 
 describe('FunctionOf Function', () => {
@@ -9,14 +9,14 @@ describe('FunctionOf Function', () => {
     const fooResult = returnFoo();
     const barResult = returnBar();
 
-    expect(fooResult).to.eq('foo');
-    expect(barResult).to.eq('bar');
+    expect(fooResult).toBe('foo');
+    expect(barResult).toBe('bar');
   });
 
   it('should cache created functions and should use from there', () => {
     const previouslyCreated = of('foo');
 
-    expect(previouslyCreated).to.eq(of('foo'));
-    expect(of('foo')).to.eq(of('foo'));
+    expect(previouslyCreated).toBe(of('foo'));
+    expect(of('foo')).toBe(of('foo'));
   });
 });

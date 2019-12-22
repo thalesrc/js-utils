@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import 'mocha';
+import 'jest';
 
 import { debounce, debounceWithKey } from './debounce';
 
@@ -23,7 +22,7 @@ describe('Debounce Function', () => {
 
     debounce(bar)
       .then(() => {
-        expect(foo).to.eq(1);
+        expect(foo).toBe(1);
         done();
       });
   });
@@ -32,8 +31,8 @@ describe('Debounce Function', () => {
     const started = new Date().getTime();
 
     debounce(bar).then(() => {
-      expect(foo).to.eq(1);
-      expect(new Date().getTime() - started).to.greaterThan(179);
+      expect(foo).toBe(1);
+      expect(new Date().getTime() - started).toBeGreaterThan(179);
       done();
     });
   });
@@ -45,9 +44,9 @@ describe('Debounce Function', () => {
       .then(() => {
         const executedIn = new Date().getTime() - started;
 
-        expect(foo).to.eq(1);
-        expect(executedIn).greaterThan(49);
-        expect(executedIn).lessThan(60);
+        expect(foo).toBe(1);
+        expect(executedIn).toBeGreaterThan(49);
+        expect(executedIn).toBeLessThan(60);
 
         done();
       });
@@ -62,7 +61,7 @@ describe('Debounce Function', () => {
 
     debounce(baz, undefined, john)
       .then(() => {
-        expect(john.x).to.eq(1);
+        expect(john.x).toBe(1);
         done();
       });
   });
@@ -76,7 +75,7 @@ describe('Debounce Function', () => {
 
     debounce(baz, undefined, undefined, 5, 3)
       .then(() => {
-        expect(john).to.eq(8);
+        expect(john).toBe(8);
         done();
       });
   });
@@ -91,7 +90,7 @@ describe('Debounce Function', () => {
         throw new CustomError("couldn't catch error");
       })
       .catch(err => {
-        expect(err.message).to.eq('baz error');
+        expect(err.message).toBe('baz error');
         done();
       });
   });

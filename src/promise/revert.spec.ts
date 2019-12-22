@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import 'mocha';
+import 'jest';
 
 import { revert } from './revert';
 
@@ -14,7 +13,7 @@ describe('Promise Revert Function', () => {
         throw new CustomError('bar');
       })
       .catch(err => {
-        expect(err).to.eq('foo');
+        expect(err).toBe('foo');
         done();
       });
   });
@@ -22,7 +21,7 @@ describe('Promise Revert Function', () => {
   it('should resolve when its rejected', done => {
     revert(Promise.reject('foo'))
       .then(res => {
-        expect(res).to.eq('foo');
+        expect(res).toBe('foo');
         done();
       });
   });

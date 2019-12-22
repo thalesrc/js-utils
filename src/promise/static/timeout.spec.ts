@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import 'mocha';
+import 'jest';
 
 import './timeout';
 
@@ -13,7 +12,7 @@ describe('Promise Timeout Static Function', () => {
 
     Promise.timeout(50)
       .then(() => {
-        expect(new Date().getTime() - startedAt).to.greaterThan(49);
+        expect(new Date().getTime() - startedAt).toBeGreaterThan(49);
         done();
       });
   });
@@ -23,8 +22,8 @@ describe('Promise Timeout Static Function', () => {
 
     Promise.timeout(50, 'foo')
       .then(val => {
-        expect(new Date().getTime() - startedAt).to.greaterThan(49);
-        expect(val).to.eq('foo');
+        expect(new Date().getTime() - startedAt).toBeGreaterThan(49);
+        expect(val).toBe('foo');
         done();
       });
   });
@@ -37,7 +36,7 @@ describe('Promise Timeout Static Function', () => {
         throw new CustomError('bar');
       })
       .catch(err => {
-        expect(err).not.to.instanceof(CustomError);
+        expect(err).not.toBeInstanceOf(CustomError);
         done();
       });
 
@@ -52,7 +51,7 @@ describe('Promise Timeout Static Function', () => {
         throw new CustomError('bar');
       })
       .catch(err => {
-        expect(err).not.to.instanceof(CustomError);
+        expect(err).not.toBeInstanceOf(CustomError);
         done();
       });
 
@@ -67,7 +66,7 @@ describe('Promise Timeout Static Function', () => {
         throw new CustomError('bar');
       })
       .catch(err => {
-        expect(err).to.eql(Promise.timeout.TIMEOUT_CANCELLED);
+        expect(err).toEqual(Promise.timeout.TIMEOUT_CANCELLED);
         done();
       });
 
@@ -80,7 +79,7 @@ describe('Promise Timeout Static Function', () => {
         throw new CustomError('foo');
       })
       .catch(err => {
-        expect(err).to.eql(Promise.timeout.IDENTIFIER_NOT_FOUND);
+        expect(err).toEqual(Promise.timeout.IDENTIFIER_NOT_FOUND);
       });
 
     const byPromise = Promise.timeout.cancel(Promise.resolve())
@@ -88,7 +87,7 @@ describe('Promise Timeout Static Function', () => {
         throw new CustomError('foo');
       })
       .catch(err => {
-        expect(err).to.eql(Promise.timeout.IDENTIFIER_NOT_FOUND);
+        expect(err).toEqual(Promise.timeout.IDENTIFIER_NOT_FOUND);
       });
 
     Promise.all([byKey, byPromise]).then(() => {
@@ -111,7 +110,7 @@ describe('Promise Timeout Static Function', () => {
           throw new CustomError('foo');
         })
         .catch(err => {
-          expect(err).to.eql(Promise.timeout.FINISHED_ALREADY);
+          expect(err).toEqual(Promise.timeout.FINISHED_ALREADY);
         });
 
       const _rejected = Promise.timeout.cancel(rejected)
@@ -119,7 +118,7 @@ describe('Promise Timeout Static Function', () => {
           throw new CustomError('foo');
         })
         .catch(err => {
-          expect(err).to.eql(Promise.timeout.FINISHED_ALREADY);
+          expect(err).toEqual(Promise.timeout.FINISHED_ALREADY);
         });
 
       Promise.all([_resolved, _rejected]).then(() => {
@@ -136,7 +135,7 @@ describe('Promise Timeout Static Function', () => {
         throw new CustomError('bar');
       })
       .catch(err => {
-        expect(err).to.eq('foo');
+        expect(err).toBe('foo');
         done();
       });
 

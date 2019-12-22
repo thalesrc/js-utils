@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import 'mocha';
+import 'jest';
 
 import './try-catch';
 
@@ -8,8 +7,8 @@ describe('Promise Try Catch Proto Function', () => {
     Promise.resolve('foo')
       .tryCatch()
       .then(([error, result]) => {
-        expect(error).to.eq(null);
-        expect(result).to.eq('foo');
+        expect(error).toBe(null);
+        expect(result).toBe('foo');
         done();
       });
   });
@@ -18,8 +17,8 @@ describe('Promise Try Catch Proto Function', () => {
     Promise.reject('foo')
       .tryCatch()
       .then(([error, result]) => {
-        expect(error).to.eq('foo');
-        expect(result).to.eq(null);
+        expect(error).toBe('foo');
+        expect(result).toBe(null);
         done();
       });
   });

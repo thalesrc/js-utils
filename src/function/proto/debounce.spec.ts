@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import 'mocha';
+import 'jest';
 
 import './debounce';
 
@@ -15,7 +14,7 @@ describe('Debounce Proto Function', () => {
     foo.debounce();
 
     foo.debounce().then(() => {
-      expect(bar).to.eq(1);
+      expect(bar).toBe(1);
       done();
     });
   });
@@ -32,10 +31,10 @@ describe('Debounce Proto Function', () => {
     foo.debounce(50, bar, 0, 0)
       .then(() => {
         const sequence = new Date().getTime() - startedAt;
-        expect(sequence).greaterThan(49);
-        expect(sequence).lessThan(60);
+        expect(sequence).toBeGreaterThan(49);
+        expect(sequence).toBeLessThan(60);
 
-        expect(bar.x).to.eq(8);
+        expect(bar.x).toBe(8);
 
         done();
       });

@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import 'mocha';
+import 'jest';
 
 import './clone';
 import { clone } from '../clone';
@@ -10,6 +9,6 @@ describe('Clone Static Function', () => {
     const bar = clone(foo);
     const baz = Object.clone(foo);
 
-    expect(bar).to.eql(baz);
+    expect(bar).toEqual(baz);
   });
 });

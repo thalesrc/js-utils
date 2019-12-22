@@ -1,6 +1,6 @@
-import { expect } from 'chai';
+
 import { fail } from 'assert';
-import 'mocha';
+import 'jest';
 
 import { defer } from './defer';
 
@@ -13,11 +13,11 @@ describe('Defer Function', () => {
     let counter = 0;
 
     defer(() => {
-      expect(counter).to.eq(1000000);
+      expect(counter).toBe(1000000);
       done();
     });
 
-    expect(counter).to.eq(0);
+    expect(counter).toBe(0);
 
     for (let i = 0; i < 1000000; i++) {
       counter++;
@@ -29,7 +29,7 @@ describe('Defer Function', () => {
 
     defer()
       .then(() => {
-        expect(counter).to.eq(1);
+        expect(counter).toBe(1);
         done();
       });
     counter++;
@@ -39,16 +39,16 @@ describe('Defer Function', () => {
     let counter = 0;
     defer(() => counter++)
       .then(() => {
-        expect(counter).to.eq(1);
+        expect(counter).toBe(1);
         done();
       });
-    expect(counter).to.eq(0);
+    expect(counter).toBe(0);
   });
 
   it('should return a promise which resolves the callback return value', done => {
     defer(() => 'test')
       .then(value => {
-        expect(value).to.eq('test');
+        expect(value).toBe('test');
         done();
       });
   });
@@ -61,7 +61,7 @@ describe('Defer Function', () => {
         throw new CustomError("couldn't catch error");
       })
       .catch((err: CustomError) => {
-        expect(err.message).to.eq('foo');
+        expect(err.message).toBe('foo');
         done();
       });
   });

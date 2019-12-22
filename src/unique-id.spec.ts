@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import 'mocha';
+import 'jest';
 
 import { uniqueId } from './unique-id';
 
@@ -8,18 +7,18 @@ describe('Unique Id Function', () => {
     const idSet = [];
     for (let i = 0; i < 100; i++) {
       const id = uniqueId();
-      expect(idSet).not.includes(id);
+      expect(idSet).not.toContain(id);
       idSet.push(id);
     }
   });
 
   it('should start a new counter for each unique prefix', () => {
-    expect(uniqueId('foo')).to.eq('foo-0');
-    expect(uniqueId('bar')).to.eq('bar-0');
-    expect(uniqueId('baz')).to.eq('baz-0');
+    expect(uniqueId('foo')).toBe('foo-0');
+    expect(uniqueId('bar')).toBe('bar-0');
+    expect(uniqueId('baz')).toBe('baz-0');
 
-    expect(uniqueId('foo')).to.eq('foo-1');
-    expect(uniqueId('bar')).to.eq('bar-1');
-    expect(uniqueId('baz')).to.eq('baz-1');
+    expect(uniqueId('foo')).toBe('foo-1');
+    expect(uniqueId('bar')).toBe('bar-1');
+    expect(uniqueId('baz')).toBe('baz-1');
   });
 });

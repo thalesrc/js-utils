@@ -1,59 +1,58 @@
-import { expect } from 'chai';
-import 'mocha';
+import 'jest';
 
 import { clone } from './clone';
 
 describe('Clone Function', () => {
   it('should clone primitives properly', () => {
-    expect(clone(0)).to.eq(0);
-    expect(clone(NaN)).to.eql(NaN);
-    expect(clone('foo')).to.eq('foo');
-    expect(clone(false)).to.eq(false);
-    expect(clone(undefined)).to.eq(undefined);
-    expect(clone(null)).to.eq(null);
+    expect(clone(0)).toBe(0);
+    expect(clone(NaN)).toEqual(NaN);
+    expect(clone('foo')).toBe('foo');
+    expect(clone(false)).toBe(false);
+    expect(clone(undefined)).toBe(undefined);
+    expect(clone(null)).toBe(null);
   });
 
   it('should reference functions and symbols by default', () => {
     const sym = Symbol('foo');
-    expect(clone(sym)).to.eq(sym);
+    expect(clone(sym)).toBe(sym);
 
     function foo() {}
     const bar = foo;
 
-    expect(clone(foo)).to.eq(foo);
-    expect(clone(bar)).to.eq(foo);
+    expect(clone(foo)).toBe(foo);
+    expect(clone(bar)).toBe(foo);
   });
 
   it('should clone object', () => {
     const foo = {x: 1, y: 2};
     const bar = clone(foo);
 
-    expect(bar).not.to.eq(foo);
-    expect(bar).to.eql(foo);
+    expect(bar).not.toBe(foo);
+    expect(bar).toEqual(foo);
   });
 
   it('should clone array', () => {
     const foo = [1, 2];
     const bar = clone(foo);
 
-    expect(bar).not.to.eq(foo);
-    expect(bar).to.eql(foo);
+    expect(bar).not.toBe(foo);
+    expect(bar).toEqual(foo);
   });
 
   it('should clone map', () => {
     const foo = new Map([['x', 1], ['y', 2]]);
     const bar = clone(foo);
 
-    expect(bar).not.to.eq(foo);
-    expect(bar).to.eql(foo);
+    expect(bar).not.toBe(foo);
+    expect(bar).toEqual(foo);
   });
 
   it('should clone set', () => {
     const foo = new Set(['a', 'b']);
     const bar = clone(foo);
 
-    expect(bar).not.to.eq(foo);
-    expect(bar).to.eql(foo);
+    expect(bar).not.toBe(foo);
+    expect(bar).toEqual(foo);
   });
 
   it('should clone object deeply', () => {
@@ -63,16 +62,16 @@ describe('Clone Function', () => {
     const foo = {x: 1, y: 2, z: {a: 'a', b: 'b'}, t: [1, 2], m: map};
     const bar = clone(foo);
 
-    expect(bar).to.eql(foo);
+    expect(bar).toEqual(foo);
 
-    expect(bar.z).not.to.eq(foo.z);
-    expect(bar.z).to.eql(foo.z);
+    expect(bar.z).not.toBe(foo.z);
+    expect(bar.z).toEqual(foo.z);
 
-    expect(bar.t).not.to.eq(foo.t);
-    expect(bar.t).to.eql(foo.t);
+    expect(bar.t).not.toBe(foo.t);
+    expect(bar.t).toEqual(foo.t);
 
-    expect(bar.m).not.to.eq(foo.m);
-    expect(bar.m).to.eql(map);
+    expect(bar.m).not.toBe(foo.m);
+    expect(bar.m).toEqual(map);
   });
 
 
@@ -80,16 +79,16 @@ describe('Clone Function', () => {
     const foo: any = [[1, 2], {a: 1, b: ['x', 'y']}];
     const bar = clone(foo);
 
-    expect(bar).to.eql(foo);
+    expect(bar).toEqual(foo);
 
-    expect(bar[0]).not.to.eq(foo[0]);
-    expect(bar[0]).to.eql(foo[0]);
+    expect(bar[0]).not.toBe(foo[0]);
+    expect(bar[0]).toEqual(foo[0]);
 
-    expect(bar[1]).not.to.eq(foo[1]);
-    expect(bar[1]).to.eql(foo[1]);
+    expect(bar[1]).not.toBe(foo[1]);
+    expect(bar[1]).toEqual(foo[1]);
 
-    expect(bar[1].b).not.to.eq(foo[1].b);
-    expect(bar[1].b).to.eql(foo[1].b);
+    expect(bar[1].b).not.toBe(foo[1].b);
+    expect(bar[1].b).toEqual(foo[1].b);
   });
 
   it('should reference unwanted instances', () => {
@@ -99,20 +98,20 @@ describe('Clone Function', () => {
     const bar = {x: new Foo(), y: new Foo(), z: new Foo2()};
     const baz = clone(bar, {instancesToRefer: [Foo, Foo2]});
 
-    expect(baz).to.eql(bar);
+    expect(baz).toEqual(bar);
 
-    expect(baz.x).to.eq(bar.x);
-    expect(baz.y).to.eq(bar.y);
-    expect(baz.z).to.eq(bar.z);
+    expect(baz.x).toBe(bar.x);
+    expect(baz.y).toBe(bar.y);
+    expect(baz.z).toBe(bar.z);
   });
 
   it('should reference filtered values', () => {
     const foo = {a: {x: true}, b: {x: false}};
     const bar = clone(foo, {valueFiltererToRefer: value => value.x});
 
-    expect(bar.a).to.eq(foo.a);
-    expect(bar.b).not.to.eq(foo.b);
-    expect(bar.b).to.eql(foo.b);
+    expect(bar.a).toBe(foo.a);
+    expect(bar.b).not.toBe(foo.b);
+    expect(bar.b).toEqual(foo.b);
   });
 
   it('should reference unwanted properties', () => {
@@ -124,17 +123,17 @@ describe('Clone Function', () => {
     const foo = {a: {x: 1}, b: {x: 2}, [sym]: {x: 3}, c: [{x: 3}, {x: 4}], d: map};
     const bar = clone(foo, {propsToRefer: ['a', sym, 1, anObjKey]});
 
-    expect(bar.a).to.eq(foo.a);
+    expect(bar.a).toBe(foo.a);
 
-    expect(bar.b).not.to.eq(foo.b);
-    expect(bar.b).to.eql(foo.b);
+    expect(bar.b).not.toBe(foo.b);
+    expect(bar.b).toEqual(foo.b);
 
-    expect(bar[sym]).to.eq(foo[sym]);
+    expect(bar[sym]).toBe(foo[sym]);
 
-    expect(bar.c[0]).not.to.eq(foo.c[0]);
-    expect(bar.c[1]).to.eq(foo.c[1]);
+    expect(bar.c[0]).not.toBe(foo.c[0]);
+    expect(bar.c[1]).toBe(foo.c[1]);
 
-    expect(bar.d.get(anObjKey)).to.eq(foo.d.get(anObjKey));
+    expect(bar.d.get(anObjKey)).toBe(foo.d.get(anObjKey));
   });
 
   it('should clone via custom cloner', () => {
@@ -151,7 +150,7 @@ describe('Clone Function', () => {
     const foo = [new A()];
     const bar = clone(foo, {customCloners: new Map([[A, aCloner]])});
 
-    expect(bar[0].customCloned).to.eq(true);
+    expect(bar[0].customCloned).toBe(true);
   });
 
   it('should overcome circular reference', () => {
@@ -165,8 +164,8 @@ describe('Clone Function', () => {
 
     const baz = clone(foo);
 
-    expect(baz.foo).to.eq(baz);
-    expect(baz.foo.bar).to.eq(baz.bar);
-    expect(baz.foo.x.bar).to.eq(baz.bar);
+    expect(baz.foo).toBe(baz);
+    expect(baz.foo.bar).toBe(baz.bar);
+    expect(baz.foo.x.bar).toBe(baz.bar);
   });
 });

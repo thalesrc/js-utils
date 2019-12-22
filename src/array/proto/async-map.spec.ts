@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import 'mocha';
+import 'jest';
 
 import './async-map';
 import '../../promise/static/timeout';
@@ -17,7 +16,7 @@ describe('Array Async Map Proto Function', () => {
       asyncMap(foo, addOneAfterSomeTime),
       foo.asyncMap(addOneAfterSomeTime)
     ]).then(([first, second]) => {
-      expect(first).to.eql(second);
+      expect(first).toEqual(second);
       done();
     });
   });

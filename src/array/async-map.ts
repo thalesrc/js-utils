@@ -6,7 +6,7 @@
  * * * *
  * Example:
  * ```typescript
- * import { asyncMap } "@thalesrc/js-utils";
+ * import { asyncMap } "@thalesrc/js-utils/array";
  *
  * const array = [1, 2, 3];
  *
@@ -15,6 +15,16 @@
  * }).then(result => {
  *  console.log(result); // [2, 3, 4]
  * });
+ * ```
+ *
+ * Example as Array Prototype:
+ * ```typescript
+ * import "@thalesrc/js-utils/array/proto/async-map";
+ *
+ * const array = [1, 2, 3];
+ *
+ * const result = await array.asyncMap(async value => await addOneAfterASecond(value));
+ * // [2, 3, 4]
  * ```
  * * * *
  * @param array Array to map

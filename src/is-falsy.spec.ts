@@ -1,23 +1,22 @@
-import { expect } from 'chai';
-import 'mocha';
+import 'jest';
 
 import { isFalsy } from './is-falsy';
 
 describe('IsFalsy Function', () => {
   it('should return "false" when truthy values passed', () => {
-    expect(isFalsy(true)).to.eq(false);
-    expect(isFalsy('a')).to.eq(false);
-    expect(isFalsy(1)).to.eq(false);
-    expect(isFalsy(-1)).to.eq(false);
-    expect(isFalsy({})).to.eq(false);
+    expect(isFalsy(true)).toBe(false);
+    expect(isFalsy('a')).toBe(false);
+    expect(isFalsy(1)).toBe(false);
+    expect(isFalsy(-1)).toBe(false);
+    expect(isFalsy({})).toBe(false);
   });
 
   it('should return "true" when falsy values passed', () => {
-    expect(isFalsy(false)).to.eq(true);
-    expect(isFalsy('')).to.eq(true);
-    expect(isFalsy(0)).to.eq(true);
-    expect(isFalsy(null)).to.eq(true);
-    expect(isFalsy(undefined)).to.eq(true);
-    expect(isFalsy(NaN)).to.eq(true);
+    expect(isFalsy(false)).toBe(true);
+    expect(isFalsy('')).toBe(true);
+    expect(isFalsy(0)).toBe(true);
+    expect(isFalsy(null)).toBe(true);
+    expect(isFalsy(undefined)).toBe(true);
+    expect(isFalsy(NaN)).toBe(true);
   });
 });

@@ -32,11 +32,12 @@
     "url": "https://github.com/thalesrc/js-utils.git"
   },
   "scripts": {
-    "document": "typedoc --out docs --excludeNotExported --excludePrivate --disableOutputCheck --gitRevision master --exclude \"**/+(as-proto|as-static)/**/*ts\"",
+    "document": "typedoc --tsconfig config/tsconfig.doc.json",
+    "doc": "typedoc",
     "prepare:github-pages": "npm run document && echo \"\" > ./docs/.nojekyll",
     "test": "jest",
     "test:coverage": "jest --collectCoverage",
-    "prepublishOnly": "tsc -p ./tsconfig.lib.json"
+    "prepublishOnly": "tsc -p config/tsconfig.lib.json"
   },
   "author": "alisahinozcelik@gmail.com",
   "license": "MIT",

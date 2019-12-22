@@ -1,5 +1,5 @@
-import 'mocha';
-import { expect } from 'chai';
+import 'jest';
+
 import { tryCatch } from './try-catch';
 
 describe('AsyncTryCatch Function', () => {
@@ -7,8 +7,8 @@ describe('AsyncTryCatch Function', () => {
     const foo = Promise.resolve('foo');
 
     tryCatch(foo).then(([err, res]) => {
-      expect(err).to.eq(null);
-      expect(res).to.eq('foo');
+      expect(err).toBe(null);
+      expect(res).toBe('foo');
       done();
     });
   });
@@ -17,8 +17,8 @@ describe('AsyncTryCatch Function', () => {
     const foo = Promise.reject('error');
 
     tryCatch(foo).then(([err, res]) => {
-      expect(err).to.eq('error');
-      expect(res).to.eq(null);
+      expect(err).toBe('error');
+      expect(res).toBe(null);
       done();
     });
   });
