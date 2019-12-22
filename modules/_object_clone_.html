@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;clone&quot; | @thalesrc/js-utils</title>
+	<title>&quot;object/clone&quot; | @thalesrc/js-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -38,8 +38,6 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -54,10 +52,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_clone_.html">&quot;clone&quot;</a>
+					<a href="_object_clone_.html">&quot;object/clone&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;clone&quot;</h1>
+			<h1>External module &quot;object/clone&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -71,22 +69,22 @@
 						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_clone_.icloneoptions.html" class="tsd-kind-icon">IClone<wbr>Options</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_clone_.iclonerinternaldata.html" class="tsd-kind-icon">ICloner<wbr>Internal<wbr>Data</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_object_clone_.icloneoptions.html" class="tsd-kind-icon">IClone<wbr>Options</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_object_clone_.iclonerinternaldata.html" class="tsd-kind-icon">ICloner<wbr>Internal<wbr>Data</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_clone_.html#polyfillrequired" class="tsd-kind-icon">Polyfill<wbr>Required</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_clone_.html#tinstancecloner" class="tsd-kind-icon">TInstance<wbr>Cloner</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_clone_.html#tnonoptionalcloneoptions" class="tsd-kind-icon">TNon<wbr>Optional<wbr>Clone<wbr>Options</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_object_clone_.html#polyfillrequired" class="tsd-kind-icon">Polyfill<wbr>Required</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_object_clone_.html#tinstancecloner" class="tsd-kind-icon">TInstance<wbr>Cloner</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_object_clone_.html#tnonoptionalcloneoptions" class="tsd-kind-icon">TNon<wbr>Optional<wbr>Clone<wbr>Options</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_clone_.html#clone" class="tsd-kind-icon">clone</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_object_clone_.html#clone" class="tsd-kind-icon">clone</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,12 +95,21 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
 					<a name="polyfillrequired" class="tsd-anchor"></a>
 					<h3>Polyfill<wbr>Required</h3>
-					<div class="tsd-signature tsd-kind-icon">Polyfill<wbr>Required<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<div class="tsd-signature tsd-kind-icon">Polyfill<wbr>Required&lt;T, TNames&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/clone.ts#L121">clone.ts:121</a></li>
+							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/object/clone.ts#L121">src/object/clone.ts:121</a></li>
 						</ul>
 					</aside>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>T</h4>
+						</li>
+						<li>
+							<h4>TNames<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
@@ -115,7 +122,7 @@
 					<div class="tsd-signature tsd-kind-icon">TInstance<wbr>Cloner<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/clone.ts#L132">clone.ts:132</a></li>
+							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/object/clone.ts#L132">src/object/clone.ts:132</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -128,7 +135,7 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-siganture">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">&lt;T&gt;<span class="tsd-signature-symbol">(</span>objectToClone<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, options<span class="tsd-signature-symbol">: </span><a href="_clone_.html#tnonoptionalcloneoptions" class="tsd-signature-type">TNonOptionalCloneOptions</a>, internalData<span class="tsd-signature-symbol">: </span><a href="../interfaces/_clone_.iclonerinternaldata.html" class="tsd-signature-type">IClonerInternalData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+									<li class="tsd-signature tsd-kind-icon">&lt;T&gt;<span class="tsd-signature-symbol">(</span>objectToClone<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, options<span class="tsd-signature-symbol">: </span><a href="_object_clone_.html#tnonoptionalcloneoptions" class="tsd-signature-type">TNonOptionalCloneOptions</a>, internalData<span class="tsd-signature-symbol">: </span><a href="../interfaces/_object_clone_.iclonerinternaldata.html" class="tsd-signature-type">IClonerInternalData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -144,10 +151,10 @@
 												<h5>objectToClone: <span class="tsd-signature-type">T</span></h5>
 											</li>
 											<li>
-												<h5>options: <a href="_clone_.html#tnonoptionalcloneoptions" class="tsd-signature-type">TNonOptionalCloneOptions</a></h5>
+												<h5>options: <a href="_object_clone_.html#tnonoptionalcloneoptions" class="tsd-signature-type">TNonOptionalCloneOptions</a></h5>
 											</li>
 											<li>
-												<h5>internalData: <a href="../interfaces/_clone_.iclonerinternaldata.html" class="tsd-signature-type">IClonerInternalData</a></h5>
+												<h5>internalData: <a href="../interfaces/_object_clone_.iclonerinternaldata.html" class="tsd-signature-type">IClonerInternalData</a></h5>
 											</li>
 										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
@@ -160,10 +167,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
 					<a name="tnonoptionalcloneoptions" class="tsd-anchor"></a>
 					<h3>TNon<wbr>Optional<wbr>Clone<wbr>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">TNon<wbr>Optional<wbr>Clone<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="_clone_.html#polyfillrequired" class="tsd-signature-type">PolyfillRequired</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_clone_.icloneoptions.html" class="tsd-signature-type">ICloneOptions</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">keyof ICloneOptions</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">TNon<wbr>Optional<wbr>Clone<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="_object_clone_.html#polyfillrequired" class="tsd-signature-type">PolyfillRequired</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_object_clone_.icloneoptions.html" class="tsd-signature-type">ICloneOptions</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">keyof ICloneOptions</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/clone.ts#L127">clone.ts:127</a></li>
+							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/object/clone.ts#L127">src/object/clone.ts:127</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -190,18 +197,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/clone.ts#L256">clone.ts:256</a></li>
+									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/object/clone.ts#L256">src/object/clone.ts:256</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<h4 id="deep-clone">Deep Clone</h4>
+									<a href="#deep-clone" id="deep-clone" style="color: inherit; text-decoration: none;">
+										<h4>Deep Clone</h4>
+									</a>
 								</div>
-								<p>A function to recursively clone objects, arrays etc. with <a href="../interfaces/_clone_.icloneoptions.html">cloning options</a></p>
+								<p>A function to recursively clone objects, arrays etc. with <a href="../interfaces/_object_clone_.icloneoptions.html">cloning options</a></p>
 								<p><em>References Functions &amp; Symbols by default</em></p>
 								<hr>
 								<p>Example:</p>
-								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/object"</span>;
 
 <span class="hljs-keyword">const</span> object = {a: <span class="hljs-number">1</span>, b: {c: <span class="hljs-literal">true</span>, d: [<span class="hljs-string">"x"</span>, <span class="hljs-string">"y"</span>]}};
 
@@ -215,14 +224,14 @@
 <span class="hljs-comment">// {a: 1, b: {c: true, d: ["x", "y"]}}</span>
 <span class="hljs-comment">// object.b.d === clonedObject.b.d // true</span></code></pre>
 								<p>Static usage example:</p>
-								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@thalesrc/js-utils/dist/as-static/clone"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@thalesrc/js-utils/object/static/clone"</span>;
 
 <span class="hljs-keyword">const</span> object = {a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>};
 <span class="hljs-keyword">const</span> clonedObject = <span class="hljs-built_in">Object</span>.clone(object); <span class="hljs-comment">// {a: 1, b: 2}</span></code></pre>
 								<hr>
 								<dl class="tsd-comment-tags">
 									<dt>see</dt>
-									<dd><p><a href="../interfaces/_clone_.icloneoptions.html">ICloneOptions</a> for more information.</p>
+									<dd><p><a href="../interfaces/_object_clone_.icloneoptions.html">ICloneOptions</a> for more information.</p>
 									</dd>
 								</dl>
 							</div>
@@ -259,95 +268,92 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_async_map_.html">"async-<wbr>map"</a>
+						<a href="_array_async_map_.html">&quot;array/async-<wbr>map&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_async_try_catch_.html">"async-<wbr>try-<wbr>catch"</a>
+						<a href="_array_compact_.html">&quot;array/compact&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_array_difference_.html">&quot;array/difference&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_array_intersection_.html">&quot;array/intersection&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_array_remove_.html">&quot;array/remove&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_array_replace_.html">&quot;array/replace&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_array_uniquify_.html">&quot;array/uniquify&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_function_debounce_.html">&quot;function/debounce&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_function_defer_.html">&quot;function/defer&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_function_noop_.html">&quot;function/noop&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_function_of_.html">&quot;function/of&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_is_falsy_.html">&quot;is-<wbr>falsy&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_is_truthy_.html">&quot;is-<wbr>truthy&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_map_merge_.html">&quot;map/merge&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_math_min_max_.html">&quot;math/min-<wbr>max&quot;</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_clone_.html">"clone"</a>
+						<a href="_object_clone_.html">&quot;object/clone&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_compact_.html">"compact"</a>
+						<a href="_open_promise_.html">&quot;open-<wbr>promise&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_debounce_.html">"debounce"</a>
+						<a href="_promise_revert_.html">&quot;promise/revert&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_defer_.html">"defer"</a>
+						<a href="_promise_timeout_.html">&quot;promise/timeout&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_difference_.html">"difference"</a>
+						<a href="_promise_try_catch_.html">&quot;promise/try-<wbr>catch&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_function_of_.html">"function-<wbr>of"</a>
+						<a href="_smart_map_.html">&quot;smart-<wbr>map&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_intersection_.html">"intersection"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_is_falsy_.html">"is-<wbr>falsy"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_is_truthy_.html">"is-<wbr>truthy"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_map_merge_.html">"map-<wbr>merge"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_min_max_.html">"min-<wbr>max"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_noop_.html">"noop"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_open_promise_.html">"open-<wbr>promise"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_promise_timeout_.html">"promise-<wbr>timeout"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_remove_.html">"remove"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_replace_.html">"replace"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_revert_promise_.html">"revert-<wbr>promise"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_smart_map_.html">"smart-<wbr>map"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_unique_id_.html">"unique-<wbr>id"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_uniquify_.html">"uniquify"</a>
+						<a href="_unique_id_.html">&quot;unique-<wbr>id&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_clone_.icloneoptions.html" class="tsd-kind-icon">IClone<wbr>Options</a>
+						<a href="../interfaces/_object_clone_.icloneoptions.html" class="tsd-kind-icon">IClone<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_clone_.iclonerinternaldata.html" class="tsd-kind-icon">ICloner<wbr>Internal<wbr>Data</a>
+						<a href="../interfaces/_object_clone_.iclonerinternaldata.html" class="tsd-kind-icon">ICloner<wbr>Internal<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_clone_.html#polyfillrequired" class="tsd-kind-icon">Polyfill<wbr>Required</a>
+						<a href="_object_clone_.html#polyfillrequired" class="tsd-kind-icon">Polyfill<wbr>Required</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="_clone_.html#tinstancecloner" class="tsd-kind-icon">TInstance<wbr>Cloner</a>
+						<a href="_object_clone_.html#tinstancecloner" class="tsd-kind-icon">TInstance<wbr>Cloner</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="_clone_.html#tnonoptionalcloneoptions" class="tsd-kind-icon">TNon<wbr>Optional<wbr>Clone<wbr>Options</a>
+						<a href="_object_clone_.html#tnonoptionalcloneoptions" class="tsd-kind-icon">TNon<wbr>Optional<wbr>Clone<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_clone_.html#clone" class="tsd-kind-icon">clone</a>
+						<a href="_object_clone_.html#clone" class="tsd-kind-icon">clone</a>
 					</li>
 				</ul>
 			</nav>
@@ -366,6 +372,7 @@
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -414,7 +421,7 @@
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>

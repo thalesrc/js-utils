@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;uniquify&quot; | @thalesrc/js-utils</title>
+	<title>&quot;function/noop&quot; | @thalesrc/js-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -38,8 +38,6 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -54,10 +52,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_uniquify_.html">&quot;uniquify&quot;</a>
+					<a href="_function_noop_.html">&quot;function/noop&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;uniquify&quot;</h1>
+			<h1>External module &quot;function/noop&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -71,7 +69,7 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_uniquify_.html#uniquify" class="tsd-kind-icon">uniquify</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_function_noop_.html#noop" class="tsd-kind-icon">noop</a></li>
 							</ul>
 						</section>
 					</div>
@@ -79,47 +77,39 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-					<a name="uniquify" class="tsd-anchor"></a>
-					<h3>uniquify</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">uniquify&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="noop" class="tsd-anchor"></a>
+					<h3>noop</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">noop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/uniquify.ts#L18">uniquify.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/function/noop.ts#L20">src/function/noop.ts:20</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<h4 id="uniquify">Uniquify</h4>
+									<a href="#noop-function" id="noop-function" style="color: inherit; text-decoration: none;">
+										<h4>Noop function</h4>
+									</a>
+									<hr>
+									<p>Example usage:</p>
+									<p>```typescript
+									import { noop } from &quot;@thalesrc/js-utils/function&quot;;</p>
 								</div>
-								<p>Removes repeated items from the array</p>
-								<hr>
-								<p>Example:</p>
-								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { uniquify } <span class="hljs-string">"@thalesrc/js-utils"</span>;
+								<p>noop();
+								document.onload = noop;</p>
+								<pre><code><span class="hljs-keyword">Static</span> usage example:
+```typescript
+import <span class="hljs-string">"@thalesrc/js-utils/function/static/noop"</span>;
 
-<span class="hljs-keyword">const</span> array = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>];
-
-uniquify(array); <span class="hljs-comment">// ["a", "b", "c"]</span></code></pre>
-								<hr>
+<span class="hljs-function"><span class="hljs-keyword">Function</span>.<span class="hljs-title">noop</span><span class="hljs-params">()</span></span>;
+document.onload = <span class="hljs-function"><span class="hljs-keyword">Function</span>.<span class="hljs-title">noop</span></span>;</code></pre><hr>
 							</div>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>T</h4>
-								</li>
-							</ul>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
-							<p>The new uniquified array</p>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -132,80 +122,77 @@ uniquify(array); <span class="hljs-comment">// ["a", "b", "c"]</span></code></pr
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_async_map_.html">"async-<wbr>map"</a>
+						<a href="_array_async_map_.html">&quot;array/async-<wbr>map&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_async_try_catch_.html">"async-<wbr>try-<wbr>catch"</a>
+						<a href="_array_compact_.html">&quot;array/compact&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_clone_.html">"clone"</a>
+						<a href="_array_difference_.html">&quot;array/difference&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_compact_.html">"compact"</a>
+						<a href="_array_intersection_.html">&quot;array/intersection&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_debounce_.html">"debounce"</a>
+						<a href="_array_remove_.html">&quot;array/remove&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_defer_.html">"defer"</a>
+						<a href="_array_replace_.html">&quot;array/replace&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_difference_.html">"difference"</a>
+						<a href="_array_uniquify_.html">&quot;array/uniquify&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_function_of_.html">"function-<wbr>of"</a>
+						<a href="_function_debounce_.html">&quot;function/debounce&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_intersection_.html">"intersection"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_is_falsy_.html">"is-<wbr>falsy"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_is_truthy_.html">"is-<wbr>truthy"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_map_merge_.html">"map-<wbr>merge"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_min_max_.html">"min-<wbr>max"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_noop_.html">"noop"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_open_promise_.html">"open-<wbr>promise"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_promise_timeout_.html">"promise-<wbr>timeout"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_remove_.html">"remove"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_replace_.html">"replace"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_revert_promise_.html">"revert-<wbr>promise"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_smart_map_.html">"smart-<wbr>map"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_unique_id_.html">"unique-<wbr>id"</a>
+						<a href="_function_defer_.html">&quot;function/defer&quot;</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_uniquify_.html">"uniquify"</a>
+						<a href="_function_noop_.html">&quot;function/noop&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_function_of_.html">&quot;function/of&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_is_falsy_.html">&quot;is-<wbr>falsy&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_is_truthy_.html">&quot;is-<wbr>truthy&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_map_merge_.html">&quot;map/merge&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_math_min_max_.html">&quot;math/min-<wbr>max&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_object_clone_.html">&quot;object/clone&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_open_promise_.html">&quot;open-<wbr>promise&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_promise_revert_.html">&quot;promise/revert&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_promise_timeout_.html">&quot;promise/timeout&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_promise_try_catch_.html">&quot;promise/try-<wbr>catch&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_smart_map_.html">&quot;smart-<wbr>map&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_unique_id_.html">&quot;unique-<wbr>id&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_uniquify_.html#uniquify" class="tsd-kind-icon">uniquify</a>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_function_noop_.html#noop" class="tsd-kind-icon">noop</a>
 					</li>
 				</ul>
 			</nav>
@@ -224,6 +211,7 @@ uniquify(array); <span class="hljs-comment">// ["a", "b", "c"]</span></code></pr
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -272,7 +260,7 @@ uniquify(array); <span class="hljs-comment">// ["a", "b", "c"]</span></code></pr
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;debounce&quot; | @thalesrc/js-utils</title>
+	<title>&quot;function/debounce&quot; | @thalesrc/js-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -38,8 +38,6 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -54,10 +52,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_debounce_.html">&quot;debounce&quot;</a>
+					<a href="_function_debounce_.html">&quot;function/debounce&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;debounce&quot;</h1>
+			<h1>External module &quot;function/debounce&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -71,20 +69,20 @@
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_debounce_.html#tdebouncefunction" class="tsd-kind-icon">TDebounce<wbr>Function</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_function_debounce_.html#tdebouncefunction" class="tsd-kind-icon">TDebounce<wbr>Function</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_debounce_.html#default_debounce_time" class="tsd-kind-icon">DEFAULT_<wbr>DEBOUNCE_<wbr>TIME</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_function_debounce_.html#default_debounce_time" class="tsd-kind-icon">DEFAULT_<wbr>DEBOUNCE_<wbr>TIME</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_debounce_.html#debounce" class="tsd-kind-icon">debounce</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_debounce_.html#debouncewithkey" class="tsd-kind-icon">debounce<wbr>With<wbr>Key</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_function_debounce_.html#debounce" class="tsd-kind-icon">debounce</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_function_debounce_.html#debouncewithkey" class="tsd-kind-icon">debounce<wbr>With<wbr>Key</a></li>
 							</ul>
 						</section>
 					</div>
@@ -95,12 +93,18 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
 					<a name="tdebouncefunction" class="tsd-anchor"></a>
 					<h3>TDebounce<wbr>Function</h3>
-					<div class="tsd-signature tsd-kind-icon">TDebounce<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<div class="tsd-signature tsd-kind-icon">TDebounce<wbr>Function&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/debounce.ts#L4">debounce.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/function/debounce.ts#L4">src/function/debounce.ts:4</a></li>
 						</ul>
 					</aside>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>T</h4>
+						</li>
+					</ul>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
@@ -135,7 +139,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>DEBOUNCE_<wbr>TIME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">180</span><span class="tsd-signature-symbol"> =&nbsp;180</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/debounce.ts#L11">debounce.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/function/debounce.ts#L11">src/function/debounce.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -146,22 +150,24 @@
 					<a name="debounce" class="tsd-anchor"></a>
 					<h3>debounce</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">debounce&lt;T&gt;<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><a href="_debounce_.html#tdebouncefunction" class="tsd-signature-type">TDebounceFunction</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, time<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, thisObject<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">debounce&lt;T&gt;<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><a href="_function_debounce_.html#tdebouncefunction" class="tsd-signature-type">TDebounceFunction</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, time<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, thisObject<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/debounce.ts#L93">debounce.ts:93</a></li>
+									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/function/debounce.ts#L93">src/function/debounce.ts:93</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<h4 id="debounces-a-function-that-delays-invoking-until-after-given-time-have-elapsed-since-the-last-time-the-debounced-function-was-invoked">Debounces a function that delays invoking until after given time have elapsed since the last time the debounced function was invoked</h4>
+									<a href="#debounces-a-function-that-delays-invoking-until-after-given-time-have-elapsed-since-the-last-time-the-debounced-function-was-invoked" id="debounces-a-function-that-delays-invoking-until-after-given-time-have-elapsed-since-the-last-time-the-debounced-function-was-invoked" style="color: inherit; text-decoration: none;">
+										<h4>Debounces a function that delays invoking until after given time have elapsed since the last time the debounced function was invoked</h4>
+									</a>
 								</div>
 								<hr>
 								<p>Example usage:</p>
-								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { debounce } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { debounce } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/promise"</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"hello"</span>);
@@ -195,7 +201,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>callback: <a href="_debounce_.html#tdebouncefunction" class="tsd-signature-type">TDebounceFunction</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>callback: <a href="_function_debounce_.html#tdebouncefunction" class="tsd-signature-type">TDebounceFunction</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The function to execute only last of multiple execute requests by given time</p>
 									</div>
@@ -222,13 +228,13 @@
 					<a name="debouncewithkey" class="tsd-anchor"></a>
 					<h3>debounce<wbr>With<wbr>Key</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">debounce<wbr>With<wbr>Key&lt;T&gt;<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">symbol</span>, callback<span class="tsd-signature-symbol">: </span><a href="_debounce_.html#tdebouncefunction" class="tsd-signature-type">TDebounceFunction</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, time<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, thisObject<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">debounce<wbr>With<wbr>Key&lt;T&gt;<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">symbol</span>, callback<span class="tsd-signature-symbol">: </span><a href="_function_debounce_.html#tdebouncefunction" class="tsd-signature-type">TDebounceFunction</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, time<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, thisObject<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/debounce.ts#L15">debounce.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/function/debounce.ts#L15">src/function/debounce.ts:15</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -243,7 +249,7 @@
 									<h5>key: <span class="tsd-signature-type">symbol</span></h5>
 								</li>
 								<li>
-									<h5>callback: <a href="_debounce_.html#tdebouncefunction" class="tsd-signature-type">TDebounceFunction</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>callback: <a href="_function_debounce_.html#tdebouncefunction" class="tsd-signature-type">TDebounceFunction</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> time: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;DEFAULT_DEBOUNCE_TIME</span></h5>
@@ -268,89 +274,86 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_async_map_.html">"async-<wbr>map"</a>
+						<a href="_array_async_map_.html">&quot;array/async-<wbr>map&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_async_try_catch_.html">"async-<wbr>try-<wbr>catch"</a>
+						<a href="_array_compact_.html">&quot;array/compact&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_clone_.html">"clone"</a>
+						<a href="_array_difference_.html">&quot;array/difference&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_compact_.html">"compact"</a>
+						<a href="_array_intersection_.html">&quot;array/intersection&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_array_remove_.html">&quot;array/remove&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_array_replace_.html">&quot;array/replace&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_array_uniquify_.html">&quot;array/uniquify&quot;</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_debounce_.html">"debounce"</a>
+						<a href="_function_debounce_.html">&quot;function/debounce&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_defer_.html">"defer"</a>
+						<a href="_function_defer_.html">&quot;function/defer&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_difference_.html">"difference"</a>
+						<a href="_function_noop_.html">&quot;function/noop&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_function_of_.html">"function-<wbr>of"</a>
+						<a href="_function_of_.html">&quot;function/of&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_index_.html">"index"</a>
+						<a href="_is_falsy_.html">&quot;is-<wbr>falsy&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_intersection_.html">"intersection"</a>
+						<a href="_is_truthy_.html">&quot;is-<wbr>truthy&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_is_falsy_.html">"is-<wbr>falsy"</a>
+						<a href="_map_merge_.html">&quot;map/merge&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_is_truthy_.html">"is-<wbr>truthy"</a>
+						<a href="_math_min_max_.html">&quot;math/min-<wbr>max&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_map_merge_.html">"map-<wbr>merge"</a>
+						<a href="_object_clone_.html">&quot;object/clone&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_min_max_.html">"min-<wbr>max"</a>
+						<a href="_open_promise_.html">&quot;open-<wbr>promise&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_noop_.html">"noop"</a>
+						<a href="_promise_revert_.html">&quot;promise/revert&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_open_promise_.html">"open-<wbr>promise"</a>
+						<a href="_promise_timeout_.html">&quot;promise/timeout&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_promise_timeout_.html">"promise-<wbr>timeout"</a>
+						<a href="_promise_try_catch_.html">&quot;promise/try-<wbr>catch&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_remove_.html">"remove"</a>
+						<a href="_smart_map_.html">&quot;smart-<wbr>map&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_replace_.html">"replace"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_revert_promise_.html">"revert-<wbr>promise"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_smart_map_.html">"smart-<wbr>map"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_unique_id_.html">"unique-<wbr>id"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_uniquify_.html">"uniquify"</a>
+						<a href="_unique_id_.html">&quot;unique-<wbr>id&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_debounce_.html#tdebouncefunction" class="tsd-kind-icon">TDebounce<wbr>Function</a>
+						<a href="_function_debounce_.html#tdebouncefunction" class="tsd-kind-icon">TDebounce<wbr>Function</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="_debounce_.html#default_debounce_time" class="tsd-kind-icon">DEFAULT_<wbr>DEBOUNCE_<wbr>TIME</a>
+						<a href="_function_debounce_.html#default_debounce_time" class="tsd-kind-icon">DEFAULT_<wbr>DEBOUNCE_<wbr>TIME</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_debounce_.html#debounce" class="tsd-kind-icon">debounce</a>
+						<a href="_function_debounce_.html#debounce" class="tsd-kind-icon">debounce</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_debounce_.html#debouncewithkey" class="tsd-kind-icon">debounce<wbr>With<wbr>Key</a>
+						<a href="_function_debounce_.html#debouncewithkey" class="tsd-kind-icon">debounce<wbr>With<wbr>Key</a>
 					</li>
 				</ul>
 			</nav>
@@ -369,6 +372,7 @@
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -417,7 +421,7 @@
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>

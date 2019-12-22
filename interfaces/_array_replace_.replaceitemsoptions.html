@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;min-max&quot; | @thalesrc/js-utils</title>
+	<title>ReplaceItemsOptions | @thalesrc/js-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -38,8 +38,6 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -54,84 +52,123 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_min_max_.html">&quot;min-max&quot;</a>
+					<a href="../modules/_array_replace_.html">&quot;array/replace&quot;</a>
+				</li>
+				<li>
+					<a href="_array_replace_.replaceitemsoptions.html">ReplaceItemsOptions</a>
 				</li>
 			</ul>
-			<h1>External module &quot;min-max&quot;</h1>
+			<h1>Interface ReplaceItemsOptions&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Replace Items Options Interface</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>template</dt>
+						<dd><p>T typeof the items of the array</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>T</h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">ReplaceItemsOptions</span>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Functions</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_min_max_.html#minmax" class="tsd-kind-icon">min<wbr>Max</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_array_replace_.replaceitemsoptions.html#deletecount" class="tsd-kind-icon">delete<wbr>Count</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_array_replace_.replaceitemsoptions.html#itemstoreplace" class="tsd-kind-icon">items<wbr>ToReplace</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_array_replace_.replaceitemsoptions.html#startingindex" class="tsd-kind-icon">starting<wbr>Index</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="minmax" class="tsd-anchor"></a>
-					<h3>min<wbr>Max</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">min<wbr>Max<span class="tsd-signature-symbol">(</span>min<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, max<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/min-max.ts#L24">min-max.ts:24</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<h4 id="limits-the-value-by-given-parameters">Limits the value by given parameters</h4>
-								</div>
-								<hr>
-								<p>Example usage:</p>
-								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { minMax } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
-
-<span class="hljs-keyword">const</span> limitedValue = minMax(<span class="hljs-number">200</span>, <span class="hljs-number">300</span>, <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">1000</span>);</code></pre>
-								<p>Example as Math static:</p>
-								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@thalesrc/js-utils/dist/as-static/min-max"</span>;
-
-<span class="hljs-keyword">const</span> limitedValue = <span class="hljs-built_in">Math</span>.minMax(<span class="hljs-number">200</span>, <span class="hljs-number">300</span>, <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">1000</span>);</code></pre>
-								<hr>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>min: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>minimum limit</p>
-									</div>
-								</li>
-								<li>
-									<h5>max: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>maximum limit</p>
-									</div>
-								</li>
-								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>value to limit</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-							<p>the limited value <em>(returns NaN if an argument is NaN)</em></p>
-						</li>
-					</ul>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="deletecount" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> delete<wbr>Count</h3>
+					<div class="tsd-signature tsd-kind-icon">delete<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/array/replace.ts#L19">src/array/replace.ts:19</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Determines how many items will be deleted from the array</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>1</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="itemstoreplace" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> items<wbr>ToReplace</h3>
+					<div class="tsd-signature tsd-kind-icon">items<wbr>ToReplace<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/array/replace.ts#L26">src/array/replace.ts:26</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Items to replace</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>[]</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="startingindex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> starting<wbr>Index</h3>
+					<div class="tsd-signature tsd-kind-icon">starting<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/array/replace.ts#L12">src/array/replace.ts:12</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Starting index of the array for replacement operation</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>0</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -142,80 +179,98 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_async_map_.html">"async-<wbr>map"</a>
+						<a href="../modules/_array_async_map_.html">&quot;array/async-<wbr>map&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_async_try_catch_.html">"async-<wbr>try-<wbr>catch"</a>
+						<a href="../modules/_array_compact_.html">&quot;array/compact&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_clone_.html">"clone"</a>
+						<a href="../modules/_array_difference_.html">&quot;array/difference&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_compact_.html">"compact"</a>
+						<a href="../modules/_array_intersection_.html">&quot;array/intersection&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_debounce_.html">"debounce"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_defer_.html">"defer"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_difference_.html">"difference"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_function_of_.html">"function-<wbr>of"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_intersection_.html">"intersection"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_is_falsy_.html">"is-<wbr>falsy"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_is_truthy_.html">"is-<wbr>truthy"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_map_merge_.html">"map-<wbr>merge"</a>
+						<a href="../modules/_array_remove_.html">&quot;array/remove&quot;</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_min_max_.html">"min-<wbr>max"</a>
+						<a href="../modules/_array_replace_.html">&quot;array/replace&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_noop_.html">"noop"</a>
+						<a href="../modules/_array_uniquify_.html">&quot;array/uniquify&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_open_promise_.html">"open-<wbr>promise"</a>
+						<a href="../modules/_function_debounce_.html">&quot;function/debounce&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_promise_timeout_.html">"promise-<wbr>timeout"</a>
+						<a href="../modules/_function_defer_.html">&quot;function/defer&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_remove_.html">"remove"</a>
+						<a href="../modules/_function_noop_.html">&quot;function/noop&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_replace_.html">"replace"</a>
+						<a href="../modules/_function_of_.html">&quot;function/of&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_revert_promise_.html">"revert-<wbr>promise"</a>
+						<a href="../modules/_is_falsy_.html">&quot;is-<wbr>falsy&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_smart_map_.html">"smart-<wbr>map"</a>
+						<a href="../modules/_is_truthy_.html">&quot;is-<wbr>truthy&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_unique_id_.html">"unique-<wbr>id"</a>
+						<a href="../modules/_map_merge_.html">&quot;map/merge&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_uniquify_.html">"uniquify"</a>
+						<a href="../modules/_math_min_max_.html">&quot;math/min-<wbr>max&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_object_clone_.html">&quot;object/clone&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_open_promise_.html">&quot;open-<wbr>promise&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_promise_revert_.html">&quot;promise/revert&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_promise_timeout_.html">&quot;promise/timeout&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_promise_try_catch_.html">&quot;promise/try-<wbr>catch&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_smart_map_.html">&quot;smart-<wbr>map&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_unique_id_.html">&quot;unique-<wbr>id&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_min_max_.html#minmax" class="tsd-kind-icon">min<wbr>Max</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_array_replace_.replacebymapoptions.html" class="tsd-kind-icon">Replace<wbr>ByMap<wbr>Options</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_array_replace_.replaceitemsoptions.html" class="tsd-kind-icon">Replace<wbr>Items<wbr>Options</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_array_replace_.replaceitemsoptions.html#deletecount" class="tsd-kind-icon">delete<wbr>Count</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_array_replace_.replaceitemsoptions.html#itemstoreplace" class="tsd-kind-icon">items<wbr>ToReplace</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_array_replace_.replaceitemsoptions.html#startingindex" class="tsd-kind-icon">starting<wbr>Index</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="../modules/_array_replace_.html#replace" class="tsd-kind-icon">replace</a>
 					</li>
 				</ul>
 			</nav>
@@ -234,6 +289,7 @@
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -282,7 +338,7 @@
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>

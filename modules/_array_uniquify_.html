@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IClonerInternalData | @thalesrc/js-utils</title>
+	<title>&quot;array/uniquify&quot; | @thalesrc/js-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -38,8 +38,6 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -54,91 +52,82 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_clone_.html">&quot;clone&quot;</a>
-				</li>
-				<li>
-					<a href="_clone_.iclonerinternaldata.html">IClonerInternalData</a>
+					<a href="_array_uniquify_.html">&quot;array/uniquify&quot;</a>
 				</li>
 			</ul>
-			<h1>Interface IClonerInternalData</h1>
+			<h1>External module &quot;array/uniquify&quot;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<h4 id="internal-data-for-cloning-process">Internal Data For Cloning Process</h4>
-					</div>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-hierarchy">
-				<h3>Hierarchy</h3>
-				<ul class="tsd-hierarchy">
-					<li>
-						<span class="target">IClonerInternalData</span>
-					</li>
-				</ul>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
+							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_clone_.iclonerinternaldata.html#clonedobjects" class="tsd-kind-icon">cloned<wbr>Objects</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_clone_.iclonerinternaldata.html#finalizers" class="tsd-kind-icon">finalizers</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_clone_.iclonerinternaldata.html#key" class="tsd-kind-icon">key</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_clone_.iclonerinternaldata.html#parent" class="tsd-kind-icon">parent</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_array_uniquify_.html#uniquify" class="tsd-kind-icon">uniquify</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="clonedobjects" class="tsd-anchor"></a>
-					<h3>cloned<wbr>Objects</h3>
-					<div class="tsd-signature tsd-kind-icon">cloned<wbr>Objects<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Symbol</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/clone.ts#L113">clone.ts:113</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="finalizers" class="tsd-anchor"></a>
-					<h3>finalizers</h3>
-					<div class="tsd-signature tsd-kind-icon">finalizers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/clone.ts#L116">clone.ts:116</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="key" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> key</h3>
-					<div class="tsd-signature tsd-kind-icon">key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/clone.ts#L115">clone.ts:115</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="parent" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> parent</h3>
-					<div class="tsd-signature tsd-kind-icon">parent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Object</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/clone.ts#L114">clone.ts:114</a></li>
-						</ul>
-					</aside>
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+					<a name="uniquify" class="tsd-anchor"></a>
+					<h3>uniquify</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">uniquify&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/array/uniquify.ts#L27">src/array/uniquify.ts:27</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<a href="#uniquify" id="uniquify" style="color: inherit; text-decoration: none;">
+										<h4>Uniquify</h4>
+									</a>
+								</div>
+								<p>Removes repeated items from the array</p>
+								<hr>
+								<p>Example:</p>
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { uniquify } <span class="hljs-string">"@thalesrc/js-utils/array"</span>;
+
+<span class="hljs-keyword">const</span> array = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>];
+
+uniquify(array); <span class="hljs-comment">// ["a", "b", "c"]</span></code></pre>
+								<p>Prototype Example:</p>
+								<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">"@thalesrc/js-utils/array/proto/uniquify"</span>;
+
+<span class="hljs-keyword">const</span> array = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>];
+
+array.uniquify(); <span class="hljs-comment">// ["a", "b", "c"]</span></code></pre>
+								<hr>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>The new uniquified array</p>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -149,113 +138,77 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_async_map_.html">"async-<wbr>map"</a>
+						<a href="_array_async_map_.html">&quot;array/async-<wbr>map&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_async_try_catch_.html">"async-<wbr>try-<wbr>catch"</a>
+						<a href="_array_compact_.html">&quot;array/compact&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_array_difference_.html">&quot;array/difference&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_array_intersection_.html">&quot;array/intersection&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_array_remove_.html">&quot;array/remove&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_array_replace_.html">&quot;array/replace&quot;</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="../modules/_clone_.html">"clone"</a>
+						<a href="_array_uniquify_.html">&quot;array/uniquify&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_compact_.html">"compact"</a>
+						<a href="_function_debounce_.html">&quot;function/debounce&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_debounce_.html">"debounce"</a>
+						<a href="_function_defer_.html">&quot;function/defer&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_defer_.html">"defer"</a>
+						<a href="_function_noop_.html">&quot;function/noop&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_difference_.html">"difference"</a>
+						<a href="_function_of_.html">&quot;function/of&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_function_of_.html">"function-<wbr>of"</a>
+						<a href="_is_falsy_.html">&quot;is-<wbr>falsy&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_index_.html">"index"</a>
+						<a href="_is_truthy_.html">&quot;is-<wbr>truthy&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_intersection_.html">"intersection"</a>
+						<a href="_map_merge_.html">&quot;map/merge&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_is_falsy_.html">"is-<wbr>falsy"</a>
+						<a href="_math_min_max_.html">&quot;math/min-<wbr>max&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_is_truthy_.html">"is-<wbr>truthy"</a>
+						<a href="_object_clone_.html">&quot;object/clone&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_map_merge_.html">"map-<wbr>merge"</a>
+						<a href="_open_promise_.html">&quot;open-<wbr>promise&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_min_max_.html">"min-<wbr>max"</a>
+						<a href="_promise_revert_.html">&quot;promise/revert&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_noop_.html">"noop"</a>
+						<a href="_promise_timeout_.html">&quot;promise/timeout&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_open_promise_.html">"open-<wbr>promise"</a>
+						<a href="_promise_try_catch_.html">&quot;promise/try-<wbr>catch&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_promise_timeout_.html">"promise-<wbr>timeout"</a>
+						<a href="_smart_map_.html">&quot;smart-<wbr>map&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_remove_.html">"remove"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_replace_.html">"replace"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_revert_promise_.html">"revert-<wbr>promise"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_smart_map_.html">"smart-<wbr>map"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_unique_id_.html">"unique-<wbr>id"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_uniquify_.html">"uniquify"</a>
+						<a href="_unique_id_.html">&quot;unique-<wbr>id&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_clone_.icloneoptions.html" class="tsd-kind-icon">IClone<wbr>Options</a>
-					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_clone_.iclonerinternaldata.html" class="tsd-kind-icon">ICloner<wbr>Internal<wbr>Data</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_clone_.iclonerinternaldata.html#clonedobjects" class="tsd-kind-icon">cloned<wbr>Objects</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_clone_.iclonerinternaldata.html#finalizers" class="tsd-kind-icon">finalizers</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_clone_.iclonerinternaldata.html#key" class="tsd-kind-icon">key</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_clone_.iclonerinternaldata.html#parent" class="tsd-kind-icon">parent</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="after-current">
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="../modules/_clone_.html#polyfillrequired" class="tsd-kind-icon">Polyfill<wbr>Required</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="../modules/_clone_.html#tinstancecloner" class="tsd-kind-icon">TInstance<wbr>Cloner</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="../modules/_clone_.html#tnonoptionalcloneoptions" class="tsd-kind-icon">TNon<wbr>Optional<wbr>Clone<wbr>Options</a>
-					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="../modules/_clone_.html#clone" class="tsd-kind-icon">clone</a>
+						<a href="_array_uniquify_.html#uniquify" class="tsd-kind-icon">uniquify</a>
 					</li>
 				</ul>
 			</nav>
@@ -274,6 +227,7 @@
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -322,7 +276,7 @@
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
