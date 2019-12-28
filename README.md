@@ -19,7 +19,6 @@ Collecting commonly used utility functions in a package.
 * Tree-shaking
 * No dependencies
 * High performance
-* Esnext focused
 * Documentation
 * Well tested
 * Static/Prototype method support
@@ -357,3 +356,20 @@ import "@thalesrc/js-utils/promise/static/timeout";
 Promise.timeout(1000)
  .then(() => console.log("will be logged after a second"));
 ```
+
+## Legacy Typescript Support
+
+Import utils from `legacy` folder
+
+Example:
+```typescript
+import { tryCatch } from "@thalesrc/js-utils/legacy/promise";
+
+const promise = anAsyncCall();
+
+const [error, result] = await tryCatch(promise);
+```
+
+## License
+
+[MIT](./LICENSE)
