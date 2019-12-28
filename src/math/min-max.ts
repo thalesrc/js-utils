@@ -1,5 +1,5 @@
 /**
- * #### Limits the value by given parameters
+ * #### Limits the value by specified range
  *
  * * * *
  * Example usage:
