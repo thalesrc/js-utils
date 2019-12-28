@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@thalesrc/js-utils</title>
+	<title>@thalesrc/js-utils - v0.0.0</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">@thalesrc/js-utils</a>
+					<a href="index.html" class="title">@thalesrc/js-utils - v0.0.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -52,7 +52,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> @thalesrc/js-utils</h1>
+			<h1> @thalesrc/js-utils - v0.0.0</h1>
 		</div>
 	</div>
 </header>
@@ -68,46 +68,318 @@
 					<a href="https://codecov.io/gh/thalesrc/js-utils"><img src="https://codecov.io/gh/thalesrc/js-utils/branch/master/graph/badge.svg" alt="codecov"></a>
 					<a href="https://www.npmjs.com/package/@thalesrc/js-utils"><img src="https://img.shields.io/npm/v/@thalesrc/js-utils.svg" alt="npm"></a>
 					<a href="https://www.npmjs.com/package/@thalesrc/js-utils"><img src="https://img.shields.io/npm/dw/@thalesrc/js-utils.svg" alt="npm"></a>
-					<a href="https://www.patreon.com/alisahin"><img src="https://img.shields.io/badge/patreon-alisahin-orange.svg" alt="patreon"></a>
 					<a href="https://github.com/ellerbrock/typescript-badges/"><img src="https://badges.frapsoft.com/typescript/version/typescript-next.svg?v=101" alt="TypeScript"></a>
 					<a href="https://github.com/thalesrc/js-utils/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/@thalesrc/js-utils.svg" alt="npm"></a>
 				<a href="https://gitter.im/thalesrc_js-utils/Lobby?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/thalesrc_js-utils/Lobby.svg" alt="Join the chat at https://gitter.im/thalesrc_js-utils/Lobby"></a></p>
+				<a href="#motivation" id="motivation" style="color: inherit; text-decoration: none;">
+					<h2>Motivation</h2>
+				</a>
+				<p>Collecting commonly used utility functions in a package.</p>
+				<a href="#goals" id="goals" style="color: inherit; text-decoration: none;">
+					<h2>Goals</h2>
+				</a>
+				<ul>
+					<li>Typescript support</li>
+					<li>Tree-shaking</li>
+					<li>No dependencies</li>
+					<li>High performance</li>
+					<li>Esnext focused</li>
+					<li>Documentation</li>
+					<li>Well tested</li>
+					<li>Static/Prototype method support</li>
+				</ul>
 				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
-					<h4>Installation</h4>
-				</a>
-				<p><code>npm install @thalesrc/js-utils --save</code></p>
-				<a href="#utility-functions" id="utility-functions" style="color: inherit; text-decoration: none;">
-					<h4>Utility Functions</h4>
+					<h2>Installation</h2>
 				</a>
 				<ul>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_async_map_.html">async-map</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_async_try_catch_.html">async-try-catch</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_clone_.html">clone</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_compact_.html">compact</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_debounce_.html">debounce</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_defer_.html">defer</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_difference_.html">difference</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_function_of_.html">function-of</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_intersection_.html">intersection</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_is_falsy_.html">is-falsy</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_is_truthy_.html">is-truthy</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_map_merge_.html">map-merge</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_min_max_.html">min-max</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_noop_.html">noop</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_promise_timeout_.html">promise-timeout</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_replace_.html">replace</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_revert_promise_.html">revert-promise</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_unique_id_.html">unique-id</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_uniquify_.html">uniquify</a></li>
+					<li>npm: <code>npm install @thalesrc/js-utils --save</code></li>
+					<li>yarn: <code>yarn add @thalesrc/js-utils</code></li>
 				</ul>
-				<a href="#utility-classes" id="utility-classes" style="color: inherit; text-decoration: none;">
-					<h4>Utility Classes</h4>
+				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+					<h2>Documentation</h2>
 				</a>
-				<ul>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_open_promise_.html">open-promise</a></li>
-					<li><a href="https://thalesrc.github.io/js-utils/modules/_smart_map_.html">smart-map</a></li>
-				</ul>
-				<p>All Documentation =&gt; <a href="https://thalesrc.github.io/js-utils">thalesrc.github.io/js-utils</a></p>
+				<p>See: <a href="https://thalesrc.github.io/js-utils">thalesrc.github.io/js-utils</a></p>
+				<a href="#functions" id="functions" style="color: inherit; text-decoration: none;">
+					<h2>Functions</h2>
+				</a>
+				<a href="#array" id="array" style="color: inherit; text-decoration: none;">
+					<h3>Array</h3>
+				</a>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_array_async_map_htmlasync-mapa" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_array_async_map_htmlasync-mapa" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_array_async_map_.html">Async Map</a></h4>
+				</a>
+				<p>Maps an array asynchronously</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { asyncMap } <span class="hljs-string">"@thalesrc/js-utils/array"</span>;
+
+<span class="hljs-keyword">const</span> array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> asyncMap(array, <span class="hljs-keyword">async</span> value =&gt; {
+ <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> addOneAfterASecond(value);
+});
+
+<span class="hljs-built_in">console</span>.log(result); <span class="hljs-comment">// [2, 3, 4]</span></code></pre>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_array_compact_htmlcompacta" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_array_compact_htmlcompacta" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_array_compact_.html">Compact</a></h4>
+				</a>
+				<p>Filters falsy values of an array</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { compact } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/array"</span>;
+
+<span class="hljs-keyword">const</span> arr = [<span class="hljs-literal">undefined</span>, <span class="hljs-string">""</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-string">"1"</span>, <span class="hljs-literal">null</span>];
+<span class="hljs-keyword">const</span> compacted = compact(arr); <span class="hljs-comment">// [1, "1"];</span></code></pre>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_array_difference_htmldifferencea" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_array_difference_htmldifferencea" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_array_difference_.html">Difference</a></h4>
+				</a>
+				<p>Gets the difference of the two arrays or sets</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { difference } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/array"</span>;
+
+<span class="hljs-keyword">const</span> base = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>];
+
+difference(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>]); <span class="hljs-comment">// ["c", "d", "c", "d"]</span>
+difference(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>], <span class="hljs-literal">true</span>); <span class="hljs-comment">// ["c", "d", "a", "b", "c", "d"]</span></code></pre>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_array_intersection_htmlintersectiona" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_array_intersection_htmlintersectiona" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_array_intersection_.html">Intersection</a></h4>
+				</a>
+				<p>Gets the intersection of the two arrays or sets</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { intersection } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/array"</span>;
+
+<span class="hljs-keyword">const</span> base = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>];
+
+intersection(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"x"</span>]); <span class="hljs-comment">// ["a", "b", "a", "b"]</span>
+intersection(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"x"</span>], <span class="hljs-literal">false</span>); <span class="hljs-comment">// ["a", "b"]</span></code></pre>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_array_remove_htmlremovea" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_array_remove_htmlremovea" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_array_remove_.html">Remove</a></h4>
+				</a>
+				<p>Removes an item from an array</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { remove } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/array"</span>;
+
+<span class="hljs-keyword">const</span> array = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>];
+
+remove(array, <span class="hljs-string">"b"</span>); <span class="hljs-comment">// ["a", "c", "a", "b", "c"]</span>
+remove(array, <span class="hljs-string">"b"</span>, <span class="hljs-literal">true</span>); <span class="hljs-comment">// ["a", "c", "a", "c"]</span></code></pre>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_array_replace_htmlreplacea" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_array_replace_htmlreplacea" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_array_replace_.html">Replace</a></h4>
+				</a>
+				<p>Replaces an item with passed one of an array</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { replace } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/array"</span>;
+
+<span class="hljs-keyword">const</span> array = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>];
+
+replace(array, <span class="hljs-string">"b"</span>, <span class="hljs-string">"x"</span>); <span class="hljs-comment">// ["a", "x", "c", "a", "b", "c"]</span>
+replace(array, {startingIndex: <span class="hljs-number">3</span>, deleteCount: <span class="hljs-number">1</span>, itemsToReplace: [<span class="hljs-string">'x'</span>, <span class="hljs-string">'y'</span>]}); <span class="hljs-comment">// ["a", "b", "c", "x", "y", "b", "c"];</span>
+
+<span class="hljs-keyword">const</span> config = <span class="hljs-keyword">new</span> Map();
+config.set(<span class="hljs-string">"a"</span>, <span class="hljs-string">"x"</span>)
+config.set(<span class="hljs-string">"b"</span>, <span class="hljs-string">"y"</span>);
+
+replace(array, {itemsToReplace: config}); <span class="hljs-comment">// ["x", "y", "c", "a", "b", "c"];</span>
+replace(array, {itemsToReplace: config, multi: <span class="hljs-literal">true</span>}); <span class="hljs-comment">// ["x", "y", "c", "x", "y", "c"];</span></code></pre>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_array_uniquify_htmluniquifya" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_array_uniquify_htmluniquifya" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_array_uniquify_.html">Uniquify</a></h4>
+				</a>
+				<p>Removes repeated items from the array</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { uniquify } <span class="hljs-string">"@thalesrc/js-utils/array"</span>;
+
+<span class="hljs-keyword">const</span> array = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>];
+
+uniquify(array); <span class="hljs-comment">// ["a", "b", "c"]</span></code></pre>
+				<a href="#function" id="function" style="color: inherit; text-decoration: none;">
+					<h3>Function</h3>
+				</a>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_function_debounce_htmldebouncea" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_function_debounce_htmldebouncea" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_function_debounce_.html">Debounce</a></h4>
+				</a>
+				<p>Debounces a function that delays invoking until after configured time have elapsed since the last time the debounced function was invoked</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { debounce } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/promise"</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"hello"</span>);
+}
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+  debounce(foo);
+}
+
+<span class="hljs-comment">// logs "hello" only once</span></code></pre>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_function_defer_htmldefera" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_function_defer_htmldefera" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_function_defer_.html">Defer</a></h4>
+				</a>
+				<p>Delays the execution of the passed function</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { defer } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/function"</span>;
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> defer(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> aFunctionToDeferThatReturnsHello());
+
+<span class="hljs-built_in">console</span>.log(result); <span class="hljs-comment">// 'hello'</span></code></pre>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_function_noop_htmlnoopa" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_function_noop_htmlnoopa" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_function_noop_.html">Noop</a></h4>
+				</a>
+				<p>Noop function</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { noop } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/function"</span>;
+
+noop();</code></pre>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_function_of_htmlofa" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_function_of_htmlofa" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_function_of_.html">Of</a></h4>
+				</a>
+				<p>Creates a function which returns the specified value</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { of } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/function"</span>;
+
+<span class="hljs-keyword">const</span> base = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, {}, <span class="hljs-string">"x"</span>, <span class="hljs-string">"y"</span>];
+
+base.map(of(<span class="hljs-string">'hi'</span>)); <span class="hljs-comment">// ["hi", "hi", "hi", "hi", "hi", "hi"]</span></code></pre>
+				<a href="#map" id="map" style="color: inherit; text-decoration: none;">
+					<h3>Map</h3>
+				</a>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_map_merge_htmlmergea" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_map_merge_htmlmergea" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_map_merge_.html">Merge</a></h4>
+				</a>
+				<p>Merges two maps</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { merge } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/map"</span>;
+
+<span class="hljs-keyword">const</span> first = <span class="hljs-keyword">new</span> Map();
+first.set(<span class="hljs-string">"a"</span>, <span class="hljs-number">1</span>);
+
+<span class="hljs-keyword">const</span> second = <span class="hljs-keyword">new</span> Map();
+second.set(<span class="hljs-string">"b"</span>, <span class="hljs-number">2</span>);
+merge(first, second); <span class="hljs-comment">// [{key: "a", value: 1}, {key: "b", value: 2}]</span></code></pre>
+				<a href="#math" id="math" style="color: inherit; text-decoration: none;">
+					<h3>Math</h3>
+				</a>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_math_min_max_htmlmin-maxa" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_math_min_max_htmlmin-maxa" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_math_min_max_.html">Min-Max</a></h4>
+				</a>
+				<p>Limits the value by specified range</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { minMax } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/math"</span>;
+
+<span class="hljs-keyword">const</span> limitedValue = minMax(<span class="hljs-number">200</span>, <span class="hljs-number">300</span>, <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">1000</span>); <span class="hljs-comment">// Outputs between 200-300</span></code></pre>
+				<a href="#object" id="object" style="color: inherit; text-decoration: none;">
+					<h3>Object</h3>
+				</a>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_object_clone_htmlclonea" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_object_clone_htmlclonea" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_object_clone_.html">Clone</a></h4>
+				</a>
+				<p>A function to deep clone anything (recursively)</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { clone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/object"</span>;
+
+<span class="hljs-keyword">const</span> object = {a: <span class="hljs-number">1</span>, b: {c: <span class="hljs-literal">true</span>, d: [<span class="hljs-string">"x"</span>, <span class="hljs-string">"y"</span>]}};
+
+<span class="hljs-keyword">const</span> clonedObject = clone(object);
+<span class="hljs-comment">// {a: 1, b: {c: true, d: ["x", "y"]}}</span>
+<span class="hljs-comment">// object.b.d === clonedObject.b.d // false</span></code></pre>
+				<a href="#promise" id="promise" style="color: inherit; text-decoration: none;">
+					<h3>Promise</h3>
+				</a>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_promise_revert_htmlreverta" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_promise_revert_htmlreverta" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_promise_revert_.html">Revert</a></h4>
+				</a>
+				<p>Exchanges resolve state with rejection of a promise</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { revert } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/promise"</span>;
+
+<span class="hljs-keyword">const</span> errorPromise = <span class="hljs-built_in">Promise</span>.reject(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'foo'</span>));
+
+revert(errorPromise)
+ .then(<span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> {
+   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"this will be logged"</span>, err);
+ })
+ .catch(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
+   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"this won't be logged"</span>, res);
+ });</code></pre>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_promise_timeout_htmltimeouta" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_promise_timeout_htmltimeouta" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_promise_timeout_.html">Timeout</a></h4>
+				</a>
+				<p>Returns a promise which resolves after specified time</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { timeout } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/promise"</span>;
+
+timeout(<span class="hljs-number">1000</span>)
+ .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"will be logged after a second"</span>));</code></pre>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_promise_try_catch_htmltry-catcha" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_promise_try_catch_htmltry-catcha" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_promise_try_catch_.html">Try Catch</a></h4>
+				</a>
+				<p>Merges result and error in the same callback</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { tryCatch } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/promise"</span>;
+
+<span class="hljs-keyword">const</span> promise = anAsyncCall();
+
+<span class="hljs-keyword">const</span> [error, result] = <span class="hljs-keyword">await</span> tryCatch(promise);</code></pre>
+				<a href="#etc" id="etc" style="color: inherit; text-decoration: none;">
+					<h3>Etc.</h3>
+				</a>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_is_falsy_htmlis-falsya" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_is_falsy_htmlis-falsya" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_is_falsy_.html">Is Falsy</a></h4>
+				</a>
+				<p>Returns whether the entered value is falsy</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { isFalsy } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
+
+isFalsy(<span class="hljs-literal">undefined</span>); <span class="hljs-comment">// true</span>
+isFalsy(<span class="hljs-literal">true</span>); <span class="hljs-comment">// false</span></code></pre>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_is_truthy_htmlis-truthya" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_is_truthy_htmlis-truthya" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_is_truthy_.html">Is Truthy</a></h4>
+				</a>
+				<p>Returns whether the entered value is truthy</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { isTruthy } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
+
+isTruthy(<span class="hljs-literal">undefined</span>); <span class="hljs-comment">// false</span>
+isTruthy(<span class="hljs-literal">true</span>); <span class="hljs-comment">// true</span></code></pre>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_open-promise_htmlopen-promisea" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_open-promise_htmlopen-promisea" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_open-promise_.html">Open Promise</a></h4>
+				</a>
+				<p>A promise constructor to resolve or reject from outside</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { OpenPromise } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
+
+<span class="hljs-keyword">const</span> aPromiseWillBeResolvedLater = <span class="hljs-keyword">new</span> OpenPromise();
+
+aPromiseWillBeResolvedLater.promise.then(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(val));
+
+aPromiseWillBeResolvedLater.resolve({x: <span class="hljs-number">1</span>});
+<span class="hljs-comment">// logs `{x: 1}`</span></code></pre>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_smart_map_htmlsmart-mapa" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_smart_map_htmlsmart-mapa" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_smart_map_.html">Smart Map</a></h4>
+				</a>
+				<p>Like WeakMap but can also store values using primitive keys</p>
+				<p>See: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap">WeakMap</a></p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { SmartMap } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
+
+<span class="hljs-keyword">const</span> aMap = <span class="hljs-keyword">new</span> SmartMap();
+
+aMap.set(<span class="hljs-string">"foo"</span>, <span class="hljs-string">"foo"</span>);
+aMap.set(<span class="hljs-number">1</span>, <span class="hljs-string">"thales rocks"</span>);
+<span class="hljs-built_in">console</span>.log(aMap.size) <span class="hljs-comment">// 2</span>
+
+aMap.set({}, <span class="hljs-string">"thales rocks again"</span>);
+<span class="hljs-built_in">console</span>.log(aMap.size) <span class="hljs-comment">// 2</span>
+
+<span class="hljs-keyword">const</span> anObject = {};
+aMap.set(anObject, <span class="hljs-string">"thales rocks again and again"</span>);
+<span class="hljs-built_in">console</span>.log(aMap.size) <span class="hljs-comment">// 3</span>
+<span class="hljs-built_in">console</span>.log(aMap.get(anObject)) <span class="hljs-comment">// "thales rocks again and again"</span></code></pre>
+				<a href="#a-hrefhttpsthalesrcgithubiojs-utilsmodules_unique-id_htmlunique-ida" id="a-hrefhttpsthalesrcgithubiojs-utilsmodules_unique-id_htmlunique-ida" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_unique-id_.html">Unique Id</a></h4>
+				</a>
+				<p>Starts a new counter for every unique prefix and if a prefix is given, returns the id by prefixing it, otherwise returns the id as number</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { uniqueId } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
+
+uniqueId(); <span class="hljs-comment">// 0</span>
+uniqueId(); <span class="hljs-comment">// 1</span>
+uniqueId(<span class="hljs-string">"some-str"</span>); <span class="hljs-comment">// "some-str-0";</span>
+uniqueId(<span class="hljs-string">"some-str"</span>); <span class="hljs-comment">// "some-str-1";</span>
+uniqueId(); <span class="hljs-comment">// 3</span></code></pre>
+				<a href="#staticprototype-methods" id="staticprototype-methods" style="color: inherit; text-decoration: none;">
+					<h2>Static/Prototype Methods</h2>
+				</a>
+				<p>You may use any of these methods by adding them to the constructors or prototypes to native objects in main file.</p>
+				<p>Prototype Example:</p>
+				<pre><code class="language-typescript"><span class="hljs-comment">// main.ts</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">"@thalesrc/js-utils/array/proto/compact"</span>;
+
+<span class="hljs-comment">// somewhere else</span>
+<span class="hljs-keyword">const</span> arr = [<span class="hljs-literal">undefined</span>, <span class="hljs-string">""</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-string">"1"</span>, <span class="hljs-literal">null</span>];
+<span class="hljs-keyword">const</span> compacted = arr.compact(); <span class="hljs-comment">// [1, "1"];</span>
+</code></pre>
+				<p>Static Example:</p>
+				<pre><code class="language-typescript"><span class="hljs-comment">// main.ts</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">"@thalesrc/js-utils/promise/static/timeout"</span>;
+
+<span class="hljs-comment">// somewhere else</span>
+<span class="hljs-built_in">Promise</span>.timeout(<span class="hljs-number">1000</span>)
+ .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"will be logged after a second"</span>));</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
