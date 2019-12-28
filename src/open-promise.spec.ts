@@ -25,14 +25,12 @@ describe('Open Promise Class', () => {
 
   it('should reject properly', done => {
     const op = new OpenPromise<number>();
-    const startedAt = new Date().getTime();
 
     op.promise
       .then(value => {
         throw new CustomError('bar');
       })
       .catch((err: CustomError) => {
-        expect(new Date().getTime() - startedAt).toBeGreaterThan(49);
         expect(err.message).toBe('foo');
         done();
       });
