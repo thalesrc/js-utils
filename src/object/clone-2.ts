@@ -23,6 +23,12 @@ interface CloningObjectData<T> {
 class Strategy {
   public mode: 'sync' | 'async' = 'sync';
   public clone: (this: Strategy) => any = noop;
+
+  constructor(async = false) {
+    if (async) {
+      this.mode = 'async';
+    }
+  }
 }
 
 class StrategyData {
@@ -46,12 +52,24 @@ class StrategyData {
   }
 
   public readonly syncClone = (
-    customCloner: (cloner: (data: CloningObjectData<any>) => any) => any
+    customCloner: (cloner: <T>(data: CloningObjectData<T>) => T) => any
   ) => {
     const strategy = new Strategy();
 
     strategy.clone = () => customCloner(
       ({parent = UNKNOWN, key = UNKNOWN, value}) => cloner({parent, key, value}, this[INTERNALS])
+    );
+
+    return strategy;
+  }
+
+  public readonly asyncClone = (
+    customCloner: (cloner: <T>(data: CloningObjectData<T>) => Promise<T>) => any
+  ) => {
+    const strategy = new Strategy(true);
+
+    strategy.clone = () => customCloner(
+      ({parent = UNKNOWN, key = UNKNOWN, value}) => asyncCloner({parent, key, value}, this[INTERNALS])
     );
 
     return strategy;
@@ -76,6 +94,27 @@ export function clone<T>(
   const internalData = new InternalData(strategy, finalizer);
 
   const clonedObject = cloner({value: object, parent: UNKNOWN, key: UNKNOWN}, internalData);
+
+  for (const {value, key, parent} of internalData.finalizers) {
+    let finalizerFunction = finalizer(parent, key, value) as (result: any) => void;
+
+    if (typeof finalizerFunction !== 'function') {
+      finalizerFunction = builtInFinalizerFunction(parent, key, value) as (result: any) => void;
+    }
+
+    finalizerFunction(internalData.clonedObjects.get(value));
+  }
+
+  return clonedObject as T;
+}
+
+export async function asyncClone<T>(
+  object: T,
+  strategy: (data: StrategyData) => Strategy | void = noop,
+  finalizer: (parent: any, key: any, value: any) => ((result: any) => void) | void = noop
+): Promise<T> {
+  const internalData = new InternalData(strategy, finalizer);
+  const clonedObject = await asyncCloner({value: object, parent: UNKNOWN, key: UNKNOWN}, internalData);
 
   for (const {value, key, parent} of internalData.finalizers) {
     let finalizerFunction = finalizer(parent, key, value) as (result: any) => void;
@@ -131,6 +170,53 @@ function cloner<T>(
   return result;
 }
 
+async function asyncCloner<T>(
+  {value, key, parent}: CloningObjectData<T>,
+  internals: InternalData
+): Promise<T> {
+  const strategyData = new StrategyData(parent, key, value, internals);
+  const { clonedObjects, finalizers, customStrategy } = internals;
+
+  let strategy: Strategy = customStrategy(strategyData) as Strategy;
+
+  if (!(strategy instanceof Strategy)) {
+    strategy = builtInAsyncStrategyFunction(strategyData);
+  }
+
+  // If cloned before, skip circular cloning
+  if (clonedObjects.has(value as any)) {
+    if (clonedObjects.get(value as any) === CLONING_IN_PROGRESS) {
+      finalizers.push({value, key, parent});
+
+      return TO_BE_FINALIZED as any;
+    }
+
+    return clonedObjects.get(value as any);
+  }
+
+  // Mark object as cloning
+  try {
+    clonedObjects.set(value as any, CLONING_IN_PROGRESS);
+  } catch {}
+
+  // Clone
+  let result: T;
+
+  if (strategy.mode === 'async') {
+    result = await strategy.clone();
+  } else {
+    result = strategy.clone();
+  }
+
+  // Register
+  try {
+    clonedObjects.set(value as any, result);
+  } catch {}
+
+  // Return result
+  return result;
+}
+
 function builtInStrategyFunction({value, syncClone, keepSame}: StrategyData): Strategy {
   if (value === null || !(value instanceof Object) || value instanceof Function) {
     return keepSame();
@@ -161,6 +247,38 @@ function builtInStrategyFunction({value, syncClone, keepSame}: StrategyData): St
   }
 
   return syncClone(objectCloner(value));
+}
+
+function builtInAsyncStrategyFunction({value, asyncClone, keepSame}: StrategyData): Strategy {
+  if (value === null || !(value instanceof Object) || value instanceof Function) {
+    return keepSame();
+  }
+
+  if (value instanceof Array) {
+    return asyncClone(arrayCloner(value));
+  }
+
+  if (value instanceof Set) {
+    return asyncClone(setCloner(value));
+  }
+
+  if (value instanceof Map) {
+    return asyncClone(mapCloner(value));
+  }
+
+  if (value instanceof WeakMap || value instanceof WeakSet) {
+    return keepSame();
+  }
+
+  if (OBJECTS_TO_KEEP.some(object => object === value)) {
+    return keepSame();
+  }
+
+  if (CONSTRUCTABLE_TYPES.some(type => value instanceof type)) {
+    return asyncClone(() => new value.constructor(value));
+  }
+
+  return asyncClone(objectCloner(value));
 }
 
 function builtInFinalizerFunction(parent: any, key: any, value: any): ((result: any) => void) | void {
