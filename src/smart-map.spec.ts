@@ -23,8 +23,9 @@ describe('SmartMap Class', () => {
     map.set(true, 'boolean');
     map.set(Symbol(), 'symbol');
     map.set(undefined, 'undefined');
+    map.set(null, 'null');
 
-    expect(map.size).toBe(5);
+    expect(map.size).toBe(6);
   });
 
   it('should set a value by object type keys', () => {
@@ -58,9 +59,11 @@ describe('SmartMap Class', () => {
 
     map.set(1, '1');
     map.set(anObj, 'an object');
+    map.set(null, 'null');
 
     expect(map.get(1)).toBe('1');
     expect(map.get(anObj)).toBe('an object');
+    expect(map.get(null)).toBe('null');
   });
 
   it('should delete value when delete method called via both primitive and object key', () => {

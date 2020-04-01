@@ -108,6 +108,6 @@ export class SmartMap<K = any, V = any> extends Map<K, V> {
    * @returns A boolean whether if the key is storable in weakmap or not
    */
   protected isStorableInWeakMap(key: K): boolean {
-    return SmartMap.TYPES_TO_STORE_IN_WEAKMAP.some(_key => typeof key === _key);
+    return key !== null && SmartMap.TYPES_TO_STORE_IN_WEAKMAP.some(_key => typeof key === _key);
   }
 }
