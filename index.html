@@ -145,6 +145,15 @@ difference(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string
 
 intersection(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"x"</span>]); <span class="hljs-comment">// ["a", "b", "a", "b"]</span>
 intersection(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"x"</span>], <span class="hljs-literal">false</span>); <span class="hljs-comment">// ["a", "b"]</span></code></pre>
+				<a href="#limit" id="limit" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_array_limit_.html">Limit</a></h4>
+				</a>
+				<p>Returns first <code>n</code> children of an array</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { limit } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/array"</span>;
+
+<span class="hljs-keyword">const</span> array = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>, <span class="hljs-string">"e"</span>, <span class="hljs-string">"f"</span>];
+
+limit(array, <span class="hljs-number">3</span>); <span class="hljs-comment">// ["a", "b", "c"]</span></code></pre>
 				<a href="#remove" id="remove" style="color: inherit; text-decoration: none;">
 					<h4><a href="https://thalesrc.github.io/js-utils/modules/_array_remove_.html">Remove</a></h4>
 				</a>
@@ -298,6 +307,18 @@ timeout(<span class="hljs-number">1000</span>)
 <span class="hljs-keyword">const</span> promise = anAsyncCall();
 
 <span class="hljs-keyword">const</span> [error, result] = <span class="hljs-keyword">await</span> tryCatch(promise);</code></pre>
+				<a href="#string" id="string" style="color: inherit; text-decoration: none;">
+					<h3>String</h3>
+				</a>
+				<a href="#limit-1" id="limit-1" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_string_limit_.html">Limit</a></h4>
+				</a>
+				<p>Limits the string to <code>n</code> character</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { limit } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/string"</span>;
+
+<span class="hljs-keyword">const</span> str = <span class="hljs-string">'foobarbaz'</span>;
+
+limit(str, <span class="hljs-number">3</span>); <span class="hljs-comment">// 'foo'</span></code></pre>
 				<a href="#etc" id="etc" style="color: inherit; text-decoration: none;">
 					<h3>Etc.</h3>
 				</a>
@@ -317,6 +338,17 @@ isFalsy(<span class="hljs-literal">true</span>); <span class="hljs-comment">// f
 
 isTruthy(<span class="hljs-literal">undefined</span>); <span class="hljs-comment">// false</span>
 isTruthy(<span class="hljs-literal">true</span>); <span class="hljs-comment">// true</span></code></pre>
+				<a href="#limit-2" id="limit-2" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_limit_.html">Limit</a></h4>
+				</a>
+				<p>Limits the string or array to <code>n</code> character</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { limit } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
+
+<span class="hljs-keyword">const</span> str = <span class="hljs-string">'foobarbaz'</span>;
+<span class="hljs-keyword">const</span> array = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>, <span class="hljs-string">"e"</span>, <span class="hljs-string">"f"</span>];
+
+limit(str, <span class="hljs-number">3</span>); <span class="hljs-comment">// 'foo'</span>
+limit(array, <span class="hljs-number">3</span>); <span class="hljs-comment">// ["a", "b", "c"]</span></code></pre>
 				<a href="#open-promise" id="open-promise" style="color: inherit; text-decoration: none;">
 					<h4><a href="https://thalesrc.github.io/js-utils/modules/_open-promise_.html">Open Promise</a></h4>
 				</a>
@@ -414,6 +446,9 @@ uniqueId(); <span class="hljs-comment">// 3</span></code></pre>
 						<a href="modules/_array_intersection_.html">&quot;array/intersection&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="modules/_array_limit_.html">&quot;array/limit&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="modules/_array_remove_.html">&quot;array/remove&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -441,6 +476,9 @@ uniqueId(); <span class="hljs-comment">// 3</span></code></pre>
 						<a href="modules/_is_truthy_.html">&quot;is-<wbr>truthy&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="modules/_limit_.html">&quot;limit&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="modules/_map_merge_.html">&quot;map/merge&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -463,6 +501,9 @@ uniqueId(); <span class="hljs-comment">// 3</span></code></pre>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_smart_map_.html">&quot;smart-<wbr>map&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_string_limit_.html">&quot;string/limit&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_unique_id_.html">&quot;unique-<wbr>id&quot;</a>
