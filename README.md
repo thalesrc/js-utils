@@ -84,6 +84,17 @@ intersection(base, ["a", "b", "x"]); // ["a", "b", "a", "b"]
 intersection(base, ["a", "b", "x"], false); // ["a", "b"]
 ```
 
+#### [Limit](https://thalesrc.github.io/js-utils/modules/_array_limit_.html)
+Returns first `n` children of an array
+
+```typescript
+import { limit } from "@thalesrc/js-utils/array";
+
+const array = ["a", "b", "c", "d", "e", "f"];
+
+limit(array, 3); // ["a", "b", "c"]
+```
+
 #### [Remove](https://thalesrc.github.io/js-utils/modules/_array_remove_.html)
 Removes an item from an array
 
@@ -258,6 +269,19 @@ const promise = anAsyncCall();
 const [error, result] = await tryCatch(promise);
 ```
 
+### String
+
+#### [Limit](https://thalesrc.github.io/js-utils/modules/_string_limit_.html)
+Limits the string to `n` character
+
+```typescript
+import { limit } from "@thalesrc/js-utils/string";
+
+const str = 'foobarbaz';
+
+limit(str, 3); // 'foo'
+```
+
 ### Etc.
 
 #### [Is Falsy](https://thalesrc.github.io/js-utils/modules/_is_falsy_.html)
@@ -278,6 +302,19 @@ import { isTruthy } from "@thalesrc/js-utils";
 
 isTruthy(undefined); // false
 isTruthy(true); // true
+```
+
+#### [Limit](https://thalesrc.github.io/js-utils/modules/_limit_.html)
+Limits the string or array to `n` character
+
+```typescript
+import { limit } from "@thalesrc/js-utils";
+
+const str = 'foobarbaz';
+const array = ["a", "b", "c", "d", "e", "f"];
+
+limit(str, 3); // 'foo'
+limit(array, 3); // ["a", "b", "c"]
 ```
 
 #### [Open Promise](https://thalesrc.github.io/js-utils/modules/_open-promise_.html)
