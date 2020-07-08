@@ -229,6 +229,19 @@ const clonedObject = clone(object);
 // object.b.d === clonedObject.b.d // false
 ```
 
+#### [Deepest](https://thalesrc.github.io/js-utils/modules/_object_deepest_.html)
+Get deepest value in an object chain
+
+```typescript
+import { deepest } from "@thalesrc/js-utils/object";
+
+const a = {x: null};
+const b = {x: a};
+const c = {x: b};
+
+deepest(c, 'x'); // {x: null} (a)
+```
+
 ### Promise
 
 #### [Revert](https://thalesrc.github.io/js-utils/modules/_promise_revert_.html)

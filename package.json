@@ -25,7 +25,8 @@
     "noop",
     "unique id",
     "replace",
-    "remove"
+    "remove",
+    "deepest"
   ],
   "repository": {
     "type": "git",
