@@ -272,6 +272,17 @@ merge(first, second); <span class="hljs-comment">// [{key: "a", value: 1}, {key:
 <span class="hljs-keyword">const</span> clonedObject = clone(object);
 <span class="hljs-comment">// {a: 1, b: {c: true, d: ["x", "y"]}}</span>
 <span class="hljs-comment">// object.b.d === clonedObject.b.d // false</span></code></pre>
+				<a href="#deepest" id="deepest" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_object_deepest_.html">Deepest</a></h4>
+				</a>
+				<p>Get deepest value in an object chain</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { deepest } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/object"</span>;
+
+<span class="hljs-keyword">const</span> a = {x: <span class="hljs-literal">null</span>};
+<span class="hljs-keyword">const</span> b = {x: a};
+<span class="hljs-keyword">const</span> c = {x: b};
+
+deepest(c, <span class="hljs-string">'x'</span>); <span class="hljs-comment">// {x: null} (a)</span></code></pre>
 				<a href="#promise" id="promise" style="color: inherit; text-decoration: none;">
 					<h3>Promise</h3>
 				</a>
@@ -486,6 +497,9 @@ uniqueId(); <span class="hljs-comment">// 3</span></code></pre>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_object_clone_.html">&quot;object/clone&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_object_deepest_.html">&quot;object/deepest&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_open_promise_.html">&quot;open-<wbr>promise&quot;</a>
