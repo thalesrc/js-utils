@@ -72,6 +72,17 @@ difference(base, ["a", "b"]); // ["c", "d", "c", "d"]
 difference(base, ["a", "b"], true); // ["c", "d", "a", "b", "c", "d"]
 ```
 
+#### [Find By Key](https://thalesrc.github.io/js-utils/modules/_array_find_by_key_.html)
+Finds an object in an array by matching the value set on the key
+
+```typescript
+import { findByKey } from "@thalesrc/js-utils/array";
+
+const array = [{a: 1}, {a: 2}, {a: 3}];
+
+findByKey(array, "a", 2); // {a: 2}
+```
+
 #### [Intersection](https://thalesrc.github.io/js-utils/modules/_array_intersection_.html)
 Gets the intersection of the two arrays or sets
 

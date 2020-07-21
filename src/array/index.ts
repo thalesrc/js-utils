@@ -1,6 +1,7 @@
 export * from './async-map';
 export * from './compact';
 export * from './difference';
+export * from './find-by-key';
 export * from './intersection';
 export * from './limit';
 export * from './remove';

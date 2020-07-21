@@ -1,4 +1,4 @@
-export { ReplaceByMapOptions, ReplaceItemsOptions, TInclusion, TSubstraction, asyncMap, compact, difference, intersection, remove, replace, uniquify } from './array';
+export { ReplaceByMapOptions, ReplaceItemsOptions, TInclusion, TSubstraction, asyncMap, compact, difference, findByKey, intersection, remove, replace, uniquify } from './array';
 export * from './function';
 export * from './map';
 export * from './math';
