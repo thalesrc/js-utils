@@ -135,6 +135,15 @@
 
 difference(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>]); <span class="hljs-comment">// ["c", "d", "c", "d"]</span>
 difference(base, [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>], <span class="hljs-literal">true</span>); <span class="hljs-comment">// ["c", "d", "a", "b", "c", "d"]</span></code></pre>
+				<a href="#find-by-key" id="find-by-key" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_array_find_by_key_.html">Find By Key</a></h4>
+				</a>
+				<p>Finds an object in an array by matching the value set on the key</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { findByKey } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils/array"</span>;
+
+<span class="hljs-keyword">const</span> array = [{a: <span class="hljs-number">1</span>}, {a: <span class="hljs-number">2</span>}, {a: <span class="hljs-number">3</span>}];
+
+findByKey(array, <span class="hljs-string">"a"</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// {a: 2}</span></code></pre>
 				<a href="#intersection" id="intersection" style="color: inherit; text-decoration: none;">
 					<h4><a href="https://thalesrc.github.io/js-utils/modules/_array_intersection_.html">Intersection</a></h4>
 				</a>
@@ -452,6 +461,9 @@ uniqueId(); <span class="hljs-comment">// 3</span></code></pre>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_array_difference_.html">&quot;array/difference&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_array_find_by_key_.html">&quot;array/find-<wbr>by-<wbr>key&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_array_intersection_.html">&quot;array/intersection&quot;</a>
