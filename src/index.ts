@@ -1,11 +1,12 @@
-export { ReplaceByMapOptions, ReplaceItemsOptions, TInclusion, TSubstraction, asyncMap, compact, difference, findByKey, intersection, remove, replace, uniquify } from './array';
+export { ReplaceByMapOptions, ReplaceItemsOptions, TInclusion, TSubstraction, asyncMap, difference, findByKey, intersection, remove, replace, uniquify } from './array';
 export * from './function';
 export * from './map';
 export * from './math';
-export * from './object';
+export { clone, deepest } from './object';
 export * from './promise';
 export {  } from './string';
 
+export * from './compact';
 export * from './is-falsy';
 export * from './is-truthy';
 export * from './open-promise';

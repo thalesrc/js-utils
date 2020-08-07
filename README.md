@@ -240,6 +240,21 @@ const clonedObject = clone(object);
 // object.b.d === clonedObject.b.d // false
 ```
 
+#### [Compact](https://thalesrc.github.io/js-utils/modules/_object_compact_.html)
+Removes `null` and `undefined` values and their keys from an object
+
+```typescript
+import { compact } from "@thalesrc/js-utils/object";
+
+const a = {
+ x: null,
+ y: undefined,
+ z: 20
+};
+
+compact(a); // {z: 20}
+```
+
 #### [Deepest](https://thalesrc.github.io/js-utils/modules/_object_deepest_.html)
 Get deepest value in an object chain
 
@@ -307,6 +322,25 @@ limit(str, 3); // 'foo'
 ```
 
 ### Etc.
+
+#### [Compact](https://thalesrc.github.io/js-utils/modules/_compact_.html)
+Filters falsy values of the given array
+Removes `null` and `undefined` values and their keys from an object
+
+```typescript
+import { compact } from "@thalesrc/js-utils";
+
+const arr = [undefined, "", false, 0, 1, "1"];
+const compacted = compact(arr); // [1, "1"];
+
+const object = {
+ x: null,
+ y: undefined,
+ z: 20
+};
+
+const compacted = compact(object); // {z: 20}
+```
 
 #### [Is Falsy](https://thalesrc.github.io/js-utils/modules/_is_falsy_.html)
 Returns whether the entered value is falsy
