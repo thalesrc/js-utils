@@ -199,6 +199,15 @@ replace(array, {itemsToReplace: config, multi: <span class="hljs-literal">true</
 <span class="hljs-keyword">const</span> array = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>];
 
 uniquify(array); <span class="hljs-comment">// ["a", "b", "c"]</span></code></pre>
+				<a href="#uniquify-by-key" id="uniquify-by-key" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_array_uniquify_by_key_.html">Uniquify By Key</a></h4>
+				</a>
+				<p>Removes objects from the array which the value of its specifed key included before by another</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { uniquifyByKey } <span class="hljs-string">"@thalesrc/js-utils/array"</span>;
+
+<span class="hljs-keyword">const</span> array = [{a: <span class="hljs-number">1</span>}, {a: <span class="hljs-number">1</span>}, {a: <span class="hljs-number">2</span>}, {a: <span class="hljs-number">3</span>}, {a: <span class="hljs-number">3</span>}, {a: <span class="hljs-number">4</span>}];
+
+uniquifyByKey(array, <span class="hljs-string">'a'</span>); <span class="hljs-comment">// [{a: 1}, {a: 2}, {a: 3}, {a: 4}]</span></code></pre>
 				<a href="#function" id="function" style="color: inherit; text-decoration: none;">
 					<h3>Function</h3>
 				</a>
@@ -509,6 +518,9 @@ uniqueId(); <span class="hljs-comment">// 3</span></code></pre>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_array_uniquify_.html">&quot;array/uniquify&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_array_uniquify_by_key_.html">&quot;array/uniquify-<wbr>by-<wbr>key&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_compact_.html">&quot;compact&quot;</a>
