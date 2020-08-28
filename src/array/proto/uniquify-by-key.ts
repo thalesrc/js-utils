@@ -20,7 +20,7 @@ declare global {
      * @param key Key to search the value on
      * @return The new uniquified array
      */
-    uniquifyByKey(key: keyof T): typeof uniquifyByKey;
+    uniquifyByKey(key: keyof T): T[];
   }
 }
 
