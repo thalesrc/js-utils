@@ -148,6 +148,17 @@ const array = ["a", "b", "c", "a", "b", "c"];
 uniquify(array); // ["a", "b", "c"]
 ```
 
+#### [Uniquify By Key](https://thalesrc.github.io/js-utils/modules/_array_uniquify_by_key_.html)
+Removes objects from the array which the value of its specifed key included before by another
+
+```typescript
+import { uniquifyByKey } "@thalesrc/js-utils/array";
+
+const array = [{a: 1}, {a: 1}, {a: 2}, {a: 3}, {a: 3}, {a: 4}];
+
+uniquifyByKey(array, 'a'); // [{a: 1}, {a: 2}, {a: 3}, {a: 4}]
+```
+
 ### Function
 
 #### [Debounce](https://thalesrc.github.io/js-utils/modules/_function_debounce_.html)

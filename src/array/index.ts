@@ -7,3 +7,4 @@ export * from './limit';
 export * from './remove';
 export * from './replace';
 export * from './uniquify';
+export * from './uniquify-by-key';
