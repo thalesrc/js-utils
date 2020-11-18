@@ -12,7 +12,7 @@ describe('Open Promise Class', () => {
     const op = new OpenPromise<number>();
     const startedAt = new Date().getTime();
 
-    op.promise.then(value => {
+    op.then(value => {
       expect(new Date().getTime() - startedAt).toBeGreaterThan(48);
       expect(value).toBe(1);
       done();
@@ -26,7 +26,7 @@ describe('Open Promise Class', () => {
   it('should reject properly', done => {
     const op = new OpenPromise<number>();
 
-    op.promise
+    op
       .then(value => {
         throw new CustomError('bar');
       })
@@ -55,7 +55,7 @@ describe('Open Promise Class', () => {
 
   it('should return rejected state properly', done => {
     const op = new OpenPromise<number>();
-    op.promise.catch(noop);
+    op.catch(noop);
 
     expect(op.rejected).toBe(false);
     op.reject(new CustomError('foo'));
@@ -70,7 +70,7 @@ describe('Open Promise Class', () => {
   it('should return finished state properly', done => {
     const op = new OpenPromise<number>();
     const op2 = new OpenPromise<number>();
-    op2.promise.catch(noop);
+    op2.catch(noop);
 
     expect(op.finished).toBe(false);
     expect(op2.finished).toBe(false);
@@ -88,20 +88,20 @@ describe('Open Promise Class', () => {
     const op = new OpenPromise<number>();
     const startedAt = new Date().getTime();
 
-    op.promise.then(val => {
+    op.then(val => {
       expect(new Date().getTime() - startedAt).toBeGreaterThan(48);
       expect(val).toBe(1);
       done();
     });
 
-    op.bindPromise(new Promise(resolve => setTimeout(resolve.bind(null, 1), 50)));
+    op.bindTo(new Promise(resolve => setTimeout(resolve.bind(null, 1), 50)));
   });
 
   it('should reject when bound promise rejected', done => {
     const op = new OpenPromise<number>();
     const startedAt = new Date().getTime();
 
-    op.promise
+    op
       .then(() => {
         throw new CustomError('bar');
       })
@@ -111,6 +111,6 @@ describe('Open Promise Class', () => {
         done();
       });
 
-    op.bindPromise(new Promise((resolve, reject) => setTimeout(reject.bind(null, new CustomError('foo')), 50)));
+    op.bindTo(new Promise((resolve, reject) => setTimeout(reject.bind(null, new CustomError('foo')), 50)));
   });
 });

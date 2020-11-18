@@ -1,3 +1,15 @@
+import { noop } from './function';
+
+type Resolver<T> = (value?: T) => any;
+type Rejector = (reason?: any) => any;
+type PromiseExecutor<T> = (resolve: Resolver<T>, reject: Rejector) => any;
+
+const RESOLVED = Symbol('Open Promise Resolved');
+const REJECTED = Symbol('Open Promise Rejected');
+
+let resolver: Resolver<any>;
+let rejector: Rejector;
+
 /**
  * #### Open Promise
  * A promise constructor to resolve or reject from outside
@@ -9,7 +21,7 @@
  *
  * const aPromiseWillBeResolvedLater = new OpenPromise();
  *
- * aPromiseWillBeResolvedLater.promise.then(val => console.log(val));
+ * aPromiseWillBeResolvedLater.then(val => console.log(val));
  * // aPromiseWillBeResolvedLater.finished // false
  * ...
  * ...
@@ -18,74 +30,98 @@
  * // aPromiseWillBeResolvedLater.finished // true
  * ```
  * * * *
- * @template T typeof the value which will be resolved
+ * @template T typeof the value which is going to be resolved
  */
-export class OpenPromise<T = any> {
-  private _resolver: (param: T) => void;
-  private _rejector: (error: any) => void;
+export class OpenPromise<T = any> extends Promise<T> {
+  private [RESOLVED] = false;
+  private [REJECTED] = false;
 
   /**
-   * The actual promise object itself
+   * Resolves promise
+   * @param value Value to resolve the promise
    */
-  public promise: Promise<T>;
-
-  private _resolved = false;
-  private _rejected = false;
+  public resolve: Resolver<T>;
 
   /**
-   * #### Open Promise Constructor
+   * Rejects promise
+   * @param reason Error to reject promise
    */
-  constructor() {
-    this.promise = new Promise<T>((resolve, reject) => {
-      this._resolver = resolve;
-      this._rejector = reject;
+  public reject: Rejector;
+
+  /**
+   * Open Promise Constructor
+   */
+  constructor(executor: PromiseExecutor<T> = noop) {
+    super((resolve, reject) => {
+
+      resolver = new Proxy(noop, {
+        apply(t, c, [value]) {
+          this.context[RESOLVED] = true;
+          resolve(value);
+        },
+        set(t, prop, value) {
+          if (prop !== 'context') {
+            return false;
+          }
+
+          this.context = value;
+
+          return true;
+        }
+      });
+
+      rejector = new Proxy(noop, {
+        apply(t, c, [reason]) {
+          this.context[REJECTED] = true;
+          reject(reason);
+        },
+        set(t, prop, value) {
+          if (prop !== 'context') {
+            return false;
+          }
+
+          this.context = value;
+
+          return true;
+        }
+      });
+
+      executor.call(null, resolver, rejector);
     });
+
+    resolver['context'] = this;
+    rejector['context'] = this;
+
+    this.resolve = resolver;
+    this.reject = rejector;
   }
 
   /**
    * Returns whether is the promise resolved
    */
   public get resolved(): boolean {
-    return this._resolved;
+    return this[RESOLVED];
   }
 
   /**
    * Returns whether is the promise rejected
    */
   public get rejected(): boolean {
-    return this._rejected;
+    return this[REJECTED];
   }
 
   /**
    * Returns whether is the promise finished
    */
   public get finished(): boolean {
-    return this._resolved || this._rejected;
-  }
-
-  /**
-   * Resolves promise
-   * @param param Value to resolve the promise
-   */
-  public resolve(param: T): void {
-    this._resolved = true;
-    this._resolver(param);
-  }
-
-  /**
-   * Rejects promise
-   * @param error Error to reject promise
-   */
-  public reject(error: any): void {
-    this._rejected = true;
-    this._rejector(error);
+    return this[RESOLVED] || this[REJECTED];
   }
 
   /**
    * Binds a promise to the inner promise to resolve or reject with it
    * @param promise A promise to bind inner promise
    */
-  public bindPromise(promise: Promise<T> | T): void {
+  public bindTo(promise: Promise<T>): void {
     if (promise instanceof Promise) {
       promise.then(e => this.resolve(e)).catch(e => this.reject(e));
     } else {

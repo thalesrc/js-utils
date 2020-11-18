@@ -38,7 +38,7 @@ export function debounceWithKey<T>(
     .then(() => {
       CACHE.delete(key);
       const result = callback.call(thisObject, ...args);
-      promise.bindPromise(result);
+      promise.bindTo(result);
       return result;
     })
     .catch(err => {
@@ -47,7 +47,7 @@ export function debounceWithKey<T>(
       }
     });
 
-  return promise.promise;
+  return promise;
 }
 
 /**

@@ -84,7 +84,7 @@ const promiseTimeoutInitializer = (() => {
   const REFERANCE_CACHE = new WeakMap<Promise<any>, ITimeoutCache>();
   const KEY_CACHE = new Map<symbol, ITimeoutCache>();
 
-  const timeout = <T = void>(time: number, value: T = undefined, key: symbol = undefined) => {
+  const timeout = <T = void>(time: number, value: T = undefined, key: symbol = undefined): Promise<T> => {
     const openPromise = new OpenPromise<T>();
     const id: any = setTimeout(() => {
       openPromise.resolve(value);
@@ -92,13 +92,13 @@ const promiseTimeoutInitializer = (() => {
 
     const cacheObject: ITimeoutCache = {openPromise, id};
 
-    REFERANCE_CACHE.set(openPromise.promise, cacheObject);
+    REFERANCE_CACHE.set(openPromise, cacheObject);
 
     if (key) {
       KEY_CACHE.set(key, cacheObject);
     }
 
-    return openPromise.promise;
+    return openPromise;
   };
 
   Object.defineProperties(timeout, {
