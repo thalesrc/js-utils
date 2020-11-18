@@ -61,7 +61,7 @@ jobs:
       - run: npx replace-json-property ./package.json typescript ~3.4.5
       - run: npm i
       - run: npm test
-      - run: npm version $PACKAGE_VERSION+legacy --no-git-tag-version
+      - run: npm version '${PACKAGE_VERSION}+legacy' --no-git-tag-version
       - name: Upload Package Artifact
         uses: actions/upload-artifact@v2
         with:
