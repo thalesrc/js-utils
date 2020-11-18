@@ -394,7 +394,7 @@ import { OpenPromise } from "@thalesrc/js-utils";
 
 const aPromiseWillBeResolvedLater = new OpenPromise();
 
-aPromiseWillBeResolvedLater.promise.then(val => console.log(val));
+aPromiseWillBeResolvedLater.then(val => console.log(val));
 
 aPromiseWillBeResolvedLater.resolve({x: 1});
 // logs `{x: 1}`
