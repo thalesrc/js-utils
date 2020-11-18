@@ -31,6 +31,8 @@ function* uniqueIdGenerator(prefix?: string) {
  * @param prefix prefix to prepend into the unique id
  * @returns A unique id
  */
+export function uniqueId(): number;
+export function uniqueId(prefix: string): string;
 export function uniqueId(prefix?: string): string | number {
   if (!prefix || typeof prefix !== 'string') {
     prefix = undefined;
