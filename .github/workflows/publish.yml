@@ -5,25 +5,82 @@ on:
     types: [created]
 
 jobs:
-  publish-npm:
+  # publish-npm:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v1
+  #     - name: Set env
+  #       run: echo ::set-env name=PACKAGE_VERSION::$(echo ${GITHUB_REF:10})
+  #     - uses: actions/setup-node@v1
+  #       with:
+  #         node-version: 12
+  #         registry-url: https://registry.npmjs.org/
+  #     - run: npm install
+  #     - run: npm test
+  #     - run: npm run version-update
+  #     - run: npm run prepare:package
+  #     - run: npm run change-ts-version
+  #     - run: rm -rf node_modules
+  #     - run: rm ./package-lock.json
+  #     - run: npm install
+  #     - run: npm run prepare:legacy
+  #     - run: npm publish
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+  prepare-lts:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: Set env
-        run: echo ::set-env name=PACKAGE_VERSION::$(echo ${GITHUB_REF:10})
+        run: echo "PACKAGE_VERSION=${GITHUB_REF:10}" >> $GITHUB_ENV
       - uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm install
+      - run: npm i
       - run: npm test
-      - run: npm run version-update
+      - run: npm version $PACKAGE_VERSION --no-git-tag-version
       - run: npm run prepare:package
-      - run: npm run change-ts-version
-      - run: rm -rf node_modules
-      - run: rm ./package-lock.json
-      - run: npm install
-      - run: npm run prepare:legacy
-      - run: npm publish
+      - name: Upload Package Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: lts
+          path: .
+
+  prepare-legacy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set env
+        run: echo "PACKAGE_VERSION=${GITHUB_REF:10}" >> $GITHUB_ENV
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npx replace-json-property ./package.json typescript ~3.4.5
+      - run: npm i
+      - run: npm test
+      - run: npm version $PACKAGE_VERSION+legacy --no-git-tag-version
+      - name: Upload Package Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: legacy
+          path: .
+  publish:
+    runs-on: ubuntu-latest
+    needs: [prepare-lts, prepare-legacy]
+    steps:
+      - uses: actions/download-artifact@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - name: Publish legacy
+        run: cd ./legacy && npm publish --tag legacy
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: Publish Latest
+        run: cd ./lts && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
