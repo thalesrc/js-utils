@@ -465,17 +465,9 @@ Promise.timeout(1000)
 
 ## Legacy Typescript Support
 
-Import utils from `legacy` folder
+Install legacy build
 
-Example:
-```typescript
-import { tryCatch } from "@thalesrc/js-utils/legacy/promise";
-
-const promise = anAsyncCall();
-
-const [error, result] = await tryCatch(promise);
-```
-
+`npm install @thalesrc/js-utils@legacy --save`
 ## License
 
 [MIT](./LICENSE)
