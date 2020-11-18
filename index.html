@@ -416,7 +416,7 @@ limit(array, <span class="hljs-number">3</span>); <span class="hljs-comment">// 
 
 <span class="hljs-keyword">const</span> aPromiseWillBeResolvedLater = <span class="hljs-keyword">new</span> OpenPromise();
 
-aPromiseWillBeResolvedLater.promise.then(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(val));
+aPromiseWillBeResolvedLater.then(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(val));
 
 aPromiseWillBeResolvedLater.resolve({x: <span class="hljs-number">1</span>});
 <span class="hljs-comment">// logs `{x: 1}`</span></code></pre>

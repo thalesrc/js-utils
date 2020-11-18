@@ -79,7 +79,7 @@
 
 <span class="hljs-keyword">const</span> aPromiseWillBeResolvedLater = <span class="hljs-keyword">new</span> OpenPromise();
 
-aPromiseWillBeResolvedLater.promise.then(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(val));
+aPromiseWillBeResolvedLater.then(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(val));
 <span class="hljs-comment">// aPromiseWillBeResolvedLater.finished // false</span>
 ...
 ...
@@ -89,7 +89,7 @@ aPromiseWillBeResolvedLater.resolve({x: <span class="hljs-number">1</span>});
 					<hr>
 					<dl class="tsd-comment-tags">
 						<dt>template</dt>
-						<dd><p>T typeof the value which will be resolved</p>
+						<dd><p>T typeof the value which is going to be resolved</p>
 						</dd>
 					</dl>
 				</div>
@@ -106,7 +106,12 @@ aPromiseWillBeResolvedLater.resolve({x: <span class="hljs-number">1</span>});
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">OpenPromise</span>
+						<span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">OpenPromise</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -123,7 +128,10 @@ aPromiseWillBeResolvedLater.resolve({x: <span class="hljs-number">1</span>});
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_open_promise_.openpromise.html#promise" class="tsd-kind-icon">promise</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_open_promise_.openpromise.html#_symbol_tostringtag_" class="tsd-kind-icon">[<wbr>Symbol.to<wbr>String<wbr>Tag]</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_open_promise_.openpromise.html#reject" class="tsd-kind-icon">reject</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_open_promise_.openpromise.html#resolve" class="tsd-kind-icon">resolve</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_open_promise_.openpromise.html#promise" class="tsd-kind-icon">Promise</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -137,9 +145,10 @@ aPromiseWillBeResolvedLater.resolve({x: <span class="hljs-number">1</span>});
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_open_promise_.openpromise.html#bindpromise" class="tsd-kind-icon">bind<wbr>Promise</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_open_promise_.openpromise.html#reject" class="tsd-kind-icon">reject</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_open_promise_.openpromise.html#resolve" class="tsd-kind-icon">resolve</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_open_promise_.openpromise.html#bindto" class="tsd-kind-icon">bind<wbr>To</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_open_promise_.openpromise.html#catch" class="tsd-kind-icon">catch</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_open_promise_.openpromise.html#finally" class="tsd-kind-icon">finally</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_open_promise_.openpromise.html#then" class="tsd-kind-icon">then</a></li>
 							</ul>
 						</section>
 					</div>
@@ -151,22 +160,26 @@ aPromiseWillBeResolvedLater.resolve({x: <span class="hljs-number">1</span>});
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Open<wbr>Promise<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_open_promise_.openpromise.html" class="tsd-signature-type">OpenPromise</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Open<wbr>Promise<span class="tsd-signature-symbol">(</span>executor<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">PromiseExecutor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_open_promise_.openpromise.html" class="tsd-signature-type">OpenPromise</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/open-promise.ts#L33">src/open-promise.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/open-promise.ts#L49">src/open-promise.ts:49</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<a href="#open-promise-constructor" id="open-promise-constructor" style="color: inherit; text-decoration: none;">
-										<h4>Open Promise Constructor</h4>
-									</a>
+									<p>Open Promise Constructor</p>
 								</div>
 							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> executor: <span class="tsd-signature-type">PromiseExecutor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;noop</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_open_promise_.openpromise.html" class="tsd-signature-type">OpenPromise</a></h4>
 						</li>
 					</ul>
@@ -174,20 +187,66 @@ aPromiseWillBeResolvedLater.resolve({x: <span class="hljs-number">1</span>});
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="_symbol_tostringtag_" class="tsd-anchor"></a>
+					<h3>[<wbr>Symbol.to<wbr>String<wbr>Tag]</h3>
+					<div class="tsd-signature tsd-kind-icon">[<wbr>Symbol.to<wbr>String<wbr>Tag]<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from Promise.[Symbol.toStringTag]</p>
+						<ul>
+							<li>Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:169</li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="promise" class="tsd-anchor"></a>
-					<h3>promise</h3>
-					<div class="tsd-signature tsd-kind-icon">promise<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="reject" class="tsd-anchor"></a>
+					<h3>reject</h3>
+					<div class="tsd-signature tsd-kind-icon">reject<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Rejector</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/open-promise.ts#L30">src/open-promise.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/open-promise.ts#L49">src/open-promise.ts:49</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The actual promise object itself</p>
+							<p>Rejects promise</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd><p>Error to reject promise</p>
+							</dd>
+						</dl>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="resolve" class="tsd-anchor"></a>
+					<h3>resolve</h3>
+					<div class="tsd-signature tsd-kind-icon">resolve<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Resolver</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/open-promise.ts#L43">src/open-promise.ts:43</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Resolves promise</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd><p>Value to resolve the promise</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="promise" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Promise</h3>
+					<div class="tsd-signature tsd-kind-icon">Promise<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PromiseConstructor</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es2015.promise.d.ts:152</li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -202,7 +261,7 @@ aPromiseWillBeResolvedLater.resolve({x: <span class="hljs-number">1</span>});
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/open-promise.ts#L62">src/open-promise.ts:62</a></li>
+									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/open-promise.ts#L116">src/open-promise.ts:116</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -224,7 +283,7 @@ aPromiseWillBeResolvedLater.resolve({x: <span class="hljs-number">1</span>});
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/open-promise.ts#L55">src/open-promise.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/open-promise.ts#L109">src/open-promise.ts:109</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -246,7 +305,7 @@ aPromiseWillBeResolvedLater.resolve({x: <span class="hljs-number">1</span>});
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/open-promise.ts#L48">src/open-promise.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/open-promise.ts#L102">src/open-promise.ts:102</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -262,16 +321,16 @@ aPromiseWillBeResolvedLater.resolve({x: <span class="hljs-number">1</span>});
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="bindpromise" class="tsd-anchor"></a>
-					<h3>bind<wbr>Promise</h3>
+					<a name="bindto" class="tsd-anchor"></a>
+					<h3>bind<wbr>To</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">bind<wbr>Promise<span class="tsd-signature-symbol">(</span>promise<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">bind<wbr>To<span class="tsd-signature-symbol">(</span>promise<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/open-promise.ts#L88">src/open-promise.ts:88</a></li>
+									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/open-promise.ts#L124">src/open-promise.ts:124</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -282,7 +341,7 @@ aPromiseWillBeResolvedLater.resolve({x: <span class="hljs-number">1</span>});
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>promise: <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></h5>
+									<h5>promise: <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A promise to bind inner promise</p>
 									</div>
@@ -292,65 +351,124 @@ aPromiseWillBeResolvedLater.resolve({x: <span class="hljs-number">1</span>});
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="reject" class="tsd-anchor"></a>
-					<h3>reject</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">reject<span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<a name="catch" class="tsd-anchor"></a>
+					<h3>catch</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">catch&lt;TResult&gt;<span class="tsd-signature-symbol">(</span>onrejected<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from Promise.catch</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/open-promise.ts#L79">src/open-promise.ts:79</a></li>
+									<li>Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:1430</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Rejects promise</p>
+									<p>Attaches a callback for only the rejection of the Promise.</p>
 								</div>
 							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>TResult</h4>
+								</li>
+							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>error: <span class="tsd-signature-type">any</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> onrejected: <span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Error to reject promise</p>
+										<p>The callback to execute when the Promise is rejected.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A Promise for the completion of the callback.</p>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="resolve" class="tsd-anchor"></a>
-					<h3>resolve</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">resolve<span class="tsd-signature-symbol">(</span>param<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="finally" class="tsd-anchor"></a>
+					<h3>finally</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">finally<span class="tsd-signature-symbol">(</span>onfinally<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from Promise.finally</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/thalesrc/js-utils/blob/master/src/open-promise.ts#L70">src/open-promise.ts:70</a></li>
+									<li>Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es2018.promise.d.ts:31</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Resolves promise</p>
+									<p>Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+									resolved value cannot be modified from the callback.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>param: <span class="tsd-signature-type">T</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> onfinally: <span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Value to resolve the promise</p>
+										<p>The callback to execute when the Promise is settled (fulfilled or rejected).</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A Promise for the completion of the callback.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<a name="then" class="tsd-anchor"></a>
+					<h3>then</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">then&lt;TResult1, TResult2&gt;<span class="tsd-signature-symbol">(</span>onfulfilled<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span>, onrejected<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResult1</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TResult2</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from Promise.then</p>
+								<ul>
+									<li>Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:1423</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Attaches callbacks for the resolution and/or rejection of the Promise.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>TResult1</h4>
+								</li>
+								<li>
+									<h4>TResult2</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> onfulfilled: <span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The callback to execute when the Promise is resolved.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> onrejected: <span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The callback to execute when the Promise is rejected.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResult1</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TResult2</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A Promise for the completion of which ever callback is executed.</p>
 						</li>
 					</ul>
 				</section>
@@ -377,8 +495,17 @@ aPromiseWillBeResolvedLater.resolve({x: <span class="hljs-number">1</span>});
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="_open_promise_.openpromise.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_open_promise_.openpromise.html#_symbol_tostringtag_" class="tsd-kind-icon">[<wbr>Symbol.to<wbr>String<wbr>Tag]</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_open_promise_.openpromise.html#promise" class="tsd-kind-icon">promise</a>
+								<a href="_open_promise_.openpromise.html#reject" class="tsd-kind-icon">reject</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_open_promise_.openpromise.html#resolve" class="tsd-kind-icon">resolve</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="_open_promise_.openpromise.html#promise" class="tsd-kind-icon">Promise</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 								<a href="_open_promise_.openpromise.html#finished" class="tsd-kind-icon">finished</a>
@@ -390,13 +517,16 @@ aPromiseWillBeResolvedLater.resolve({x: <span class="hljs-number">1</span>});
 								<a href="_open_promise_.openpromise.html#resolved" class="tsd-kind-icon">resolved</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_open_promise_.openpromise.html#bindpromise" class="tsd-kind-icon">bind<wbr>Promise</a>
+								<a href="_open_promise_.openpromise.html#bindto" class="tsd-kind-icon">bind<wbr>To</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_open_promise_.openpromise.html#reject" class="tsd-kind-icon">reject</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="_open_promise_.openpromise.html#catch" class="tsd-kind-icon">catch</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_open_promise_.openpromise.html#resolve" class="tsd-kind-icon">resolve</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="_open_promise_.openpromise.html#finally" class="tsd-kind-icon">finally</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="_open_promise_.openpromise.html#then" class="tsd-kind-icon">then</a>
 							</li>
 						</ul>
 					</li>
