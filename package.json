@@ -27,7 +27,8 @@
     "unique id",
     "replace",
     "remove",
-    "deepest"
+    "deepest",
+    "never"
   ],
   "repository": {
     "type": "git",

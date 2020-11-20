@@ -281,6 +281,27 @@ deepest(c, 'x'); // {x: null} (a)
 
 ### Promise
 
+#### [Never](https://thalesrc.github.io/js-utils/modules/_promise_never_.html)
+A promise which never resolves
+
+```typescript
+import { never, NEVER } from '@thalesrc/js-utils/promise';
+
+function foo(promise = never()) {
+  promise.then(val => {
+    ...
+  });
+}
+
+// or
+
+function foo(promise = NEVER) {
+  promise.then(val => {
+    ...
+  });
+}
+```
+
 #### [Revert](https://thalesrc.github.io/js-utils/modules/_promise_revert_.html)
 Exchanges resolve state with rejection of a promise
 
