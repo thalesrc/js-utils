@@ -49,6 +49,21 @@ export class OpenPromise<T = any> extends Promise<T> {
   public reject: Rejector;
 
   /**
+   * Returns whether is the promise resolved
+   */
+  public resolved: boolean;
+
+  /**
+   * Returns whether is the promise rejected
+   */
+  public rejected: boolean;
+
+  /**
+   * Returns whether is the promise finished
+   */
+  public finished: boolean;
+
+  /**
    * Open Promise Constructor
    */
   constructor(executor: PromiseExecutor<T> = noop) {
@@ -97,36 +112,6 @@ export class OpenPromise<T = any> extends Promise<T> {
   }
 
   /**
-   * Returns whether is the promise resolved
-   */
-  public get resolved(): boolean {
-    return this[RESOLVED];
-  }
-  public set resolved(value) {
-    throw new Error('Property `resolved` can not been set');
-  }
-
-  /**
-   * Returns whether is the promise rejected
-   */
-  public get rejected(): boolean {
-    return this[REJECTED];
-  }
-  public set rejected(value) {
-    throw new Error('Property `rejected` can not been set');
-  }
-
-  /**
-   * Returns whether is the promise finished
-   */
-  public get finished(): boolean {
-    return this[RESOLVED] || this[REJECTED];
-  }
-  public set finished(value) {
-    throw new Error('Property `finished` can not been set');
-  }
-
-  /**
    * Binds a promise to the inner promise to resolve or reject with it
    * @param promise A promise to bind inner promise
    */
@@ -138,3 +123,13 @@ export class OpenPromise<T = any> extends Promise<T> {
     }
   }
 }
+
+Object.defineProperty(OpenPromise.prototype, 'resolved', {get() {
+  return this[RESOLVED];
+}});
+Object.defineProperty(OpenPromise.prototype, 'rejected', {get() {
+  return this[REJECTED];
+}});
+Object.defineProperty(OpenPromise.prototype, 'finished', {get() {
+  return this[RESOLVED] || this[REJECTED];
+}});
