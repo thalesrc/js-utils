@@ -102,6 +102,9 @@ export class OpenPromise<T = any> extends Promise<T> {
   public get resolved(): boolean {
     return this[RESOLVED];
   }
+  public set resolved(value) {
+    throw new Error('Property `resolved` can not been set');
+  }
 
   /**
    * Returns whether is the promise rejected
@@ -109,12 +112,18 @@ export class OpenPromise<T = any> extends Promise<T> {
   public get rejected(): boolean {
     return this[REJECTED];
   }
+  public set rejected(value) {
+    throw new Error('Property `rejected` can not been set');
+  }
 
   /**
    * Returns whether is the promise finished
    */
   public get finished(): boolean {
     return this[RESOLVED] || this[REJECTED];
+  }
+  public set finished(value) {
+    throw new Error('Property `finished` can not been set');
   }
 
   /**
