@@ -383,6 +383,16 @@ limit(str, <span class="hljs-number">3</span>); <span class="hljs-comment">// 'f
 				<a href="#etc" id="etc" style="color: inherit; text-decoration: none;">
 					<h3>Etc.</h3>
 				</a>
+				<a href="#arrayize" id="arrayize" style="color: inherit; text-decoration: none;">
+					<h4><a href="https://thalesrc.github.io/js-utils/modules/_arrayize_.html">Arrayize</a></h4>
+				</a>
+				<p>Encapsulates a non array value with an array that contains it unless the value is already an array</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { arrayize } <span class="hljs-keyword">from</span> <span class="hljs-string">"@thalesrc/js-utils"</span>;
+
+<span class="hljs-keyword">const</span> foo = <span class="hljs-string">'foo'</span>;
+<span class="hljs-keyword">const</span> bar = [<span class="hljs-string">'bar'</span>];
+<span class="hljs-keyword">const</span> fooArr = arrayize(foo); <span class="hljs-comment">// ['foo'];</span>
+<span class="hljs-keyword">const</span> barArr = arrayize(bar); <span class="hljs-comment">// ['bar'];</span></code></pre>
 				<a href="#compact-2" id="compact-2" style="color: inherit; text-decoration: none;">
 					<h4><a href="https://thalesrc.github.io/js-utils/modules/_compact_.html">Compact</a></h4>
 				</a>
@@ -535,6 +545,9 @@ uniqueId(); <span class="hljs-comment">// 3</span></code></pre>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_array_uniquify_by_key_.html">&quot;array/uniquify-<wbr>by-<wbr>key&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_arrayize_.html">&quot;arrayize&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_compact_.html">&quot;compact&quot;</a>
