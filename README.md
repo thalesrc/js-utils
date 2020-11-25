@@ -355,6 +355,18 @@ limit(str, 3); // 'foo'
 
 ### Etc.
 
+#### [Arrayize](https://thalesrc.github.io/js-utils/modules/_arrayize_.html)
+Encapsulates a non array value with an array that contains it unless the value is already an array
+
+```typescript
+import { arrayize } from "@thalesrc/js-utils";
+
+const foo = 'foo';
+const bar = ['bar'];
+const fooArr = arrayize(foo); // ['foo'];
+const barArr = arrayize(bar); // ['bar'];
+```
+
 #### [Compact](https://thalesrc.github.io/js-utils/modules/_compact_.html)
 Filters falsy values of the given array
 Removes `null` and `undefined` values and their keys from an object

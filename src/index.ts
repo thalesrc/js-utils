@@ -6,6 +6,7 @@ export { clone, deepest } from './object';
 export * from './promise';
 export {  } from './string';
 
+export * from './arrayize';
 export * from './compact';
 export * from './is-falsy';
 export * from './is-truthy';

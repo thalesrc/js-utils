@@ -28,7 +28,8 @@
     "replace",
     "remove",
     "deepest",
-    "never"
+    "never",
+    "arrayize"
   ],
   "repository": {
     "type": "git",
