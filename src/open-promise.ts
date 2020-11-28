@@ -1,4 +1,4 @@
-import { noop } from './function';
+import { noop } from './function/noop';
 
 type Resolver<T> = (value?: T) => any;
 type Rejector = (reason?: any) => any;
