@@ -101,7 +101,7 @@ export class OpenPromise<T = any> extends Promise<T> {
         }
       });
 
-      executor.call(null, resolver, rejector);
+      (executor || noop).call(null, resolver, rejector);
     });
 
     resolver['context'] = this;
