@@ -14,7 +14,7 @@ import { noop } from '../function/noop';
  * }
  * ```
  */
-export const NEVER = new Promise(noop);
+export const NEVER = new Promise<any>(noop);
 
 /**
  * Creates a promise which never resolves
@@ -34,6 +34,6 @@ export const NEVER = new Promise(noop);
  *
  * @returns the promise which never resolves
  */
-export function never(): Promise<unknown> {
+export function never<T = never>(): Promise<T> {
   return NEVER;
 }
