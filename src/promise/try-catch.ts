@@ -38,13 +38,14 @@
  * ```
  * * * *
  * @param promise Promise to try
+ * @param defaultResult Setting this will put the value into the result field when the promise throws error
  * @returns Error and result array
  */
-export async function tryCatch<T, E = any>(promise: Promise<T>): Promise<[E, T]> {
+export async function tryCatch<T, E = any>(promise: Promise<T>, defaultResult: T = null): Promise<[E, T]> {
   try {
     const result = await promise;
     return [null, result];
   } catch (error) {
-    return [error, null];
+    return [error, defaultResult];
   }
 }

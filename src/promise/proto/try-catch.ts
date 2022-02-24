@@ -24,11 +24,12 @@ declare global {
      *
      * ```
      * * * *
+     * @param defaultResult Setting this will put the value into the result field when the promise throws error
      */
-    tryCatch<E = any>(): Promise<[E, T]>;
+    tryCatch<E = any>(defaultResult?: T): Promise<[E, T]>;
   }
 }
 
-Promise.prototype.tryCatch = function<T, E>(this: Promise<T>): Promise<[E, T]> {
-  return tryCatch<T, E>(this);
+Promise.prototype.tryCatch = function<T, E>(this: Promise<T>, defaultResult: T = null): Promise<[E, T]> {
+  return tryCatch<T, E>(this, defaultResult);
 };
