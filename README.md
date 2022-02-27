@@ -340,6 +340,23 @@ const promise = anAsyncCall();
 const [error, result] = await tryCatch(promise);
 ```
 
+#### [Try One By One](https://thalesrc.github.io/js-utils/modules/_promise_try_one_by_one_.html)
+Tries a set of promises one by one with given order. Breaks the call when a promise resolved. Otherwise keeps trying incoming promises until the list is finished.
+
+```typescript
+import { tryOneByOne } from "@thalesrc/js-utils/promise";
+
+async function fooFunction() {
+  const foo = await tryOneByOne([
+    () => someCall(),
+    (err) => anotherCall(),
+    (err) => fooPromise()
+  ]);
+
+  // do stuff
+}
+```
+
 ### String
 
 #### [Limit](https://thalesrc.github.io/js-utils/modules/_string_limit_.html)
